@@ -9,33 +9,43 @@ namespace ThuisBijMuis.Clickables
 
         private AudioSource audioSource;
         private Animator animator;
+        private IClickableCustomBehaviour clickableCustomBehaviour;
 
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
+            clickableCustomBehaviour = GetComponent<IClickableCustomBehaviour>();
         }
 
         public void Execute()
         {
-            if (data.onSelectVoice != null)
-            {
-                if (audioSource == null)
-                    audioSource = gameObject.AddComponent<AudioSource>();
+            AudioClip voiceClip = null;
+            AudioClip soundClip = null;
 
-                audioSource.PlayOneShot(data.onSelectVoice);
-            }
+            if (data.onSelectVoice != null)
+                voiceClip = data.onSelectVoice;
 
             if (data.onSelectSound != null)
-            {
-                if (audioSource == null)
-                    audioSource = gameObject.AddComponent<AudioSource>();
+                soundClip = data.onSelectSound;
 
-                audioSource.PlayOneShot(data.onSelectSound);
+            if (audioSource == null && (voiceClip != null || soundClip != null))
+                audioSource = gameObject.AddComponent<AudioSource>();
+
+            if (!audioSource.isPlaying)
+            {
+                if (voiceClip != null)
+                    audioSource.PlayOneShot(data.onSelectVoice);
+
+                if (soundClip != null)
+                    audioSource.PlayOneShot(data.onSelectSound);
             }
 
             if (animator != null && !animator.GetBool("OnSelect"))
                 animator.SetBool("OnSelect", true);
+
+            if (clickableCustomBehaviour != null)
+                clickableCustomBehaviour.ExecuteCustomBehaviour();
         }
 
         public void AnimationEnded()
