@@ -8,7 +8,8 @@ namespace ThuisBijMuis.PageTurning
     {
         [SerializeField]
         private bool backPage = false;
-        private bool ableToClick = true;
+
+        private BookController bookController;
 
         private readonly float pageTurnTime = 1;
         private float pivotNumber;
@@ -20,6 +21,9 @@ namespace ThuisBijMuis.PageTurning
 
         private void Start()
         {
+            bookController = transform.parent.parent.GetComponent<BookController>();
+            if (bookController == null) Debug.LogError("No BookController found on parent: " + name);
+
             pivot = transform.parent;
             if (pivot == null) Debug.LogError("No pivot found on page: " + name);
 
@@ -29,11 +33,18 @@ namespace ThuisBijMuis.PageTurning
             targetRotation.eulerAngles = rot;
 
             pivotNumber = pivot.GetComponent<PagePivot>().PivotNumber;
+
+            transform.localPosition = new Vector3(transform.localPosition.x, -pivotNumber / 1000, transform.localPosition.z);
+
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).localPosition = new Vector3(0, 0.0001f, 0);
+            }
         }
 
         private void OnMouseOver()
         {
-            if (Input.GetMouseButtonDown(0) && ableToClick)
+            if (Input.GetMouseButtonDown(0) && !bookController.isCurrentlyTurningPage)
             {
                 StartCoroutine(PageTurner());
             }
@@ -41,7 +52,9 @@ namespace ThuisBijMuis.PageTurning
 
         private IEnumerator PageTurner()
         {
-            ableToClick = false;
+            bookController.SetTurningPage(true);
+            if (backPage) bookController.ChangeCurrentPage(false);
+            else bookController.ChangeCurrentPage(true);
 
             Quaternion currentRosPivot = pivot.rotation;
             float time = 0;
@@ -64,7 +77,17 @@ namespace ThuisBijMuis.PageTurning
 
                 yield return new WaitForEndOfFrame();
             }
-            ableToClick = true;
+
+            bookController.PageTurnEnd();
+            bookController.SetTurningPage(false);
+        }
+
+        public void SetChildrenActive(bool state)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(state);
+            }
         }
     }
 }
