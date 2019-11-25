@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PagePivot : MonoBehaviour
+namespace ThuisBijMuis.PageTurning
 {
-    public int PivotNumber;
+    public class PagePivot : MonoBehaviour
+    {
+        public int PivotNumber;
+    }
 }
