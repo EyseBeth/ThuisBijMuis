@@ -204,24 +204,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &873656462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3728465643664278282, guid: 8e3bb55e738976c409d0ad835b09fad0,
-    type: 3}
-  m_PrefabInstance: {fileID: 8088431690015516783}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &873656468
-MonoBehaviour:
+--- !u!1001 &780792136
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873656462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65e528c6d857b054487e9c554b6fb1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3728465643664278282, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_Name
+      value: Square (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 116023352, guid: 8e3bb55e738976c409d0ad835b09fad0, type: 3}
+      propertyPath: m_HasTransformHierarchy
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e3bb55e738976c409d0ad835b09fad0, type: 3}
 --- !u!1 &1391090542
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +288,7 @@ GameObject:
   - component: {fileID: 1391090544}
   - component: {fileID: 1391090543}
   m_Layer: 0
-  m_Name: ClickablesController
+  m_Name: ClickableIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,10 +303,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1391090542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b54b4b5fb10684aa77e4ec61f6642d, type: 3}
+  m_Script: {fileID: 11500000, guid: f7fdb542438bf9d40892e28a87a024a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickableIndicatorType: 0
+  isAdder: 1
+  wiggleSpeed: 50
+  wiggleStrength: 10
+  wiggleTime: 1
+  wiggleTimeout: 10
+  wiggleTimeoutVariation: 5
 --- !u!4 &1391090544
 Transform:
   m_ObjectHideFlags: 0
@@ -296,17 +356,17 @@ PrefabInstance:
     - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7508199999671737691, guid: 8e3bb55e738976c409d0ad835b09fad0,
         type: 3}

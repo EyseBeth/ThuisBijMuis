@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using ThuisBijMuis.Clickables.CustomBehaviours;
+using ThuisBijMuis.Clickables.Indicators;
+using UnityEngine;
 
 namespace ThuisBijMuis.Clickables
 {
@@ -10,6 +12,7 @@ namespace ThuisBijMuis.Clickables
         private AudioSource audioSource;
         private Animator animator;
         private IClickableCustomBehaviour clickableCustomBehaviour;
+        private ClickableIndicatorBase clickableIndicator;
 
         private AudioClip voiceClip;
         private AudioClip soundClip;
@@ -19,6 +22,7 @@ namespace ThuisBijMuis.Clickables
             audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
             clickableCustomBehaviour = GetComponent<IClickableCustomBehaviour>();
+            clickableIndicator = GetComponent<ClickableIndicatorBase>();
 
             if (data.onSelectVoice != null)
                 voiceClip = data.onSelectVoice;
@@ -46,6 +50,8 @@ namespace ThuisBijMuis.Clickables
 
             if (clickableCustomBehaviour != null)
                 clickableCustomBehaviour.ExecuteCustomBehaviour();
+
+            clickableIndicator.Pause();
         }
 
         public void AnimationEnded()
@@ -54,6 +60,8 @@ namespace ThuisBijMuis.Clickables
 
             if (clickableCustomBehaviour != null)
                 clickableCustomBehaviour.EndCustomBehaviour();
+
+            clickableIndicator.UnPause();
         }
 
         // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.

@@ -1,4 +1,4 @@
-﻿namespace ThuisBijMuis.Clickables
+﻿namespace ThuisBijMuis.Clickables.CustomBehaviours
 {
     public interface IClickableCustomBehaviour
     {
