@@ -3,5 +3,6 @@
     public interface IClickableCustomBehaviour
     {
         void ExecuteCustomBehaviour();
+        void EndCustomBehaviour();
     }
 }

@@ -11,17 +11,14 @@ namespace ThuisBijMuis.Clickables
         private Animator animator;
         private IClickableCustomBehaviour clickableCustomBehaviour;
 
+        private AudioClip voiceClip;
+        private AudioClip soundClip;
+
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
             clickableCustomBehaviour = GetComponent<IClickableCustomBehaviour>();
-        }
-
-        public void Execute()
-        {
-            AudioClip voiceClip = null;
-            AudioClip soundClip = null;
 
             if (data.onSelectVoice != null)
                 voiceClip = data.onSelectVoice;
@@ -31,8 +28,11 @@ namespace ThuisBijMuis.Clickables
 
             if (audioSource == null && (voiceClip != null || soundClip != null))
                 audioSource = gameObject.AddComponent<AudioSource>();
+        }
 
-            if (!audioSource.isPlaying)
+        private void Execute()
+        {
+            if (audioSource != null && !audioSource.isPlaying)
             {
                 if (voiceClip != null)
                     audioSource.PlayOneShot(data.onSelectVoice);
@@ -51,6 +51,15 @@ namespace ThuisBijMuis.Clickables
         public void AnimationEnded()
         {
             animator.SetBool("OnSelect", false);
+
+            if (clickableCustomBehaviour != null)
+                clickableCustomBehaviour.EndCustomBehaviour();
+        }
+
+        // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.
+        private void OnMouseDown()
+        {
+            Execute();
         }
     }
 }
