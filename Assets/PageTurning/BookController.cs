@@ -33,5 +33,15 @@ namespace ThuisBijMuis.PageTurning
             if (index < allPages.Length - 2) allPages[index + 2].SetChildrenActive(false);
             if (index < allPages.Length - 3) allPages[index + 3].SetChildrenActive(false);
         }
+
+        public int GetPivotNumber(Transform pivot)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                if (transform.GetChild(i) == pivot) return i;
+            }
+            Debug.LogError("Pivot not a child of BookController");
+            return 0;
+        }
     }
 }

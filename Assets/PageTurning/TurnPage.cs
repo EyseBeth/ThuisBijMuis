@@ -11,30 +11,35 @@ namespace ThuisBijMuis.PageTurning
 
         private BookController bookController;
 
-        private readonly float pageTurnTime = 1;
+        private readonly float pageTurnTime = 2;
         private float pivotNumber;
 
         private Vector3 rot = Vector3.zero;
         private Quaternion targetRotation = Quaternion.identity;
+        private Quaternion currentRotation = Quaternion.identity;
+
+        private float time;
 
         private Transform pivot = null;
+        private bool isClicked = false;
+        private bool firstUpdate = false;
 
         private void Start()
         {
-            bookController = transform.parent.parent.GetComponent<BookController>();
-            if (bookController == null) Debug.LogError("No BookController found on parent: " + name);
+            try { bookController = transform.parent.parent.GetComponent<BookController>(); }
+            catch (System.Exception e) { throw e; }
 
-            pivot = transform.parent;
-            if (pivot == null) Debug.LogError("No pivot found on page: " + name);
+            try { pivot = transform.parent; }
+            catch (System.Exception e) { throw e; }
 
             if (backPage) rot.z = 0;
             else rot.z = 180;
 
             targetRotation.eulerAngles = rot;
 
-            pivotNumber = pivot.GetComponent<PagePivot>().PivotNumber;
+            pivotNumber = bookController.GetPivotNumber(pivot);
 
-            transform.localPosition = new Vector3(transform.localPosition.x, -pivotNumber / 1000, transform.localPosition.z);
+            transform.localPosition = new Vector3(transform.localPosition.x, -(pivotNumber + 1) / 1000, transform.localPosition.z);
 
             for (int i = 0; i < transform.childCount; i++)
             {
@@ -42,44 +47,59 @@ namespace ThuisBijMuis.PageTurning
             }
         }
 
-        private void OnMouseOver()
+        private void OnMouseDown()
         {
-            if (Input.GetMouseButtonDown(0) && !bookController.isCurrentlyTurningPage)
+            if (!bookController.isCurrentlyTurningPage)
             {
-                StartCoroutine(PageTurner());
+                isClicked = true;
             }
         }
 
-        private IEnumerator PageTurner()
+        private void Update()
+        {
+            if (isClicked)
+            {
+                if (!firstUpdate)
+                {
+                    currentRotation = pivot.rotation;
+                    FirstUpdate();
+                    firstUpdate = true;
+                }
+
+                if (PageLerp(pageTurnTime)) //Lerp Done
+                {
+                    bookController.SetTurningPage(false);
+                }
+            }
+        }
+
+
+        private void FirstUpdate()
         {
             bookController.SetTurningPage(true);
             if (backPage) bookController.ChangeCurrentPage(false);
             else bookController.ChangeCurrentPage(true);
 
-            Quaternion currentRosPivot = pivot.rotation;
-            float time = 0;
-            float amountTurned = 0;
-            bool movedPos = false;
-            while (amountTurned < 1)
+            Vector3 newPivotPosition = new Vector3(pivot.position.x, pivot.position.y * -1, pivot.position.z);
+            Debug.Log(newPivotPosition);
+            pivot.position = newPivotPosition;
+        }
+
+        private bool PageLerp(float duration)
+        {
+            if (time < 1)
             {
-
-                amountTurned = time / pageTurnTime;
-                pivot.rotation = Quaternion.Lerp(currentRosPivot, targetRotation, amountTurned);
-
-                time += Time.deltaTime;
-
-                if (!movedPos && amountTurned > 0.5f)
-                {
-                    pivot.transform.position = new Vector3(0, pivotNumber / 1000, 0);
-                    if (backPage) pivot.transform.position *= -1;
-                    movedPos = true;
-                }
-
-                yield return new WaitForEndOfFrame();
+                time += Time.deltaTime / duration;
+                pivot.rotation = Quaternion.Lerp(currentRotation, targetRotation, time);
+                return false;
             }
-
-            bookController.PageTurnEnd();
-            bookController.SetTurningPage(false);
+            else
+            {
+                time = 0;
+                firstUpdate = false;
+                isClicked = false;
+                return true;
+            }
         }
 
         public void SetChildrenActive(bool state)
