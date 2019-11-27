@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ThuisBijMuis.Clickables
-{
+namespace ThuisBijMuis.Games.Interactables {
     [CreateAssetMenu(fileName = "New clickable item", menuName = "Clickable item")]
     public class ClickableScriptableObject : ScriptableObject
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ThuisBijMuis.Clickables.CustomBehaviours
+namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
     public class ChangeColor : MonoBehaviour, IClickableCustomBehaviour
     {

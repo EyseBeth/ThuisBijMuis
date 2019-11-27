@@ -1,9 +1,8 @@
-﻿using ThuisBijMuis.Clickables.CustomBehaviours;
-using ThuisBijMuis.Clickables.Indicators;
+﻿using ThuisBijMuis.Games.Interactables.CustomBehaviours;
+using ThuisBijMuis.Games.Interactables.Indicators;
 using UnityEngine;
 
-namespace ThuisBijMuis.Clickables
-{
+namespace ThuisBijMuis.Games.Interactables {
 #pragma warning disable 0649
     public class ClickableItem : MonoBehaviour
     {

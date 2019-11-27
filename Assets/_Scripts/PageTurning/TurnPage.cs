@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThuisBijMuis.PageTurning
-{
+namespace ThuisBijMuis.Games.PageTurning {
     public class TurnPage : MonoBehaviour
     {
         [SerializeField]
