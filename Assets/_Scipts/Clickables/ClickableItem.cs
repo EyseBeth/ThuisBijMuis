@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using ThuisBijMuis.Clickables.CustomBehaviours;
+using ThuisBijMuis.Clickables.Indicators;
+using UnityEngine;
 
 namespace ThuisBijMuis.Clickables
 {
@@ -9,38 +11,63 @@ namespace ThuisBijMuis.Clickables
 
         private AudioSource audioSource;
         private Animator animator;
+        private IClickableCustomBehaviour clickableCustomBehaviour;
+        private ClickableIndicatorBase clickableIndicator;
+
+        private AudioClip voiceClip;
+        private AudioClip soundClip;
 
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
-        }
+            clickableCustomBehaviour = GetComponent<IClickableCustomBehaviour>();
+            clickableIndicator = GetComponent<ClickableIndicatorBase>();
 
-        public void Execute()
-        {
             if (data.onSelectVoice != null)
-            {
-                if (audioSource == null)
-                    audioSource = gameObject.AddComponent<AudioSource>();
-
-                audioSource.PlayOneShot(data.onSelectVoice);
-            }
+                voiceClip = data.onSelectVoice;
 
             if (data.onSelectSound != null)
-            {
-                if (audioSource == null)
-                    audioSource = gameObject.AddComponent<AudioSource>();
+                soundClip = data.onSelectSound;
 
-                audioSource.PlayOneShot(data.onSelectSound);
+            if (audioSource == null && (voiceClip != null || soundClip != null))
+                audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        private void Execute()
+        {
+            if (audioSource != null && !audioSource.isPlaying)
+            {
+                if (voiceClip != null)
+                    audioSource.PlayOneShot(data.onSelectVoice);
+
+                if (soundClip != null)
+                    audioSource.PlayOneShot(data.onSelectSound);
             }
 
             if (animator != null && !animator.GetBool("OnSelect"))
                 animator.SetBool("OnSelect", true);
+
+            if (clickableCustomBehaviour != null)
+                clickableCustomBehaviour.ExecuteCustomBehaviour();
+
+            clickableIndicator.Pause();
         }
 
         public void AnimationEnded()
         {
             animator.SetBool("OnSelect", false);
+
+            if (clickableCustomBehaviour != null)
+                clickableCustomBehaviour.EndCustomBehaviour();
+
+            clickableIndicator.UnPause();
+        }
+
+        // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.
+        private void OnMouseDown()
+        {
+            Execute();
         }
     }
 }
