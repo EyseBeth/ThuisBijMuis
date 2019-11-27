@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables {
+#pragma warning disable 0649
 
     [RequireComponent(typeof(Collider2D))]
     public class DropZone : MonoBehaviour, IDroppable {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 namespace ThuisBijMuis.Games.PageTurning {
+#pragma warning disable 0649
     public class BookController : MonoBehaviour
     {
         public bool isCurrentlyTurningPage = false;
