@@ -1,8 +1,10 @@
 ﻿using ThuisBijMuis.Games.Interactables.CustomBehaviours;
 using ThuisBijMuis.Games.Interactables.Indicators;
 using UnityEngine;
+using UnityEngine.Events;
 
-namespace ThuisBijMuis.Games.Interactables {
+namespace ThuisBijMuis.Games.Interactables
+{
 #pragma warning disable 0649
     public class ClickableItem : MonoBehaviour
     {
@@ -16,6 +18,9 @@ namespace ThuisBijMuis.Games.Interactables {
         private AudioClip voiceClip;
         private AudioClip soundClip;
 
+        [HideInInspector] public UnityEvent OnClickEvent;
+        public bool IsSelected { get; private set; }
+
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
@@ -23,18 +28,33 @@ namespace ThuisBijMuis.Games.Interactables {
             clickableCustomBehaviour = GetComponent<IClickableCustomBehaviour>();
             clickableIndicator = GetComponent<ClickableIndicatorBase>();
 
-            if (data.onSelectVoice != null)
-                voiceClip = data.onSelectVoice;
+            if (data != null)
+            {
+                if (data.onSelectVoice != null)
+                    voiceClip = data.onSelectVoice;
 
-            if (data.onSelectSound != null)
-                soundClip = data.onSelectSound;
+                if (data.onSelectSound != null)
+                    soundClip = data.onSelectSound; 
+            }
 
             if (audioSource == null && (voiceClip != null || soundClip != null))
                 audioSource = gameObject.AddComponent<AudioSource>();
+
+            IsSelected = false;
+
+            ClickableItem[] clickables = FindObjectsOfType<ClickableItem>();
+
+            for (int i = 0; i < clickables.Length; i++)
+            {
+                if (clickables[i].transform != this.transform)
+                    clickables[i].OnClickEvent.AddListener(NewSelection);
+            }
         }
 
         private void Execute()
         {
+            IsSelected = true;
+
             if (audioSource != null && !audioSource.isPlaying)
             {
                 if (voiceClip != null)
@@ -55,6 +75,8 @@ namespace ThuisBijMuis.Games.Interactables {
 
         public void AnimationEnded()
         {
+            IsSelected = false;
+
             animator.SetBool("OnSelect", false);
 
             if (clickableCustomBehaviour != null)
@@ -63,9 +85,16 @@ namespace ThuisBijMuis.Games.Interactables {
             clickableIndicator.UnPause();
         }
 
+        private void NewSelection()
+        {
+            if (IsSelected)
+                IsSelected = false;
+        }
+
         // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.
         private void OnMouseDown()
         {
+            OnClickEvent.Invoke();
             Execute();
         }
     }
