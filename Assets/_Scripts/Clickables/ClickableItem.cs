@@ -53,6 +53,9 @@ namespace ThuisBijMuis.Games.Interactables
 
         private void Execute()
         {
+            if (IsSelected)
+                return;
+
             IsSelected = true;
 
             if (audioSource != null && !audioSource.isPlaying)

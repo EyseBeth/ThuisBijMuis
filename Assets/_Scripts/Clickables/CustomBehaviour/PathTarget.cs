@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
-    public class PathObject : MonoBehaviour
+    public class PathTarget : MonoBehaviour
     {
         [HideInInspector] public Vector2Event OnTargetClicked;
 
