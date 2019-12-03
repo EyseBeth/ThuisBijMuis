@@ -16,10 +16,9 @@ namespace ThuisBijMuis.Games.Interactables
             clickableIndicator = GetComponent<ClickableIndicatorBase>();
         }
 
-        public void UpdateIClickables()
-        {
-            clickableCustomBehaviours = GetComponentsInChildren<IClickable>();
-        }
+        // We just rewrite the list of references. This means it doesn't matter whether we add or remove.
+        // In both cases the list will be completely rewritten which gives us an up to date list.
+        public void UpdateCustomBehaviours() => clickableCustomBehaviours = GetComponentsInChildren<IClickable>();
 
         // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.
         private void OnMouseDown()

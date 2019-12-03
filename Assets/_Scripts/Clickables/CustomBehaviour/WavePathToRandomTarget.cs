@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using ThuisBijMuis.Games.Interactables.Indicators;
+using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
 #pragma warning disable 0649
-    [RequireComponent(typeof(SpriteRenderer))]
+    [RequireComponent(typeof(SpriteRenderer), typeof(ClickableIndicatorBase))]
     public class WavePathToRandomTarget : MonoBehaviour, IClickable
     {
         [SerializeField] private float moveSpeed;
@@ -30,6 +31,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
             if (isMoving)
             {
                 counter += Time.deltaTime * frequency;
+
                 // We use dir.x and dir.y here because when we go straight down we want to use the cosine
                 // on the X-axis and vice versa. We put a minus in front of the Y-axis cosine because that works.
                 Vector3 cos = new Vector3(Mathf.Cos(counter) * dir.y, -Mathf.Cos(counter) * dir.x, 0) * magnitude;
@@ -47,6 +49,11 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
             {
                 isMoving = false;
                 hasFinishedMoving = true;
+
+                // We don't need the indicator after we're done moving because
+                // the bee can't move anymore. Can still be clicked on for sound effects etc.
+                ClickableIndicatorBase indicator = GetComponent<ClickableIndicatorBase>();
+                Destroy(indicator);
             }
         }
 
