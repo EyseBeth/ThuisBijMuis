@@ -9,7 +9,9 @@ namespace ThuisBijMuis.Games.Interactables.Indicators {
 
         protected virtual void Awake()
         {
-            // Find all clickable items and add the indicator to them.
+            // Find all clickable items and store them in a variable.
+            // Custom indicator scripts can then use this variable to 
+            // add the indicator script to those items.
             clickableItems = FindObjectsOfType<ClickableItem>();
         }
 

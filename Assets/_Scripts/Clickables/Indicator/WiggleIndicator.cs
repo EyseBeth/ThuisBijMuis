@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ThuisBijMuis.Games.Interactables.CustomBehaviours;
+using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables.Indicators {
 #pragma warning disable 0649
@@ -25,6 +26,8 @@ namespace ThuisBijMuis.Games.Interactables.Indicators {
             for (int i = 0; i < clickableItems.Length; i++)
             {
                 GameObject item = clickableItems[i].gameObject;
+                item.GetComponentInChildren<ClickableAnimation>().OnAnimationEndedEvent.AddListener(UnPause);
+
                 WiggleIndicator wi = item.AddComponent<WiggleIndicator>();
                 wi.isAdder = false;
                 wi.wiggleSpeed = wiggleSpeed;

@@ -1,8 +1,7 @@
 ﻿namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
-    public interface IClickableCustomBehaviour
+    public interface IClickable
     {
         void ExecuteCustomBehaviour();
-        void EndCustomBehaviour();
     }
 }
