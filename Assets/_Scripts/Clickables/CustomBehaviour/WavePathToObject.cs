@@ -3,7 +3,7 @@
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
 #pragma warning disable 0649
-    public class WavePathToObject : MonoBehaviour, IClickableCustomBehaviour
+    public class WavePathToObject : MonoBehaviour, IClickable
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float frequency;
@@ -48,7 +48,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         private void TargetClicked(Vector2 targetPos)
         {
-            if (thisItem.IsSelected && !hasFinishedMoving)
+            if (!hasFinishedMoving)
             {
                 isMoving = true;
                 startPos = transform.position;
@@ -79,10 +79,6 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
         }
 
         public void ExecuteCustomBehaviour()
-        {
-        }
-
-        public void EndCustomBehaviour()
         {
         }
     }
