@@ -24,7 +24,7 @@ namespace ThuisBijMuis.Games.Interactables
         // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.
         private void OnMouseDown()
         {
-            clickableIndicator.Pause();
+            clickableIndicator?.Pause();
             foreach (IClickable item in clickableCustomBehaviours)
             {
                 item.ExecuteCustomBehaviour();

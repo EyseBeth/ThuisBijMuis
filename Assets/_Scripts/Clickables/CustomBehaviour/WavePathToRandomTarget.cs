@@ -3,14 +3,14 @@
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
 #pragma warning disable 0649
-    public class WavePathToObject : MonoBehaviour, IClickable
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class WavePathToRandomTarget : MonoBehaviour, IClickable
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float frequency;
         [SerializeField] private float magnitude;
         [SerializeField] private bool spriteIsFacingRight;
-
-        private ClickableItem thisItem;
+        [SerializeField] private Transform[] targets;
 
         private bool isMoving;
         private bool hasFinishedMoving;
@@ -19,18 +19,11 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
         private Vector2 endPos;
         private Vector2 dir;
         private float counter;
+        private int index;
 
-        private void Start()
-        {
-            thisItem = GetComponent<ClickableItem>();
+        private SpriteRenderer spriteRenderer;
 
-            PathTarget[] targets = FindObjectsOfType<PathTarget>();
-
-            for (int i = 0; i < targets.Length; i++)
-            {
-                targets[i].OnTargetClicked.AddListener(TargetClicked);
-            }
-        }
+        private void Awake() => spriteRenderer = GetComponent<SpriteRenderer>();
 
         private void Update()
         {
@@ -42,36 +35,15 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
                 Vector3 cos = new Vector3(Mathf.Cos(counter) * dir.y, -Mathf.Cos(counter) * dir.x, 0) * magnitude;
                 Vector3 linear = dir * new Vector3(moveSpeed, moveSpeed, 0);
 
+                // The cosine is only at (0, 0, 0) position so we have to add the linear transformation
+                // to it. This way the cosine position is added at every position.
                 transform.position += (cos + linear) * Time.deltaTime;
-            }
-        }
-
-        private void TargetClicked(Vector2 targetPos)
-        {
-            if (!hasFinishedMoving)
-            {
-                isMoving = true;
-                startPos = transform.position;
-                endPos = targetPos;
-                dir = (endPos - startPos).normalized;
-                counter = 0;
-
-                if (dir.x < 0 && spriteIsFacingRight)
-                {
-                    transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, 180, transform.localEulerAngles.z);
-                    spriteIsFacingRight = !spriteIsFacingRight;
-                }
-                else if (dir.x > 0 && !spriteIsFacingRight)
-                {
-                    transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, 0, transform.localEulerAngles.z);
-                    spriteIsFacingRight = !spriteIsFacingRight;
-                }
             }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.GetComponent<PathTarget>())
+            if (other.transform == targets[index])
             {
                 isMoving = false;
                 hasFinishedMoving = true;
@@ -80,6 +52,26 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         public void ExecuteCustomBehaviour()
         {
+            if (!hasFinishedMoving)
+            {
+                index = Random.Range(0, targets.Length);
+                isMoving = true;
+                startPos = transform.position;
+                endPos = targets[index].position;
+                dir = (endPos - startPos).normalized;
+                counter = 0;
+
+                if (dir.x < 0 && spriteIsFacingRight)
+                {
+                    spriteRenderer.flipX = !spriteRenderer.flipX;
+                    spriteIsFacingRight = !spriteIsFacingRight;
+                }
+                else if (dir.x > 0 && !spriteIsFacingRight)
+                {
+                    spriteRenderer.flipX = !spriteRenderer.flipX;
+                    spriteIsFacingRight = !spriteIsFacingRight;
+                }
+            }
         }
     }
 }
