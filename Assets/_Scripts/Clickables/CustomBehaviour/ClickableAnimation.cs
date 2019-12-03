@@ -10,10 +10,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         [HideInInspector] public UnityEvent OnAnimationEndedEvent;
 
-        private void Start()
-        {
-            animator = GetComponent<Animator>();
-        }
+        private void Start() => animator = GetComponent<Animator>();
 
         public void OnAnimationEnd()
         {
@@ -27,5 +24,5 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
             if (!animator.GetBool("OnSelect"))
                 animator.SetBool("OnSelect", true);
         }
-    } 
+    }
 }

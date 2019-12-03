@@ -23,9 +23,6 @@ namespace ThuisBijMuis.Games.Interactables.Indicators {
             Init();
         }
 
-        public virtual void UnPause()
-        {
-            isPaused = false;
-        }
+        public virtual void UnPause() => isPaused = false;
     }
 }

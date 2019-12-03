@@ -10,14 +10,8 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         private AudioSource audioSource;
 
-        private void Start()
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
+        private void Start() => audioSource = GetComponent<AudioSource>();
 
-        public void ExecuteCustomBehaviour()
-        {
-            audioSource.PlayOneShot(clip.audioClip);
-        }
+        public void ExecuteCustomBehaviour() => audioSource.PlayOneShot(clip.audioClip);
     }
 }
