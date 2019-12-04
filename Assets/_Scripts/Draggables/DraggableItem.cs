@@ -1,35 +1,54 @@
 ﻿using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables {
-    [RequireComponent(typeof(Collider2D))]
-    public class DraggableItem : MonoBehaviour, IDraggable {
+#pragma warning disable 0649
+    [RequireComponent(typeof(Collider), typeof(Rigidbody))]
+    public class DraggableItem : MonoBehaviour, IDraggable, IInteractable {
 
         [SerializeField] private DroppableTags[] acceptableTags;
 
+        const float DistanceToScreen = 10.0f;
+
         private Vector2 originalMousePosition;
-
-        //public void StartDrag() {
-        //    state = DragState.Dragging;
-        //    print("Started the drag");
-        //}
-
         private Vector3 offset, originalPosition;
-        private float distanceToScreen = 10.0f;
 
-        public void OnMouseDown() {
-            print("Started the drag");
-            originalPosition = gameObject.transform.position;
-            offset = gameObject.transform.position -
-                     Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distanceToScreen));
+        private DropZone currentDropZone;
+
+        void Start() {
+            transform.position = originalPosition = new Vector3(transform.position.x, transform.position.y,
+                transform.position.z - Mathf.Epsilon);
         }
 
         public void OnMouseDrag() {
-            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
+            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, DistanceToScreen);
             transform.position = Camera.main.ScreenToWorldPoint(newPosition) + offset;
         }
 
         public void OnMouseUp() {
+            if (currentDropZone != null && currentDropZone.CheckTags(acceptableTags)) {
+                Drop(currentDropZone);
+            } else Return();
+            currentDropZone = null;
+        }
+
+        public void Return() {
             gameObject.transform.position = originalPosition;
+        }
+
+        public void Drop(DropZone drop) {
+            gameObject.transform.position = new Vector3(drop.transform.position.x, drop.transform.position.y, drop.transform.position.z - Mathf.Epsilon);
+        }
+        private void OnTriggerStay(Collider collision) {
+            currentDropZone = collision.transform.GetComponent<DropZone>();
+
+        }
+        private void OnTriggerExit(Collider collision) {
+            currentDropZone = null;
+        }
+
+        public void ActivateInteractable() {
+            offset = gameObject.transform.position -
+                     Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, DistanceToScreen));
         }
     }
 }

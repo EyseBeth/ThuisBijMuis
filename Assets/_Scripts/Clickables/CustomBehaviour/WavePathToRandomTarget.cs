@@ -43,7 +43,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.transform == targets[index])
             {

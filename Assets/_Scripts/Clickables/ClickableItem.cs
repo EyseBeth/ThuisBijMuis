@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ThuisBijMuis.Games.Interactables
 {
 #pragma warning disable 0649
-    public class ClickableItem : MonoBehaviour
+    public class ClickableItem : MonoBehaviour, IInteractable
     {
         private IClickable[] clickableCustomBehaviours;
         private ClickableIndicatorBase clickableIndicator;
@@ -20,12 +20,9 @@ namespace ThuisBijMuis.Games.Interactables
         // In both cases the list will be completely rewritten which gives us an up to date list.
         public void UpdateCustomBehaviours() => clickableCustomBehaviours = GetComponentsInChildren<IClickable>();
 
-        // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.
-        private void OnMouseDown()
-        {
+        public void ActivateInteractable() {
             clickableIndicator?.Pause();
-            foreach (IClickable item in clickableCustomBehaviours)
-            {
+            foreach (IClickable item in clickableCustomBehaviours) {
                 item.ExecuteCustomBehaviour();
             }
         }
