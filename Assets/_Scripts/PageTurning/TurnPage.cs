@@ -71,10 +71,6 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning {
             bookController.SetTurningPage(true);
             if (backPage) bookController.ChangeCurrentPage(false);
             else bookController.ChangeCurrentPage(true);
-
-            Vector3 newPivotPosition = new Vector3(pivot.position.x, pivot.position.y, pivot.position.z * -1);
-            Debug.Log(newPivotPosition);
-            pivot.position = newPivotPosition;
         }
 
         private bool PageLerp(float duration)

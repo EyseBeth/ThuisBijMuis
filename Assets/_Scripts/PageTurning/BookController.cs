@@ -42,6 +42,7 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning {
             if (index > 0) allPages[index - 1].SetChildrenActive(false);
             if (index < allPages.Count - 2) allPages[index + 2].SetChildrenActive(false);
             if (index < allPages.Count - 3) allPages[index + 3].SetChildrenActive(false);
+
         }
 
         public int GetPivotNumber(Transform pivot) {
