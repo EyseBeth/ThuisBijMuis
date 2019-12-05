@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables.PageTurning {
+namespace ThuisBijMuis.Games.Interactables.PageTurning
+{
     public class TurnPage : MonoBehaviour, IInteractable
     {
         [SerializeField]
@@ -94,12 +95,17 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning {
         {
             for (int i = 0; i < transform.childCount; i++)
             {
-                transform.GetChild(i).gameObject.SetActive(state);
+                Transform child = transform.GetChild(i);
+                child.gameObject.SetActive(state);
+                if (state) child.transform.localPosition = new Vector3(child.transform.localPosition.x, child.transform.localPosition.y, -1f);
+                else child.localPosition = new Vector3(0, 0, -0.001f);
             }
         }
 
-        public void ActivateInteractable() {
-            if (!bookController.isCurrentlyTurningPage) {
+        public void ActivateInteractable()
+        {
+            if (!bookController.isCurrentlyTurningPage)
+            {
                 isClicked = true;
             }
         }
