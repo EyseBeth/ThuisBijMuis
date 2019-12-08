@@ -43,7 +43,9 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning
 
             for (int i = 0; i < transform.childCount; i++)
             {
-                transform.GetChild(i).localPosition = new Vector3(0, 0, -0.001f);
+                // Switched this off, it sets all child objets to the centre of the page. which inhibits placements of objectson the page.
+
+                //transform.GetChild(i).localPosition = new Vector3(0, 0, -0.001f);
             }
         }
 
@@ -97,8 +99,11 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning
             {
                 Transform child = transform.GetChild(i);
                 child.gameObject.SetActive(state);
-                if (state) child.transform.localPosition = new Vector3(child.transform.localPosition.x, child.transform.localPosition.y, -1f);
-                else child.localPosition = new Vector3(0, 0, -0.001f);
+
+                // Switched this off, it sets all child objets to the centre of the page. which inhibits placements of objectson the page.
+
+                //if (state) child.transform.localPosition = new Vector3(child.transform.localPosition.x, child.transform.localPosition.y, -1f);
+                //else child.localPosition = new Vector3(0, 0, -0.001f);
             }
         }
 

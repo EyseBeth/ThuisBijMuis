@@ -1,0 +1,907 @@
+fileFormatVersion: 2
+guid: ede655f170f04574caee31d247702c02
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4547674847920567550
+    second: page 4 text
+  - first:
+      213: -658330116956975722
+    second: page 5 text
+  - first:
+      213: 3029107149688347008
+    second: page 6 text
+  - first:
+      213: -2652459366170959233
+    second: page 7 text
+  - first:
+      213: -3694564728623343792
+    second: page 8 text
+  - first:
+      213: -2043017983467968750
+    second: arrow
+  - first:
+      213: -1760661728015184165
+    second: drag apple
+  - first:
+      213: -466168631853973879
+    second: apple
+  - first:
+      213: 1634709909192830125
+    second: bucket
+  - first:
+      213: -1816755548282093316
+    second: 4
+  - first:
+      213: 762757763700279879
+    second: yellow sock
+  - first:
+      213: -3288193841518329397
+    second: red sock
+  - first:
+      213: -6356455581923578659
+    second: blue sock
+  - first:
+      213: 4792969105933426601
+    second: bread instructions
+  - first:
+      213: 2101775603215417532
+    second: bread
+  - first:
+      213: 320269553003860674
+    second: duck
+  - first:
+      213: 2008176328888099268
+    second: 5
+  - first:
+      213: 6501298950303736333
+    second: 7
+  - first:
+      213: 1173883757149469839
+    second: flower
+  - first:
+      213: -9079189884289256361
+    second: bee
+  - first:
+      213: -5115445517896432657
+    second: pencil instructions
+  - first:
+      213: 5698825705905123064
+    second: pencil
+  - first:
+      213: -3181606171480048652
+    second: 8
+  - first:
+      213: 6606957742362733797
+    second: pot 1
+  - first:
+      213: -7681912615120183973
+    second: pot 2
+  - first:
+      213: -3075615347573854405
+    second: pot 3
+  - first:
+      213: 7222885887198843942
+    second: pot 4
+  - first:
+      213: 1023408543337233454
+    second: pot 5
+  - first:
+      213: 7440629655457331564
+    second: pot 6
+  - first:
+      213: 4846923890070638573
+    second: pot 7
+  - first:
+      213: -959735476530421499
+    second: pot 8
+  - first:
+      213: -1882447175442899839
+    second: pot 9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: page 4 text
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 3116
+        width: 1955
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080ed5701bf838143b8c35da6fcb2752
+      internalID: 4547674847920567550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: page 5 text
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2535
+        width: 1883
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a7e689956f0474caf0ea416983d9f6
+      internalID: -658330116956975722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: page 6 text
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1994
+        width: 1702
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a3e3e7ff140c346b020a836ecb0855
+      internalID: 3029107149688347008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: page 7 text
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1380
+        width: 1773
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9577e7d8242881d4981406d6f70554bd
+      internalID: -2652459366170959233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: page 8 text
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 780
+        width: 1649
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96c05ade6adace44945b06a04d27603
+      internalID: -3694564728623343792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 2869
+        width: 961
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1d7a4f2fd06934390941881841ecf3
+      internalID: -2043017983467968750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drag apple
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 3249
+        width: 1835
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab9b363f315ea64fa8a4ee2a0969d75
+      internalID: -1760661728015184165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: apple
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 2688
+        width: 387
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f496c77f2d3adec4fa5dd45bbaf3ac13
+      internalID: -466168631853973879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bucket
+      rect:
+        serializedVersion: 2
+        x: 3722
+        y: 2595
+        width: 513
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2836426c726383e4bb279c1a076a22df
+      internalID: 1634709909192830125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 4316
+        y: 2542
+        width: 560
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530e962737f97824aa50996108ffb7f5
+      internalID: -1816755548282093316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow sock
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 2281
+        width: 394
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eed74e3a78ce6740a7cbd2041a4d65a
+      internalID: 762757763700279879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red sock
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 2288
+        width: 327
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16babd78946f7044b215fe8129d964a
+      internalID: -3288193841518329397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue sock
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 2241
+        width: 360
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecb646c2935dbf48993753d93080a68
+      internalID: -6356455581923578659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bread instructions
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 2128
+        width: 1708
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78a0a00db00f8f4f80fa4d4520b4f67
+      internalID: 4792969105933426601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bread
+      rect:
+        serializedVersion: 2
+        x: 3181
+        y: 1974
+        width: 167
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce685e431fb887d48820406ff1ab35c0
+      internalID: 2101775603215417532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck
+      rect:
+        serializedVersion: 2
+        x: 3501
+        y: 1727
+        width: 528
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d1ebbc96fceea469c5099143097fbc
+      internalID: 320269553003860674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5
+      rect:
+        serializedVersion: 2
+        x: 4082
+        y: 1574
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de730eb1e1b001341b5daafdbc233042
+      internalID: 2008176328888099268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7
+      rect:
+        serializedVersion: 2
+        x: 2953
+        y: 1134
+        width: 521
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1161664228ca0542ace0149e5953051
+      internalID: 6501298950303736333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flower
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 1220
+        width: 521
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ad89b6fa57960418f9d86d1f40c8fa
+      internalID: 1173883757149469839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bee
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1347
+        width: 313
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b291cdb0107ae0c46ad373efa0655d19
+      internalID: -9079189884289256361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencil instructions
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 673
+        width: 1381
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616f3d512ff81c34d9cf1ca61a3a4676
+      internalID: -5115445517896432657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencil
+      rect:
+        serializedVersion: 2
+        x: 3508
+        y: 1160
+        width: 334
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1f8125b04c9d242a26e3f0201f2419
+      internalID: 5698825705905123064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8
+      rect:
+        serializedVersion: 2
+        x: 3274
+        y: 19
+        width: 468
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8393a736ce43a4b8f0a2d176a90aed
+      internalID: -3181606171480048652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 1
+      rect:
+        serializedVersion: 2
+        x: 3908
+        y: 1098
+        width: 287
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d06a19660d08040bd6f786ed4e1475
+      internalID: 6606957742362733797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 2
+      rect:
+        serializedVersion: 2
+        x: 4209
+        y: 1081
+        width: 257
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce84af9c72ebc9b479ea0bed1c4ad978
+      internalID: -7681912615120183973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 3
+      rect:
+        serializedVersion: 2
+        x: 4482
+        y: 1060
+        width: 268
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e87e2615134ff4a99a625322a49df9
+      internalID: -3075615347573854405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 4
+      rect:
+        serializedVersion: 2
+        x: 3889
+        y: 763
+        width: 259
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c282ee49a723a074b984c9107cbfc21b
+      internalID: 7222885887198843942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 5
+      rect:
+        serializedVersion: 2
+        x: 4176
+        y: 737
+        width: 266
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c82ea7cebae1a344b71311945eed3b0
+      internalID: 1023408543337233454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 6
+      rect:
+        serializedVersion: 2
+        x: 4452
+        y: 713
+        width: 280
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e22428e8bf438e40b855e0a45ee24bc
+      internalID: 7440629655457331564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 7
+      rect:
+        serializedVersion: 2
+        x: 3832
+        y: 407
+        width: 302
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fbdc6fb79f2694bb55550c802fa6b8
+      internalID: 4846923890070638573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 8
+      rect:
+        serializedVersion: 2
+        x: 4138
+        y: 374
+        width: 295
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57544879dca277458376fbbd3796323
+      internalID: -959735476530421499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot 9
+      rect:
+        serializedVersion: 2
+        x: 4440
+        y: 353
+        width: 303
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eecd7b0877a74b499c1e1bf443647ed
+      internalID: -1882447175442899839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
