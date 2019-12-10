@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using ThuisBijMuis.Timer;
+using ThuisBijMuis.Timers;
 
 namespace ThuisBijMuis.Games.PageSliding
 {
+    [RequireComponent(typeof(Canvas))]
     public class PageSlider : MonoBehaviour
     {
         [SerializeField]
-        private RectTransform canvas;
-        [SerializeField]
         private float duration;
 
+        private RectTransform canvas;
         private List<RectTransform> Panels = new List<RectTransform>();
         private float canvasWidth;
         private int frontPanelIndex = 0;
@@ -19,11 +19,13 @@ namespace ThuisBijMuis.Games.PageSliding
 
         public UnityBooleanEvent lerpEvent = new UnityBooleanEvent(); //The event that calls all the panels to lerp
 
-        private ThuisBijMuis.Timer.Timer timer;
+        private Timer timer;
 
         // Start is called before the first frame update
         void Start()
         {
+            canvas = this.GetComponent<RectTransform>();
+
             canvasWidth = canvas.rect.width; //Canvas.width is always the width of the screen. The Canvas is set to stretch
 
             for (int i = 0; i < canvas.childCount; i++)
@@ -36,16 +38,18 @@ namespace ThuisBijMuis.Games.PageSliding
             }
         }
 
-        private void Update()
-        {
-            if (!isCurrentlyLerping)
-            {
-                if (Input.GetMouseButtonDown(0)) GoLeft();
-                if (Input.GetMouseButtonDown(1)) GoRight();
-            }
+        private void Update() => timer?.Tick(Time.deltaTime);
 
-            timer?.Tick(Time.deltaTime);
+        public void NextPageButton()
+        {
+            if (!isCurrentlyLerping) GoRight();
         }
+
+        public void PreviousPageButton()
+        {
+            if (!isCurrentlyLerping) GoLeft();
+        }
+
 
         /// <summary>
         /// Is called when the lerp of the panels had ended

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ThuisBijMuis.Timer
+namespace ThuisBijMuis.Timers
 {
     public class Timer
     {
