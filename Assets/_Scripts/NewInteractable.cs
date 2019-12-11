@@ -1,13 +1,11 @@
 ﻿
-using System;
 using ThuisBijMuis.Games.Interactables.CustomBehaviours;
 using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace ThuisBijMuis.Games.Interactables {
     public static class NewInteractable {
-        private static float windowHeight = 400, windowWidth = 335;
+        private const float WindowHeight = 400, WindowWidth = 335;
 
         public static ref Rect Add(this ref Rect r, float x = 0f, float y = 0f, float w = 0f, float h = 0f) {
             r.x += x;
@@ -26,9 +24,9 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         [MenuItem("GameObject/2D Object/Interactable Item", false, 0)]
-        static void Init() {
+        private static void Init() {
             EditorWindow window = EditorWindow.GetWindow(typeof(InteractableItem), true, "New Interactable Item");
-            window.maxSize = new Vector2(windowWidth, windowHeight);
+            window.maxSize = new Vector2(WindowWidth, WindowHeight);
             window.minSize = window.maxSize;
         }
     }
@@ -43,7 +41,7 @@ namespace ThuisBijMuis.Games.Interactables {
         private bool animator, sound;
         private string itemName;
 
-        void OnGUI() {
+        private void OnGUI() {
             Debug.Log(EditorGUIUtility.singleLineHeight);
             Rect currRect = new Rect(LargeSideOffset, LargeSideOffset, Screen.width / 1.5f, EditorGUIUtility.singleLineHeight);
             EditorGUI.LabelField(currRect, "Choose a Sprite");
