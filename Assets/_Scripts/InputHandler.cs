@@ -7,7 +7,7 @@ namespace ThuisBijMuis.Games.Interactables {
             mainCamera = Camera.main;
         }
 
-        void Update() {
+        private void Update() {
             if (Input.GetMouseButtonDown(0)) {
                 GameObject mouseSelection = CheckForObjectUnderMouse();
                 ActivateMouseSelection(mouseSelection);

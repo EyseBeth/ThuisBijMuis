@@ -1,25 +1,19 @@
 ﻿
+using System;
+using ThuisBijMuis.Games.Interactables.CustomBehaviours;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace ThuisBijMuis.Games.Interactables {
     public static class NewInteractable {
-        private static float windowHeight = 500, windowWidth = 335;
+        private static float windowHeight = 400, windowWidth = 335;
 
         public static ref Rect Add(this ref Rect r, float x = 0f, float y = 0f, float w = 0f, float h = 0f) {
             r.x += x;
             r.y += y;
             r.width += w;
             r.height += h;
-            return ref r;
-        }
-
-        public static ref Rect AddMinMax(this ref Rect r, float xMin = 0f, float xMax = 0f, float yMin = 0f,
-            float yMax = 0f) {
-            r.xMin += xMin;
-            r.xMax += xMax;
-            r.yMin += yMin;
-            r.yMax += yMax;
             return ref r;
         }
 
@@ -31,7 +25,7 @@ namespace ThuisBijMuis.Games.Interactables {
             return ref r;
         }
 
-        [MenuItem("GameObject/2D Object/New Interactable Item", false, 0)]
+        [MenuItem("GameObject/2D Object/Interactable Item", false, 0)]
         static void Init() {
             EditorWindow window = EditorWindow.GetWindow(typeof(InteractableItem), true, "New Interactable Item");
             window.maxSize = new Vector2(windowWidth, windowHeight);
@@ -43,20 +37,48 @@ namespace ThuisBijMuis.Games.Interactables {
     public class InteractableItem : EditorWindow {
         private Transform parent;
         private Object sprite;
-        private const int TextureSize = 65, ButtonWidth = 100, ButtonHeight = 25, LongButtonWidth = 200;
+        private const int TextureSize = 65, ButtonWidth = 100, ButtonHeight = 25, LongButtonWidth = 200, DoubleLineHeight = 36, TextWidth = 175, LabelWidth = 145;
+        private const float SideOffset = 2.5f, LargeSideOffset = 7.5f;
         private bool click, drag, drop;
+        private bool animator, sound;
+        private string itemName;
 
         void OnGUI() {
-            Rect currRect = new Rect(7.5f, 7.5f, Screen.width / 1.5f, EditorGUIUtility.singleLineHeight);
+            Debug.Log(EditorGUIUtility.singleLineHeight);
+            Rect currRect = new Rect(LargeSideOffset, LargeSideOffset, Screen.width / 1.5f, EditorGUIUtility.singleLineHeight);
             EditorGUI.LabelField(currRect, "Choose a Sprite");
-            currRect.Set(Screen.width - TextureSize - 5, 2.5f, TextureSize, TextureSize);
+            currRect.Set(Screen.width - TextureSize - 5, SideOffset, TextureSize, TextureSize);
             sprite = EditorGUI.ObjectField(currRect, sprite, typeof(Sprite), true);
-            //currRect.Set(Screen.width / 1.5f + 7.5f, 2.5f, TextureSize, TextureSize);
             if (!sprite) return;
-            currRect.Set(2.5f, 5, h: ButtonHeight, w: ButtonWidth).Add(y: TextureSize);
-            click = EditorGUI.Foldout(currRect, click, "Clickable Item");
+            currRect.Set(SideOffset, EditorGUIUtility.singleLineHeight, w:TextWidth, EditorGUIUtility.singleLineHeight).Add(y: TextureSize);
+            EditorGUI.LabelField(currRect,"What is the item name?");
+            itemName = EditorGUI.TextField(currRect.Add(LabelWidth),itemName);
+            click = EditorGUI.Foldout(currRect.Add(-LabelWidth, y: DoubleLineHeight).Set(h: ButtonHeight, w: ButtonWidth), click, "Clickable Item");
             if (click) {
                 drop = drag = false;
+                Rect choiceRect = currRect;
+                animator = GUI.Toggle(choiceRect.Add(LargeSideOffset, DoubleLineHeight).Set(w:250), animator, "Does the item have an animation?");
+                sound = GUI.Toggle(choiceRect.Add(y: DoubleLineHeight).Set(w: 250), sound, "Does the item make a sound?");
+                if (GUI.Button(
+                    new Rect(Screen.width - LongButtonWidth - 5, Screen.height - ButtonHeight - 5, LongButtonWidth,
+                        ButtonHeight), "Create A New Clickable Item")) {
+                    GameObject newObject = new GameObject(itemName, typeof(SpriteRenderer), typeof(BoxCollider), typeof(ClickableItem));
+                    if (animator) {
+                        newObject.AddComponent<Animator>();
+                        newObject.AddComponent<ClickableAnimation>();
+                    }
+                    if (sound) {
+                        newObject.AddComponent<AudioSource>();
+                        newObject.AddComponent<ClickableAudio>();
+                    }
+                    newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
+                    newObject.transform.parent = parent;
+                    if(animator ^ sound) EditorUtility.DisplayDialog("Attention!",
+                        "Do not forget to add a" + (animator ? "n animation" : null) + (sound ? " sound" : null), "Ok");
+                    if (animator && sound) EditorUtility.DisplayDialog("Attention!",
+                        "Do not forget to add an animation and a sound", "Ok");
+                    Close();
+                }
             }
             currRect.Set((Screen.width / 2) - (ButtonWidth / 2));
             drag = EditorGUI.Foldout(currRect, drag, "Draggable Item");
@@ -65,30 +87,31 @@ namespace ThuisBijMuis.Games.Interactables {
                 if (GUI.Button(
                     new Rect(Screen.width - LongButtonWidth - 5, Screen.height - ButtonHeight - 5, LongButtonWidth,
                         ButtonHeight), "Create A New Draggable Item")) {
-                    GameObject newObject = new GameObject("New Draggable Item", typeof(SpriteRenderer), typeof(BoxCollider), typeof(Rigidbody), typeof(DraggableItem));
+                    GameObject newObject = new GameObject(itemName, typeof(SpriteRenderer),
+                        typeof(BoxCollider), typeof(Rigidbody), typeof(DraggableItem));
                     newObject.GetComponent<Rigidbody>().isKinematic = true;
                     newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
-                    newObject.transform.parent = parent;
+                    newObject.transform.parent = parent; 
+                    EditorUtility.DisplayDialog("Attention!", "Do not forget to add the draggable tags", "Ok");
+                    Close();
                 }
             }
             currRect.Set(Screen.width - ButtonWidth - 5f);
-            drop = EditorGUI.Foldout(currRect, drop, "Droppable Item");
+            drop = EditorGUI.Foldout(currRect, drop, "Drop Zone");
             if (drop) {
                 click = drag = false;
+                if (GUI.Button(
+                    new Rect(Screen.width - LongButtonWidth - 5, Screen.height - ButtonHeight - 5, LongButtonWidth,
+                        ButtonHeight), "Create A New Draggable Item")) {
+                    GameObject newObject = new GameObject(itemName, typeof(SpriteRenderer),
+                        typeof(BoxCollider), typeof(DropZone));
+                    newObject.GetComponent<Rigidbody>().isKinematic = true;
+                    newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
+                    newObject.transform.parent = parent;
+                    EditorUtility.DisplayDialog("Attention!", "Do not forget to add the accepted draggable tags", "Ok");
+                    Close();
+                }
             }
-            //    GUILayout.BeginHorizontal();
-            //    var temp = AssetPreview.GetAssetPreview(sprite);
-            //    EditorGUI.DrawPreviewTexture(currRect, temp);
-            //    GUILayout.EndHorizontal();
-            //
-            //    EditorGUILayout.Separator();
-            //} else {
-            //    GUILayout.BeginHorizontal();
-            //    EditorGUI.HelpBox(currRect, "Please select a texture.", MessageType.Error);
-            //    GUILayout.EndHorizontal();
-            //    EditorGUILayout.Separator();
-            //}
-
         }
 
         private void OnEnable() {
