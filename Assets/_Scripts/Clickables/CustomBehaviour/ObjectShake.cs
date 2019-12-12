@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
-    public class ClickedOn : MonoBehaviour, IClickable
+    public class ObjectShake : MonoBehaviour, IClickable
     {
         private Vector3 originPosition;
         private Quaternion originRotation;

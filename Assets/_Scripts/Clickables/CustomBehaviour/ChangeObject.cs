@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class ChangeObjects : MonoBehaviour, IClickable
+    public class ChangeObject : MonoBehaviour, IClickable
     {
         public GameObject[] firstSet;
         public GameObject[] secondSet;
