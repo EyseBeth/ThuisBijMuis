@@ -5,7 +5,7 @@ namespace ThuisBijMuis.Games.Interactables {
     [RequireComponent(typeof(Collider), typeof(Rigidbody))]
     public class DraggableItem : MonoBehaviour, IDraggable, IInteractable {
 
-        [SerializeField] private DroppableTags[] acceptableTags;
+        [SerializeField] private DroppableTags[] itemTags;
 
         const float DistanceToScreen = 10.0f;
 
@@ -25,7 +25,7 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         public void OnMouseUp() {
-            if (currentDropZone != null && currentDropZone.CheckTags(acceptableTags)) {
+            if (currentDropZone != null && currentDropZone.CheckTags(itemTags)) {
                 Drop(currentDropZone);
             } else Return();
             currentDropZone = null;
