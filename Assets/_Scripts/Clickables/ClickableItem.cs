@@ -2,71 +2,29 @@
 using ThuisBijMuis.Games.Interactables.Indicators;
 using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables {
+namespace ThuisBijMuis.Games.Interactables
+{
 #pragma warning disable 0649
-    public class ClickableItem : MonoBehaviour
+    public class ClickableItem : MonoBehaviour, IInteractable
     {
-        [SerializeField] private ClickableScriptableObject data;
-
-        private AudioSource audioSource;
-        private Animator animator;
-        private IClickableCustomBehaviour clickableCustomBehaviour;
+        private IClickable[] clickableCustomBehaviours;
         private ClickableIndicatorBase clickableIndicator;
-
-        private AudioClip voiceClip;
-        private AudioClip soundClip;
 
         private void Start()
         {
-            audioSource = GetComponent<AudioSource>();
-            animator = GetComponent<Animator>();
-            clickableCustomBehaviour = GetComponent<IClickableCustomBehaviour>();
+            clickableCustomBehaviours = GetComponentsInChildren<IClickable>();
             clickableIndicator = GetComponent<ClickableIndicatorBase>();
-
-            if (data.onSelectVoice != null)
-                voiceClip = data.onSelectVoice;
-
-            if (data.onSelectSound != null)
-                soundClip = data.onSelectSound;
-
-            if (audioSource == null && (voiceClip != null || soundClip != null))
-                audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        private void Execute()
-        {
-            if (audioSource != null && !audioSource.isPlaying)
-            {
-                if (voiceClip != null)
-                    audioSource.PlayOneShot(data.onSelectVoice);
+        // We just rewrite the list of references. This means it doesn't matter whether we add or remove.
+        // In both cases the list will be completely rewritten which gives us an up to date list.
+        public void UpdateCustomBehaviours() => clickableCustomBehaviours = GetComponentsInChildren<IClickable>();
 
-                if (soundClip != null)
-                    audioSource.PlayOneShot(data.onSelectSound);
+        public void ActivateInteractable() {
+            clickableIndicator?.Pause();
+            foreach (IClickable item in clickableCustomBehaviours) {
+                item.ExecuteCustomBehaviour();
             }
-
-            if (animator != null && !animator.GetBool("OnSelect"))
-                animator.SetBool("OnSelect", true);
-
-            if (clickableCustomBehaviour != null)
-                clickableCustomBehaviour.ExecuteCustomBehaviour();
-
-            clickableIndicator.Pause();
-        }
-
-        public void AnimationEnded()
-        {
-            animator.SetBool("OnSelect", false);
-
-            if (clickableCustomBehaviour != null)
-                clickableCustomBehaviour.EndCustomBehaviour();
-
-            clickableIndicator.UnPause();
-        }
-
-        // OnMouseDown also works with touch as long as Input.simulateMouseWithTouch is enabled.
-        private void OnMouseDown()
-        {
-            Execute();
         }
     }
 }

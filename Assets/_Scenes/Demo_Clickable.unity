@@ -211,6 +211,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2486511685172171809, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 11400000, guid: b17f7cbfbacdcc447835b975d22f4d1c,
+        type: 2}
     - target: {fileID: 3728465643664278282, guid: 8e3bb55e738976c409d0ad835b09fad0,
         type: 3}
       propertyPath: m_Name
@@ -333,6 +339,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2486511685172171809, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 11400000, guid: 579925ed74d25794c9c6cd0aa608736c,
+        type: 2}
     - target: {fileID: 3728465643664278282, guid: 8e3bb55e738976c409d0ad835b09fad0,
         type: 3}
       propertyPath: m_Name
@@ -392,6 +404,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428324882167979603, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428324882167979603, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428324882167979603, guid: 8e3bb55e738976c409d0ad835b09fad0,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e3bb55e738976c409d0ad835b09fad0, type: 3}

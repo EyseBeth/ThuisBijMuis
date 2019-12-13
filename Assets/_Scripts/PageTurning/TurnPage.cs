@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThuisBijMuis.Games.PageTurning {
-    public class TurnPage : MonoBehaviour
+namespace ThuisBijMuis.Games.Interactables.PageTurning
+{
+    public class TurnPage : MonoBehaviour, IInteractable
     {
         [SerializeField]
         private bool backPage = false;
@@ -31,26 +32,18 @@ namespace ThuisBijMuis.Games.PageTurning {
             try { pivot = transform.parent; }
             catch (System.Exception e) { throw e; }
 
-            if (backPage) rot.z = 0;
-            else rot.z = 180;
+            if (backPage) rot.y = 0;
+            else rot.y = -180;
 
             targetRotation.eulerAngles = rot;
 
             pivotNumber = bookController.GetPivotNumber(pivot);
 
-            transform.localPosition = new Vector3(transform.localPosition.x, -(pivotNumber + 1) / 1000, transform.localPosition.z);
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, (pivotNumber + 1) / 1000);
 
             for (int i = 0; i < transform.childCount; i++)
             {
-                transform.GetChild(i).localPosition = new Vector3(0, 0.0001f, 0);
-            }
-        }
-
-        private void OnMouseDown()
-        {
-            if (!bookController.isCurrentlyTurningPage)
-            {
-                isClicked = true;
+                transform.GetChild(i).localPosition = new Vector3(0, 0, -0.001f);
             }
         }
 
@@ -60,7 +53,7 @@ namespace ThuisBijMuis.Games.PageTurning {
             {
                 if (!firstUpdate)
                 {
-                    currentRotation = pivot.rotation;
+                    currentRotation = pivot.localRotation;
                     FirstUpdate();
                     firstUpdate = true;
                 }
@@ -68,6 +61,7 @@ namespace ThuisBijMuis.Games.PageTurning {
                 if (PageLerp(pageTurnTime)) //Lerp Done
                 {
                     bookController.SetTurningPage(false);
+                    bookController.PageTurnEnd();
                 }
             }
         }
@@ -78,10 +72,6 @@ namespace ThuisBijMuis.Games.PageTurning {
             bookController.SetTurningPage(true);
             if (backPage) bookController.ChangeCurrentPage(false);
             else bookController.ChangeCurrentPage(true);
-
-            Vector3 newPivotPosition = new Vector3(pivot.position.x, pivot.position.y * -1, pivot.position.z);
-            Debug.Log(newPivotPosition);
-            pivot.position = newPivotPosition;
         }
 
         private bool PageLerp(float duration)
@@ -89,7 +79,7 @@ namespace ThuisBijMuis.Games.PageTurning {
             if (time < 1)
             {
                 time += Time.deltaTime / duration;
-                pivot.rotation = Quaternion.Lerp(currentRotation, targetRotation, time);
+                pivot.localRotation = Quaternion.Lerp(currentRotation, targetRotation, time);
                 return false;
             }
             else
@@ -105,7 +95,18 @@ namespace ThuisBijMuis.Games.PageTurning {
         {
             for (int i = 0; i < transform.childCount; i++)
             {
-                transform.GetChild(i).gameObject.SetActive(state);
+                Transform child = transform.GetChild(i);
+                child.gameObject.SetActive(state);
+                if (state) child.transform.localPosition = new Vector3(child.transform.localPosition.x, child.transform.localPosition.y, -1f);
+                else child.localPosition = new Vector3(0, 0, -0.001f);
+            }
+        }
+
+        public void ActivateInteractable()
+        {
+            if (!bookController.isCurrentlyTurningPage)
+            {
+                isClicked = true;
             }
         }
     }

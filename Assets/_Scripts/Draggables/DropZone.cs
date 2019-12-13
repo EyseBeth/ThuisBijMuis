@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables {
 #pragma warning disable 0649
 
-    [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(Collider))]
     public class DropZone : MonoBehaviour, IDroppable {
 
         [SerializeField] DroppableTags[] acceptableTags;
 
         public void Start() {
+            //gameObject.layer = 2;
             Tags = new List<string>();
             foreach (DroppableTags tag in acceptableTags) {
                 Tags.Add(tag.ToString());
@@ -18,10 +20,8 @@ namespace ThuisBijMuis.Games.Interactables {
             CheckTags(new[] { DroppableTags.Jacket });
         }
 
-        public void CheckTags(DroppableTags[] tags) {
-            foreach (DroppableTags tag in tags) {
-                if (!Tags.Contains(tags.ToString())) print("Uh Oh!");
-            }
+        public bool CheckTags(DroppableTags[] tags) {
+            return !tags.All(tag => Tags.Contains(tags.ToString()));
         }
 
         public List<string> Tags { get; private set; }

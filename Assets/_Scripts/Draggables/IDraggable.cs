@@ -2,9 +2,10 @@
 
 namespace ThuisBijMuis.Games.Interactables {
     public interface IDraggable {
-        void OnMouseDown();
         void OnMouseDrag();
         void OnMouseUp();
-        
+        void Return();
+        void Drop(DropZone drop);
+
     }
 }

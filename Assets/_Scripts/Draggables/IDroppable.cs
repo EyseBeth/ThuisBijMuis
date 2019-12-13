@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables {
     public interface IDroppable {
-        void CheckTags(DroppableTags[] tags);
+        bool CheckTags(DroppableTags[] tags);
         List<string> Tags { get; }
 
     }
