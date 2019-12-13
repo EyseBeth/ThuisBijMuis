@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ThuisBijMuis.Timers;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Image))]
 public class ChangePicture : MonoBehaviour
@@ -13,7 +14,11 @@ public class ChangePicture : MonoBehaviour
     private RenderTexture renderTexture;
     [SerializeField]
     private Sprite newImage;
+    [SerializeField]
+    private Color colorToCheckFor;
     private Image image;
+    [SerializeField]
+    private UnityEvent OnCompletionEvent = new UnityEvent();
 
     void Start()
     {
@@ -28,13 +33,15 @@ public class ChangePicture : MonoBehaviour
 
     private void CheckTexture()
     {
-        if (TextureFillChecker.CheckTextureFillPercentage(80, Color.black, renderTexture)) PictureChange();
+        if (TextureFillChecker.CheckTextureFillPercentage(80, colorToCheckFor, renderTexture)) PictureChange();
     }
 
     private void PictureChange()
     {
+        Debug.Log("BOEM!");
         image.sprite = newImage;
         checkTextureTimer = null;
         ColourPlacing.ClearSprites();
+        OnCompletionEvent.Invoke();
     }
 }

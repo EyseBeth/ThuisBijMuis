@@ -8,11 +8,11 @@ public class ColourPlacing : MonoBehaviour
     [SerializeField]
     private GameObject colourSprite;
     private Camera cam;
-    public static bool ableToPlace = true;
+    public static bool ableToPlace = false;
     private static List<GameObject> spriteList = new List<GameObject>();
 
     // Start is called before the first frame update
-    void Start() => cam = GetComponent<Camera>();
+    void Start() => cam = Camera.main;
 
     // Update is called once per frame
     void Update()
@@ -27,7 +27,7 @@ public class ColourPlacing : MonoBehaviour
 
     private void PlaceColour(Vector3 position)
     {
-        spriteList.Add(Instantiate(colourSprite, position, Quaternion.identity));
+        spriteList.Add(Instantiate(colourSprite, position, Quaternion.identity, transform));
     }
 
     /// <summary>

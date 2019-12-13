@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TextureFillChecker : MonoBehaviour
+public class TextureFillChecker
 {
     /// <summary>
     /// Checks texture for fill amount
