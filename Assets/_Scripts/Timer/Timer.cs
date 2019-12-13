@@ -5,10 +5,14 @@ namespace ThuisBijMuis.Timers
     public class Timer
     {
         public float RemainingSeconds { get; private set; }
+        private float originalSeconds;
+        private bool repeating;
 
-        public Timer(float duration)
+        public Timer(float duration, bool repeating = false)
         {
             RemainingSeconds = duration;
+            originalSeconds = RemainingSeconds;
+            this.repeating = repeating;
         }
 
         /// <summary>
@@ -33,7 +37,8 @@ namespace ThuisBijMuis.Timers
         {
             if (RemainingSeconds > 0) return;
 
-            RemainingSeconds = 0;
+            if (!repeating) RemainingSeconds = 0;
+            else RemainingSeconds = originalSeconds;
 
             OnTimerEnd?.Invoke();
         }

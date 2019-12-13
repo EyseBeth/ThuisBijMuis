@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 567922469}
   - component: {fileID: 567922468}
   - component: {fileID: 567922467}
+  - component: {fileID: 567922470}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -297,6 +298,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567922470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567922466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf450deaa53c13428c4dae035eea70d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourSprite: {fileID: 0}
 --- !u!1 &1677167438
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,9 +398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f6d175421571a45a6fb8e68d4a04f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colouringSprite: {fileID: 923362758865235757, guid: 0cdcf04eacdb324469dee32a3981a88e,
-    type: 3}
-  renderTexture: {fileID: 8400000, guid: c5c90d6fcac628947b1f79df55c620c4, type: 2}
 --- !u!1 &1796309854
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +574,7 @@ GameObject:
   - component: {fileID: 2101415311}
   - component: {fileID: 2101415313}
   - component: {fileID: 2101415312}
+  - component: {fileID: 2101415314}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -607,8 +619,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f4c428df39d3cf14e8af2983dccacede, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -625,3 +637,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101415310}
   m_CullTransparentMesh: 0
+--- !u!114 &2101415314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101415310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cdac0109c3d9c4895c1a1f815f234c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderTexture: {fileID: 8400000, guid: c5c90d6fcac628947b1f79df55c620c4, type: 2}
+  newImage: {fileID: 21300000, guid: 46676ba411bc099429d74e7f444e9354, type: 3}
