@@ -12,7 +12,7 @@ namespace ThuisBijMuis.Games.Interactables
 
         private void Start()
         {
-            clickableCustomBehaviours = GetComponentsInChildren<IClickable>();
+            clickableCustomBehaviours = GetComponentsInChildren<IClickable>(false);
             clickableIndicator = GetComponent<ClickableIndicatorBase>();
         }
 

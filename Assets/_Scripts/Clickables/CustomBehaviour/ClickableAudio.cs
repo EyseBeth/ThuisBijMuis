@@ -14,7 +14,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         public void ExecuteCustomBehaviour()
         {
-            if (!audioSource.isPlaying)
+            if (!audioSource.isPlaying && clip)
                 audioSource.PlayOneShot(clip.audioClip);
         }
     }
