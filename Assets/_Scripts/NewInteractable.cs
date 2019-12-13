@@ -70,6 +70,7 @@ namespace ThuisBijMuis.Games.Interactables {
                         newObject.AddComponent<ClickableAudio>();
                     }
                     newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
+                    newObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
                     newObject.transform.parent = parent;
                     if(animator ^ sound) EditorUtility.DisplayDialog("Attention!",
                         "Do not forget to add a" + (animator ? "n animation" : null) + (sound ? " sound" : null), "Ok");
@@ -89,6 +90,7 @@ namespace ThuisBijMuis.Games.Interactables {
                         typeof(BoxCollider), typeof(Rigidbody), typeof(DraggableItem));
                     newObject.GetComponent<Rigidbody>().isKinematic = true;
                     newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
+                    newObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
                     newObject.transform.parent = parent; 
                     EditorUtility.DisplayDialog("Attention!", "Do not forget to add the draggable tags", "Ok");
                     Close();
@@ -98,17 +100,17 @@ namespace ThuisBijMuis.Games.Interactables {
             drop = EditorGUI.Foldout(currRect, drop, "Drop Zone");
             if (drop) {
                 click = drag = false;
-                if (GUI.Button(
+                if (!GUI.Button(
                     new Rect(Screen.width - LongButtonWidth - 5, Screen.height - ButtonHeight - 5, LongButtonWidth,
-                        ButtonHeight), "Create A New Draggable Item")) {
-                    GameObject newObject = new GameObject(itemName, typeof(SpriteRenderer),
-                        typeof(BoxCollider), typeof(DropZone));
-                    newObject.GetComponent<Rigidbody>().isKinematic = true;
-                    newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
-                    newObject.transform.parent = parent;
-                    EditorUtility.DisplayDialog("Attention!", "Do not forget to add the accepted draggable tags", "Ok");
-                    Close();
-                }
+                        ButtonHeight), "Create A New Draggable Item")) return;
+                GameObject newObject = new GameObject(itemName, typeof(SpriteRenderer),
+                    typeof(BoxCollider), typeof(DropZone));
+                newObject.GetComponent<Rigidbody>().isKinematic = true;
+                newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
+                newObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                newObject.transform.parent = parent;
+                EditorUtility.DisplayDialog("Attention!", "Do not forget to add the accepted draggable tags", "Ok");
+                Close();
             }
         }
 

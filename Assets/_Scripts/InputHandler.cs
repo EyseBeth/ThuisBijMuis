@@ -8,10 +8,9 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         private void Update() {
-            if (Input.GetMouseButtonDown(0)) {
-                GameObject mouseSelection = CheckForObjectUnderMouse();
-                ActivateMouseSelection(mouseSelection);
-            }
+            if (!Input.GetMouseButtonDown(0)) return;
+            GameObject mouseSelection = CheckForObjectUnderMouse();
+            ActivateMouseSelection(mouseSelection);
         }
 
         private GameObject CheckForObjectUnderMouse() {
