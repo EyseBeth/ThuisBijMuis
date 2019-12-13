@@ -16,6 +16,8 @@ public class ChangePicture : MonoBehaviour
     private Sprite newImage;
     [SerializeField]
     private Color colorToCheckFor;
+    [SerializeField]
+    private float percentageToFill;
     private Image image;
     [SerializeField]
     private UnityEvent OnCompletionEvent = new UnityEvent();
@@ -33,12 +35,11 @@ public class ChangePicture : MonoBehaviour
 
     private void CheckTexture()
     {
-        if (TextureFillChecker.CheckTextureFillPercentage(80, colorToCheckFor, renderTexture)) PictureChange();
+        if (TextureFillChecker.CheckTextureFillPercentage(percentageToFill, colorToCheckFor, renderTexture)) PictureChange();
     }
 
     private void PictureChange()
     {
-        Debug.Log("BOEM!");
         image.sprite = newImage;
         checkTextureTimer = null;
         ColourPlacing.ClearSprites();

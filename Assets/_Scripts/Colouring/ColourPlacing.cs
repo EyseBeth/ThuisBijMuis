@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ThuisBijMuis.Games.PageSliding;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
-public class ColourPlacing : MonoBehaviour
+public class ColourPlacing : MonoBehaviour, IPageActivatable
 {
     [SerializeField]
     private GameObject colourSprite;
+    [SerializeField]
+    private int pageNumber;
     private Camera cam;
     public static bool ableToPlace = false;
     private static List<GameObject> spriteList = new List<GameObject>();
@@ -20,14 +23,15 @@ public class ColourPlacing : MonoBehaviour
         if (Input.GetMouseButton(0) && ableToPlace)
         {
             Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0;
+            mousePos.z = 24.95f;
             PlaceColour(mousePos);
         }
     }
 
     private void PlaceColour(Vector3 position)
     {
-        spriteList.Add(Instantiate(colourSprite, position, Quaternion.identity, transform));
+        GameObject temp = Instantiate(colourSprite, position, Quaternion.identity, transform);
+        spriteList.Add(temp);
     }
 
     /// <summary>
@@ -44,5 +48,9 @@ public class ColourPlacing : MonoBehaviour
         ableToPlace = false;
     }
 
-
+    public void CheckPage(int pageNumber)
+    {
+        if (this.pageNumber == pageNumber) ableToPlace = true;
+        else ableToPlace = false;
+    }
 }
