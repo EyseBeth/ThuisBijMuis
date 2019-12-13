@@ -30,6 +30,9 @@ public class ColourPlacing : MonoBehaviour
         spriteList.Add(Instantiate(colourSprite, position, Quaternion.identity));
     }
 
+    /// <summary>
+    /// Clears all the sprites on the screen
+    /// </summary>
     public static void ClearSprites()
     {
         for (int i = 0; i < spriteList.Count; i++)

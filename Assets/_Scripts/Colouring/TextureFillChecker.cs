@@ -6,6 +6,13 @@ using UnityEngine.Events;
 
 public class TextureFillChecker : MonoBehaviour
 {
+    /// <summary>
+    /// Checks texture for fill amount
+    /// </summary>
+    /// <param name="percentage">Percentage of the texture that needs the be filled</param>
+    /// <param name="fillColor">Color the texture needs to be filled with</param>
+    /// <param name="textureToCheck"></param>
+    /// <returns>True if the percentage of the texture has been filled</returns>
     public static bool CheckTextureFillPercentage(float percentage, Color fillColor, Texture2D textureToCheck)
     {
         Mathf.Clamp(percentage, 10, 100);
@@ -38,6 +45,11 @@ public class TextureFillChecker : MonoBehaviour
         return CheckTextureFillPercentage(percentage, fillColor, texture2D);
     }
 
+    /// <summary>
+    /// Creates a texture2D from a RenderTexture
+    /// </summary>
+    /// <param name="rTex"></param>
+    /// <returns></returns>
     private static Texture2D ToTexture2D(RenderTexture rTex)
     {
         Texture2D tex = new Texture2D(rTex.width, rTex.height, TextureFormat.RGB24, false);
