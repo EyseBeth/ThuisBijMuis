@@ -18,6 +18,10 @@ namespace ThuisBijMuis.Games.PageSliding
         private bool isCurrentlyLerping = false;
 
         public UnityBooleanEvent lerpEvent = new UnityBooleanEvent(); //The event that calls all the panels to lerp
+        /// <summary>
+        /// Event that is called when the pages have turned. Gives the frontPageIndex
+        /// </summary>
+        public UntiyIntEvent pageEndEvent = new UntiyIntEvent(); 
 
         private Timer timer;
 
@@ -58,6 +62,7 @@ namespace ThuisBijMuis.Games.PageSliding
         {
             isCurrentlyLerping = false;
             DisablePanels(frontPanelIndex);
+            pageEndEvent.Invoke(frontPanelIndex);
         }
 
         /// <summary>
@@ -121,4 +126,5 @@ namespace ThuisBijMuis.Games.PageSliding
     }
 
     public class UnityBooleanEvent : UnityEvent<bool> { }
+    public class UntiyIntEvent : UnityEvent<int> { }
 }
