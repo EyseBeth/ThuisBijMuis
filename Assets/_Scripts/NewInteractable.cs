@@ -69,8 +69,9 @@ namespace ThuisBijMuis.Games.Interactables {
                         newObject.AddComponent<AudioSource>();
                         newObject.AddComponent<ClickableAudio>();
                     }
+                    newObject.GetComponent<Collider>().isTrigger = true;
                     newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
-                    newObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                    newObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
                     newObject.transform.parent = parent;
                     if(animator ^ sound) EditorUtility.DisplayDialog("Attention!",
                         "Do not forget to add a" + (animator ? "n animation" : null) + (sound ? " sound" : null), "Ok");
@@ -89,8 +90,9 @@ namespace ThuisBijMuis.Games.Interactables {
                     GameObject newObject = new GameObject(itemName, typeof(SpriteRenderer),
                         typeof(BoxCollider), typeof(Rigidbody), typeof(DraggableItem));
                     newObject.GetComponent<Rigidbody>().isKinematic = true;
+                    newObject.GetComponent<Collider>().isTrigger = true;
                     newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
-                    newObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                    newObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
                     newObject.transform.parent = parent; 
                     EditorUtility.DisplayDialog("Attention!", "Do not forget to add the draggable tags", "Ok");
                     Close();
@@ -106,6 +108,7 @@ namespace ThuisBijMuis.Games.Interactables {
                 GameObject newObject = new GameObject(itemName, typeof(SpriteRenderer),
                     typeof(BoxCollider), typeof(DropZone));
                 newObject.GetComponent<Rigidbody>().isKinematic = true;
+                newObject.GetComponent<Collider>().isTrigger = true;
                 newObject.GetComponent<SpriteRenderer>().sprite = sprite as Sprite;
                 newObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 newObject.transform.parent = parent;
