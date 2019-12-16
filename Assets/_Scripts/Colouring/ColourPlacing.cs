@@ -11,15 +11,16 @@ public class ColourPlacing : MonoBehaviour, IPageActivatable
     private GameObject colourSprite;
     [SerializeField]
     private int pageNumber;
-    [SerializeField]
+
+    public static bool ableToPlace = false;
+    private bool firstPlace;
+
+    private static List<GameObject> spriteList = new List<GameObject>();
+
     private Camera colourCamera;
     private Camera cam;
-    public static bool ableToPlace = false;
-    private static List<GameObject> spriteList = new List<GameObject>();
-    private bool firstPlace;
-    [SerializeField]
+
     private static UnityEvent OnStartEvent = new UnityEvent();
-    [SerializeField]
     private static UnityEvent OnCompletionEvent = new UnityEvent();
 
     // Start is called before the first frame update
@@ -40,13 +41,16 @@ public class ColourPlacing : MonoBehaviour, IPageActivatable
         }
     }
 
+    /// <summary>
+    /// Checks wether or not a position is in view for a camera
+    /// </summary>
+    /// <param name="cam">The Camera to check for</param>
+    /// <param name="pos">The position that needs to be checked</param>
+    /// <returns>True if the position is in view</returns>
     private bool IsPositionInCameraView(Camera cam, Vector3 pos)
     {
         Vector3 viewPos = cam.WorldToViewportPoint(pos);
-        if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0)
-        {
-            return true;
-        }
+        if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0) return true;
         return false;
     }
 
