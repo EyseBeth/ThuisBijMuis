@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using ThuisBijMuis.Timers;
+using System.Linq;
 
 namespace ThuisBijMuis.Games.PageSliding
 {
@@ -19,6 +20,7 @@ namespace ThuisBijMuis.Games.PageSliding
 
         public UnityBooleanEvent lerpEvent = new UnityBooleanEvent(); //The event that calls all the panels to lerp
 
+        private List<IPageActivatable> pageObjects = new List<IPageActivatable>();
         private Timer timer;
 
         // Start is called before the first frame update
@@ -36,6 +38,8 @@ namespace ThuisBijMuis.Games.PageSliding
 
                 lerpEvent.AddListener(Panels[i].GetComponent<Panel>().SetLerpDirection);
             }
+
+            pageObjects = InterfaceFinder.Find<IPageActivatable>();
         }
 
         private void Update() => timer?.Tick(Time.deltaTime);
@@ -58,6 +62,15 @@ namespace ThuisBijMuis.Games.PageSliding
         {
             isCurrentlyLerping = false;
             DisablePanels(frontPanelIndex);
+            ActivatePageObjects();
+        }
+
+        private void ActivatePageObjects()
+        {
+            foreach (IPageActivatable Ipage in pageObjects)
+            {
+                Ipage.CheckPage(frontPanelIndex);
+            }
         }
 
         /// <summary>
@@ -121,4 +134,5 @@ namespace ThuisBijMuis.Games.PageSliding
     }
 
     public class UnityBooleanEvent : UnityEvent<bool> { }
+    public class UntiyIntEvent : UnityEvent<int> { }
 }
