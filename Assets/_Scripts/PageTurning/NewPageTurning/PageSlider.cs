@@ -109,7 +109,7 @@ namespace ThuisBijMuis.Games.PageSliding {
         {
             for (int i = 0; i < Panels.Count; i++)
             {
-                if (i != indexOfPanel) Panels[i].GetChild(0).gameObject.SetActive(false);
+                if (i != indexOfPanel) Panels[i].GetChild(2).gameObject.SetActive(false);
             }
         }
 
@@ -121,7 +121,7 @@ namespace ThuisBijMuis.Games.PageSliding {
         {
             for (int i = 0; i < Panels.Count; i++)
             {
-                if (i == indexOfPanel) Panels[i].GetChild(0).gameObject.SetActive(true);
+                if (i == indexOfPanel) Panels[i].GetChild(2).gameObject.SetActive(true);
             }
         }
 
