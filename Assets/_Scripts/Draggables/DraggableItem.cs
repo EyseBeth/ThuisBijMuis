@@ -9,21 +9,18 @@ namespace ThuisBijMuis.Games.Interactables {
         [SerializeField] private DroppableTags[] itemTags;
         [SerializeField] private RectTransform canvasRectTransform;
 
-        public static float DistanceToScreen { get; } = 10.0f;
-
-        private Vector2 originalMousePosition;
-        private Vector3 offset, originalPosition;
-
+        private bool selected = false;
+        private Vector3 originalPosition;
         private DropZone currentDropZone;
 
-        void Start() {
+        private void Start() {
             originalPosition = transform.localPosition;
         }
 
         public void OnMouseDrag() {
-            print(currentDropZone);
+            if (!selected) return;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, Input.mousePosition, Camera.main, out Vector2 pos);
-            transform.position = canvasRectTransform.TransformPoint(pos) + offset;
+            transform.position = canvasRectTransform.TransformPoint(pos);
         }
 
         public void OnMouseUp() {
@@ -31,6 +28,7 @@ namespace ThuisBijMuis.Games.Interactables {
                 Drop(currentDropZone);
             } else Return();
             currentDropZone = null;
+            selected = false;
         }
 
         public void Return() {
@@ -49,9 +47,8 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         public void ActivateInteractable() {
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, Input.mousePosition, Camera.main, out Vector2 pos)) {
-                offset = (Vector2)transform.position - (Vector2)canvasRectTransform.TransformPoint(pos);
-            }
+            print(true);
+            selected = true;
         }
     }
 }
