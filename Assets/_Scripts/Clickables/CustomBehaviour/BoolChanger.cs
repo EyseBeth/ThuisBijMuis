@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
-{
+namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
+#pragma warning disable 0649
     public class BoolChanger : MonoBehaviour, IClickable
     {
         public string boolName;

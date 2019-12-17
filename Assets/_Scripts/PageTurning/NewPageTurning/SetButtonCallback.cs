@@ -2,8 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ThuisBijMuis.Games.PageSliding
-{
+namespace ThuisBijMuis.Games.PageSliding {
+#pragma warning disable 0649
     public class SetButtonCallback : MonoBehaviour
     {
         [SerializeField]

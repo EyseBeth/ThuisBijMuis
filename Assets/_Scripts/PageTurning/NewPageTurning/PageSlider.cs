@@ -4,8 +4,8 @@ using UnityEngine.Events;
 using ThuisBijMuis.Timers;
 using System.Linq;
 
-namespace ThuisBijMuis.Games.PageSliding
-{
+namespace ThuisBijMuis.Games.PageSliding {
+#pragma warning disable 0649
     [RequireComponent(typeof(Canvas))]
     public class PageSlider : MonoBehaviour
     {

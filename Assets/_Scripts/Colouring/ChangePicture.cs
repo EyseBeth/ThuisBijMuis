@@ -6,8 +6,8 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Image))]
-public class ChangePicture : MonoBehaviour
-{
+public class ChangePicture : MonoBehaviour {
+#pragma warning disable 0649
     // Start is called before the first frame update
     Timer checkTextureTimer = null;
     [SerializeField]

@@ -38,7 +38,8 @@ namespace ThuisBijMuis.Games.Interactables {
         public void Drop(DropZone drop) {
             transform.localPosition = new Vector3(drop.transform.localPosition.x, drop.transform.localPosition.y, drop.transform.localPosition.z - 0.000001f);
         }
-        private void OnTriggerStay(Collider collision) {
+        // ReSharper disable UnusedMember.Local
+        private void OnTriggerEnter(Collider collision) {
             currentDropZone = collision.transform.GetComponent<DropZone>();
 
         }

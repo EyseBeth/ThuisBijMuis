@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables
-{
+namespace ThuisBijMuis.Games.Interactables {
+#pragma warning disable 0649
     public static class ExtensionMethods
     {
         public static ref Rect Add(this ref Rect r, float x = 0f, float y = 0f, float w = 0f, float h = 0f)

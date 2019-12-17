@@ -4,8 +4,8 @@ using ThuisBijMuis.Games.PageSliding;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
-public class ColourPlacing : MonoBehaviour, IPageActivatable
-{
+public class ColourPlacing : MonoBehaviour, IPageActivatable {
+#pragma warning disable 0649
     [SerializeField]
     private GameObject colourSprite;
     [SerializeField]
