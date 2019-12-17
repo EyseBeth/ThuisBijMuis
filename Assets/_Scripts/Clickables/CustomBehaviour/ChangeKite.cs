@@ -2,66 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
-{
+namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
+#pragma warning disable 0649, 0108
     [RequireComponent(typeof(SpriteRenderer))]
-    public class ChangeKite : ChangeObject, IClickable
-    {
+    public class ChangeKite : ChangeObject, IClickable {
         VariableKeeper variableKeeper;
 
-        void Start()
-        {
+        void Start() {
             //ensures the first set is active and the second is inactive on startup.
             ChangeThem(true, false);
             variableKeeper = GameObject.Find("BookParent").GetComponent<VariableKeeper>();
         }
 
-        public void ExecuteCustomBehaviour()
-        {
-            if (objectsChanged == false && variableKeeper.clrSelected == true)
-            {
+        public override void ExecuteCustomBehaviour() {
+            if (!objectsChanged && variableKeeper.clrSelected) {
                 objectsChanged = true;
 
                 KiteSwitcher();
             }
-            
+
         }
 
-        private void ChangeThem(bool forFirst, bool forSec)
-        {
-            foreach (GameObject obj in firstSet)
-            {
-                obj.GetComponent<SpriteRenderer>().enabled = forFirst;
+        private void KiteSwitcher() {
+            if (variableKeeper.clrSelected) {
+                foreach (GameObject obj in firstSet) obj.GetComponent<SpriteRenderer>().enabled = false;
             }
 
-            foreach (GameObject obj in secondSet)
-            {
-                obj.GetComponent<SpriteRenderer>().enabled = forSec;
-            }
-        }
-
-        private void KiteSwitcher()
-        {
-            if (variableKeeper.clrSelected == true)
-            {
-                foreach (GameObject obj in firstSet)
-                {
-                    obj.GetComponent<SpriteRenderer>().enabled = false;
-                }
-            }
-            
-            if (variableKeeper.blue == true)
-            {
-                secondSet[0].GetComponent<SpriteRenderer>().enabled = true;
-            }
-            if (variableKeeper.red == true)
-            {
-                secondSet[1].GetComponent<SpriteRenderer>().enabled = true;
-            }
-            if (variableKeeper.yellow == true)
-            {
-                secondSet[2].GetComponent<SpriteRenderer>().enabled = true;
-            }
+            if (variableKeeper.blue) secondSet[0].GetComponent<SpriteRenderer>().enabled = true;
+            else if (variableKeeper.red) secondSet[1].GetComponent<SpriteRenderer>().enabled = true;
+            else if (variableKeeper.yellow) secondSet[2].GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }

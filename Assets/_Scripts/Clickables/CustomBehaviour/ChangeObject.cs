@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
-{
+namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
+#pragma warning disable 0649
     [RequireComponent(typeof(SpriteRenderer))]
     public class ChangeObject : MonoBehaviour, IClickable
     {
@@ -18,7 +18,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
             ChangeThem(true, false);
         }
 
-        public void ExecuteCustomBehaviour()
+        public virtual void ExecuteCustomBehaviour()
         {
             //Checks if the objects have already been switched, if it hasnt, it does so.
             if (objectsChanged == false)
@@ -29,7 +29,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
             }
         }
 
-        private void ChangeThem(bool forFirst, bool forSec)
+        protected void ChangeThem(bool forFirst, bool forSec)
         {
             foreach (GameObject obj in firstSet)
             {

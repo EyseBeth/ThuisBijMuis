@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
-{
+namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
+#pragma warning disable 0649
     [RequireComponent(typeof(Animator))]
     public class ClickableAnimation : MonoBehaviour, IClickable
     {

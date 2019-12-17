@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace ThuisBijMuis.Games.Interactables {
 #pragma warning disable 0649
@@ -6,22 +7,20 @@ namespace ThuisBijMuis.Games.Interactables {
     public class DraggableItem : MonoBehaviour, IDraggable, IInteractable {
 
         [SerializeField] private DroppableTags[] itemTags;
+        [SerializeField] private RectTransform canvasRectTransform;
 
-        const float DistanceToScreen = 10.0f;
-
-        private Vector2 originalMousePosition;
-        private Vector3 offset, originalPosition;
-
+        private bool selected = false;
+        private Vector3 originalPosition;
         private DropZone currentDropZone;
 
-        void Start() {
-            transform.position = originalPosition = new Vector3(transform.position.x, transform.position.y,
-                transform.position.z - Mathf.Epsilon);
+        private void Start() {
+            originalPosition = transform.localPosition;
         }
 
         public void OnMouseDrag() {
-            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, DistanceToScreen);
-            transform.position = Camera.main.ScreenToWorldPoint(newPosition) + offset;
+            if (!selected) return;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, Input.mousePosition, Camera.main, out Vector2 pos);
+            transform.position = canvasRectTransform.TransformPoint(pos);
         }
 
         public void OnMouseUp() {
@@ -29,16 +28,18 @@ namespace ThuisBijMuis.Games.Interactables {
                 Drop(currentDropZone);
             } else Return();
             currentDropZone = null;
+            selected = false;
         }
 
         public void Return() {
-            gameObject.transform.position = originalPosition;
+            transform.localPosition = originalPosition;
         }
 
         public void Drop(DropZone drop) {
-            gameObject.transform.position = new Vector3(drop.transform.position.x, drop.transform.position.y, drop.transform.position.z - Mathf.Epsilon);
+            transform.localPosition = new Vector3(drop.transform.localPosition.x, drop.transform.localPosition.y, drop.transform.localPosition.z - 0.000001f);
         }
-        private void OnTriggerStay(Collider collision) {
+        // ReSharper disable UnusedMember.Local
+        private void OnTriggerEnter(Collider collision) {
             currentDropZone = collision.transform.GetComponent<DropZone>();
 
         }
@@ -47,8 +48,8 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         public void ActivateInteractable() {
-            offset = gameObject.transform.position -
-                     Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, DistanceToScreen));
+            print(true);
+            selected = true;
         }
     }
 }

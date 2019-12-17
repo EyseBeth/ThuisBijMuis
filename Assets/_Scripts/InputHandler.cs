@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 namespace ThuisBijMuis.Games.Interactables {
+#pragma warning disable 0649
     public class InputHandler : MonoBehaviour {
 
         private Camera mainCamera;
@@ -8,18 +9,28 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         private void Update() {
-            if (Input.GetMouseButtonDown(0)) {
-                GameObject mouseSelection = CheckForObjectUnderMouse();
-                ActivateMouseSelection(mouseSelection);
-            }
+//#if UNITY_IOS || UNITY_ANDROID
+//            if (Input.touchCount <= 0) return;
+//            GameObject touchSelection = CheckedForClickedObject();
+//            ActivateSelection(touchSelection);
+//#else
+            if (!Input.GetMouseButtonDown(0)) return;
+            GameObject mouseSelection = CheckedForClickedObject();
+            ActivateSelection(mouseSelection);
+//#endif
+
         }
 
-        private GameObject CheckForObjectUnderMouse() {
+        private GameObject CheckedForClickedObject() {
+//#if UNITY_IOS || UNITY_ANDROID
+//            Ray ray = mainCamera.ScreenPointToRay(Input.GetTouch(0).position);
+//#else
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+//#endif
             return Physics.Raycast(ray, out RaycastHit hit) ? hit.collider.gameObject : null;
         }
 
-        private void ActivateMouseSelection(GameObject selection) {
+        private void ActivateSelection(GameObject selection) {
             selection?.GetComponent<IInteractable>()?.ActivateInteractable();
         }
     }
