@@ -6,7 +6,7 @@ namespace ThuisBijMuis.Games.Interactables
 {
     public class VanishDraggable : DraggableItem
     {
-        public override void OnMouseUp()
+        public override void Release()
         {
             if (currentDropZone != null && currentDropZone.CheckTags(itemTags))
             {

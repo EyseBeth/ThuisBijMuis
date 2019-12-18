@@ -7,7 +7,7 @@ namespace ThuisBijMuis.Games.Interactables {
     [RequireComponent(typeof(Collider), typeof(Rigidbody))]
     public class DraggableItem : MonoBehaviour, IDraggable, IReleasable {
 
-        [SerializeField] private List<DroppableTags> itemTags;
+        [SerializeField] protected List<DroppableTags> itemTags;
         [SerializeField] private RectTransform canvasRectTransform;
 
         protected bool selected = false;
@@ -30,7 +30,7 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         //When the object is released it checks whether it is on a drop zone and if it is, whether the tags are accepted
-        public void Release() {
+        public virtual void Release() {
             if (currentDropZone != null && currentDropZone.CheckTags(itemTags)) {
                 Drop(currentDropZone);
             } else Return();
