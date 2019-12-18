@@ -7,6 +7,12 @@ namespace ThuisBijMuis.Games.Interactables {
         Jacket,
         Pants,
         Apple,
-        Bread
+        Bread,
+        BlueSock,
+        RedSock,
+        YellowSock,
+        GreenSock,
+        DarkRedSock,
+        DarkBlueSock
     }
 }
