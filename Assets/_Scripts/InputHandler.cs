@@ -4,34 +4,35 @@ namespace ThuisBijMuis.Games.Interactables {
     public class InputHandler : MonoBehaviour {
 
         private Camera mainCamera;
+        private GameObject selection;
         void Start() {
+            Application.targetFrameRate = 300; //Sets the target frame-rate higher for smoother game-play
+            Input.multiTouchEnabled = false; //Prevents multitouch due to page transition errors
             mainCamera = Camera.main;
         }
 
         private void Update() {
-//#if UNITY_IOS || UNITY_ANDROID
-//            if (Input.touchCount <= 0) return;
-//            GameObject touchSelection = CheckedForClickedObject();
-//            ActivateSelection(touchSelection);
-//#else
-            if (!Input.GetMouseButtonDown(0)) return;
-            GameObject mouseSelection = CheckedForClickedObject();
-            ActivateSelection(mouseSelection);
-//#endif
-
+            if (Input.GetMouseButtonDown(0)) {
+                selection = CheckedForClickedObject();
+                ActivateSelection();
+            } else if (Input.GetMouseButtonUp(0)) ReleaseSelection();
         }
 
+        //Returns the gameobject hit by the raycast
         private GameObject CheckedForClickedObject() {
-//#if UNITY_IOS || UNITY_ANDROID
-//            Ray ray = mainCamera.ScreenPointToRay(Input.GetTouch(0).position);
-//#else
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-//#endif
             return Physics.Raycast(ray, out RaycastHit hit) ? hit.collider.gameObject : null;
         }
 
-        private void ActivateSelection(GameObject selection) {
+        //If the selected gameobject is an IInteractable it will activate it
+        private void ActivateSelection() {
             selection?.GetComponent<IInteractable>()?.ActivateInteractable();
+        }
+
+        //If the released gameobject is an IReleasable it will activate its release function and set the selection to null
+        private void ReleaseSelection() {
+            selection?.GetComponent<IReleasable>()?.ReleaseInteractable();
+            selection = null;
         }
     }
 }
