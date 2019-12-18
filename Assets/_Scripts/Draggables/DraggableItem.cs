@@ -6,12 +6,12 @@ namespace ThuisBijMuis.Games.Interactables {
     [RequireComponent(typeof(Collider), typeof(Rigidbody))]
     public class DraggableItem : MonoBehaviour, IDraggable, IInteractable {
 
-        [SerializeField] private DroppableTags[] itemTags;
+        [SerializeField] protected DroppableTags[] itemTags;
         [SerializeField] private RectTransform canvasRectTransform;
 
-        private bool selected = false;
+        protected bool selected = false;
         private Vector3 originalPosition;
-        private DropZone currentDropZone;
+        protected DropZone currentDropZone;
 
         private void Start() {
             originalPosition = transform.localPosition;
@@ -23,7 +23,7 @@ namespace ThuisBijMuis.Games.Interactables {
             transform.position = canvasRectTransform.TransformPoint(pos);
         }
 
-        public void OnMouseUp() {
+        public virtual void OnMouseUp() {
             if (currentDropZone != null && currentDropZone.CheckTags(itemTags)) {
                 Drop(currentDropZone);
             } else Return();
@@ -37,6 +37,7 @@ namespace ThuisBijMuis.Games.Interactables {
 
         public void Drop(DropZone drop) {
             transform.localPosition = new Vector3(drop.transform.localPosition.x, drop.transform.localPosition.y, drop.transform.localPosition.z - 0.000001f);
+            currentDropZone.IsDropped = true;
         }
         // ReSharper disable UnusedMember.Local
         private void OnTriggerEnter(Collider collision) {
@@ -44,6 +45,7 @@ namespace ThuisBijMuis.Games.Interactables {
 
         }
         private void OnTriggerExit(Collider collision) {
+            if (currentDropZone) currentDropZone.IsDropped = false;
             currentDropZone = null;
         }
 

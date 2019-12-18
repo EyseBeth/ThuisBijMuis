@@ -5,6 +5,8 @@ using UnityEngine;
 namespace ThuisBijMuis.Games.Interactables {
     public enum DroppableTags {
         Jacket,
-        Pants
+        Pants,
+        Apple,
+        Bread
     }
 }
