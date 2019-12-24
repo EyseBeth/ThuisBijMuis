@@ -6,24 +6,18 @@ using UnityEngine;
 namespace ThuisBijMuis.Games.Interactables {
 #pragma warning disable 0649
 
-    [RequireComponent(typeof(Collider))]
+    [RequireComponent(typeof(BoxCollider))]
     public class DropZone : MonoBehaviour, IDroppable {
 
-        [SerializeField] DroppableTags[] acceptableTags;
+        //The Tags property List is used to check the tags of the draggable item.
+        //The tags private list is used instead of an auto property due to serializing in the Unity Editor
+        public List<DroppableTags> Tags { get => tags; private set => tags = value; }
+        [SerializeField] private List<DroppableTags> tags;
 
-        public void Start() {
-            //gameObject.layer = 2;
-            Tags = new List<string>();
-            foreach (DroppableTags tag in acceptableTags) {
-                Tags.Add(tag.ToString());
-            }
-            CheckTags(new[] { DroppableTags.Jacket });
+        //CheckTags checks a list of tags given by the draggable against the list of tags given at creation for an (un)acceptable drop position
+        public bool CheckTags(List<DroppableTags> tags) {
+            return tags.All(t => Tags.Contains(t));
         }
 
-        public bool CheckTags(DroppableTags[] tags) {
-            return !tags.All(tag => Tags.Contains(tags.ToString()));
-        }
-
-        public List<string> Tags { get; private set; }
     }
 }
