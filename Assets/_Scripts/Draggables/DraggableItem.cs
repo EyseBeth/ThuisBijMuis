@@ -7,12 +7,16 @@ namespace ThuisBijMuis.Games.Interactables {
     [RequireComponent(typeof(Collider), typeof(Rigidbody))]
     public class DraggableItem : MonoBehaviour, IDraggable, IReleasable {
 
+<<<<<<< HEAD
         [SerializeField] private List<DroppableTags> itemTags;
+=======
+        [SerializeField] protected DroppableTags[] itemTags;
+>>>>>>> 6d99c0c49bd1205e25aa68a358c803b940c16b17
         [SerializeField] private RectTransform canvasRectTransform;
 
-        private bool selected = false;
+        protected bool selected = false;
         private Vector3 originalPosition;
-        private DropZone currentDropZone;
+        protected DropZone currentDropZone;
 
         //Sets the originalPosition at start to be used in the snap back when the object is released where it is not allowed
         private void Start() {
@@ -29,8 +33,12 @@ namespace ThuisBijMuis.Games.Interactables {
             transform.position = canvasRectTransform.TransformPoint(pos);
         }
 
+<<<<<<< HEAD
         //When the object is released it checks whether it is on a drop zone and if it is, whether the tags are accepted
         public void Release() {
+=======
+        public virtual void OnMouseUp() {
+>>>>>>> 6d99c0c49bd1205e25aa68a358c803b940c16b17
             if (currentDropZone != null && currentDropZone.CheckTags(itemTags)) {
                 Drop(currentDropZone);
             } else Return();
@@ -46,6 +54,7 @@ namespace ThuisBijMuis.Games.Interactables {
         //If the drop position is acceptable the items position is snapped to the dropzone's position
         public void Drop(DropZone drop) {
             transform.localPosition = new Vector3(drop.transform.localPosition.x, drop.transform.localPosition.y, drop.transform.localPosition.z - 0.000001f);
+            currentDropZone.IsDropped = true;
         }
         // ReSharper disable UnusedMember.Local
         private void OnTriggerEnter(Collider collision) {
@@ -53,6 +62,7 @@ namespace ThuisBijMuis.Games.Interactables {
 
         }
         private void OnTriggerExit(Collider collision) {
+            if (currentDropZone) currentDropZone.IsDropped = false;
             currentDropZone = null;
         }
 
