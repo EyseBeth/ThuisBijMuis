@@ -17,6 +17,7 @@ namespace ThuisBijMuis.Games.Interactables {
         DarkRedSock,
         DarkBlueSock,
         Bee,
-        FilledBee
+        FilledBee,
+        Pencil
     }
 }
