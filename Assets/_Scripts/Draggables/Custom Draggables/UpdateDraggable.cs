@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Updates the tag on a draggable after i'ts been dropped in it's initial zone, makes it dissappear on second drop.
+/// </summary>
 namespace ThuisBijMuis.Games.Interactables
 {
     public class UpdateDraggable : DraggableItem

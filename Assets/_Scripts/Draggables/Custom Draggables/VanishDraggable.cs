@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Makes draggable dissappear after it's beenn dropped on its respective drop zone.
+/// </summary>
 namespace ThuisBijMuis.Games.Interactables
 {
     public class VanishDraggable : DraggableItem

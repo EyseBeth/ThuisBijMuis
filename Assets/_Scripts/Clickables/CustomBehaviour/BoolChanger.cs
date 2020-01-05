@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Used on page 3, checks which of the colours has been selected.
+/// </summary>
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
 #pragma warning disable 0649
     public class BoolChanger : MonoBehaviour, IClickable
