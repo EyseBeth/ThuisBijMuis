@@ -40,6 +40,8 @@ namespace ThuisBijMuis.Games.PageSliding {
             }
 
             pageObjects = InterfaceFinder.Find<IPageActivatable>();
+
+            ActivatePageObjects();
         }
 
         private void Update() => timer?.Tick(Time.deltaTime);

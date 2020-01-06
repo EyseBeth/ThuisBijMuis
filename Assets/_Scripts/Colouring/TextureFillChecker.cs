@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TextureFillChecker
+public static class TextureFillChecker
 {
     /// <summary>
     /// Checks texture for fill amount
@@ -15,7 +15,7 @@ public class TextureFillChecker
     /// <returns>True if the percentage of the texture has been filled</returns>
     public static bool CheckTextureFillPercentage(float percentage, Color fillColor, Texture2D textureToCheck)
     {
-        Mathf.Clamp(percentage, 10, 100);
+        percentage = Mathf.Clamp(percentage, 10, 100);
         percentage /= 100;
 
         Color[] pixels =  new Color[textureToCheck.width * textureToCheck.height];

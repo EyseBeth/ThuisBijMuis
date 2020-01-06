@@ -1,48 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using ThuisBijMuis.Timers;
 using UnityEngine;
-using ThuisBijMuis.Timers;
-using UnityEngine.UI;
-using UnityEngine.Events;
 
-[RequireComponent(typeof(Image))]
-public class ChangePicture : MonoBehaviour {
-#pragma warning disable 0649
-    // Start is called before the first frame update
-    Timer checkTextureTimer = null;
-    [SerializeField]
-    private RenderTexture renderTexture;
-    [SerializeField]
-    private Sprite newImage;
-    [SerializeField]
-    private Color colorToCheckFor;
-    [SerializeField]
-    private float percentageToFill;
-    private Image image;
-    [SerializeField]
-    private UnityEvent OnCompletionEvent = new UnityEvent();
+namespace ThuisBijMuis.Games.Colouring
+{
+    [RequireComponent(typeof(SpriteRenderer))]
+public class ChangePicture : MonoBehaviour
+{
+        // Start is called before the first frame update
+        Timer checkTextureTimer = null;
+        public RenderTexture RenderTexture { get; set; }
+        public Sprite NewImage { get; set; }
+        public Color ColorToCheckFor { get; set; }
+        public float PercentageToFill { get; set; }
+        private SpriteRenderer SpriteComponent;
+        public ColourPlacing ColourPlacing { get; set; }
 
-    void Start()
-    {
-        checkTextureTimer = new Timer(0.2f, true);
-        checkTextureTimer.OnTimerEnd += CheckTexture;
+        // Update is called once per frame
+        void Update() => checkTextureTimer?.Tick(Time.deltaTime);
 
-        image = GetComponent<Image>();
-    }
+        private void CheckTexture()
+        {
+            if (TextureFillChecker.CheckTextureFillPercentage(PercentageToFill, ColorToCheckFor, RenderTexture)) PictureChange();
+        }
 
-    // Update is called once per frame
-    void Update() => checkTextureTimer?.Tick(Time.deltaTime);
+        private void PictureChange()
+        {
+            SpriteComponent.sprite = NewImage;
+            checkTextureTimer = null;
+            ColourPlacing.ClearSprites();
+        }
 
-    private void CheckTexture()
-    {
-        if (TextureFillChecker.CheckTextureFillPercentage(percentageToFill, colorToCheckFor, renderTexture)) PictureChange();
-    }
+        public void ActivateTimer()
+        {
+            checkTextureTimer = new Timer(0.2f, true);
+            checkTextureTimer.OnTimerEnd += CheckTexture;
 
-    private void PictureChange()
-    {
-        image.sprite = newImage;
-        checkTextureTimer = null;
-        ColourPlacing.ClearSprites();
-        OnCompletionEvent.Invoke();
+            SpriteComponent = GetComponent<SpriteRenderer>();
+        }
+
+        public void DisableTimer() => checkTextureTimer = null;
     }
 }
