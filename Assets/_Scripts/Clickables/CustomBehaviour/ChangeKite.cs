@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Specifically for filling the kites with their colour.
+/// </summary>
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
 #pragma warning disable 0649, 0108
     [RequireComponent(typeof(SpriteRenderer))]

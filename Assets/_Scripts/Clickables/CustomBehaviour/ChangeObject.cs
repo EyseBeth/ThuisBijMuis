@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Changes the sprite on a clickable after it has been clicked.
+/// </summary>
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
 #pragma warning disable 0649
     [RequireComponent(typeof(SpriteRenderer))]
