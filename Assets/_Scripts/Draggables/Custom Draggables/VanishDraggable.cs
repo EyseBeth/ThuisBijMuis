@@ -11,7 +11,7 @@ namespace ThuisBijMuis.Games.Interactables
     {
         public override void Release()
         {
-            if (currentDropZone != null && currentDropZone.CheckTags(itemTags))
+            if (currentDropZone != null && currentDropZone.CheckTags(ItemTags))
             {
                 Drop(currentDropZone);
                 GetComponent<SpriteRenderer>().enabled = false;

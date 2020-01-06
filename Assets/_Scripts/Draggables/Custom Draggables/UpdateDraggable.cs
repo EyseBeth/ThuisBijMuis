@@ -13,13 +13,13 @@ namespace ThuisBijMuis.Games.Interactables
         private bool filledUp = false;
         public override void Release()
         {
-            if (currentDropZone != null && currentDropZone.CheckTags(itemTags))
+            if (currentDropZone != null && currentDropZone.CheckTags(ItemTags))
             {
                 if (filledUp != true)
                 {
                     filledUp = true;
                     Drop(currentDropZone);
-                    itemTags = updateTags;
+                    ItemTags = updateTags;
                 }
                 else
                 {
