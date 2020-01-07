@@ -15,7 +15,10 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
         public void ExecuteCustomBehaviour()
         {
             if (!audioSource.isPlaying && clip)
-                audioSource.PlayOneShot(clip.audioClip);
+                audioSource.PlayOneShot(clip.audioClip[clip.counter++]);
+
+            if (clip.counter >= clip.audioClip.Length)
+                clip.counter = clip.audioClip.Length - 1;
         }
     }
 }

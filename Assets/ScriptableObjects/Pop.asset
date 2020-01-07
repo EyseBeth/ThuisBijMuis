@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f8e406d2c173945927a3de7706fae8, type: 3}
   m_Name: Pop
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 0587d7c8f7beab647a3473a8b9adc57b, type: 3}
+  audioClip:
+  - {fileID: 8300000, guid: 3ec986ce0a084fa41bf5d42371e6149a, type: 3}
+  - {fileID: 8300000, guid: 06e02a9cc68ce9b45bc84d2d1c46add4, type: 3}
+  - {fileID: 8300000, guid: 0587d7c8f7beab647a3473a8b9adc57b, type: 3}
