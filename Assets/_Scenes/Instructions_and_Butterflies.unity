@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 2062133417}
   updateTags: 0b000000
 --- !u!54 &158321655
@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 07000000
   canvasRectTransform: {fileID: 435649083}
 --- !u!54 &183859267
 Rigidbody:
@@ -5872,7 +5872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 09000000
   canvasRectTransform: {fileID: 435649083}
 --- !u!54 &584492505
 Rigidbody:
@@ -6529,7 +6529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 2062133417}
   updateTags: 0b000000
 --- !u!54 &597615806
@@ -7437,7 +7437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 2062133417}
   updateTags: 0b000000
 --- !u!54 &681404740
@@ -8247,7 +8247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 08000000
   canvasRectTransform: {fileID: 435649083}
 --- !u!54 &748856404
 Rigidbody:
@@ -12487,7 +12487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 2062133417}
   updateTags: 0b000000
 --- !u!54 &1167547949
@@ -13994,7 +13994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 2062133417}
   updateTags: 0b000000
 --- !u!54 &1351612420
@@ -14514,7 +14514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 04000000
   canvasRectTransform: {fileID: 435649083}
 --- !u!54 &1399349980
 Rigidbody:
@@ -16776,7 +16776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 06000000
   canvasRectTransform: {fileID: 435649083}
 --- !u!54 &1592875367
 Rigidbody:
@@ -18009,7 +18009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 05000000
   canvasRectTransform: {fileID: 435649083}
 --- !u!54 &1776696991
 Rigidbody:
@@ -18380,7 +18380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 2062133417}
   updateTags: 0b000000
 --- !u!54 &1807482334
@@ -19796,7 +19796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 2062133417}
   updateTags: 0b000000
 --- !u!54 &2061060280
