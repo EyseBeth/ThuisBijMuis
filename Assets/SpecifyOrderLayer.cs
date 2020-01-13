@@ -7,7 +7,7 @@ namespace ThuisBijMuis.Games {
         void Awake() {
             SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
             foreach (SpriteRenderer s in sprites) {
-                s.sortingOrder = s.GetComponent<DraggableItem>() ? 2 : 1;
+                s.sortingOrder = s.GetComponent<DraggableItem>() ? 5 : s.sortingOrder > 1 ? s.sortingOrder : 1;
             }
         }
     }
