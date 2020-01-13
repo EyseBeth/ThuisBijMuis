@@ -1,0 +1,1171 @@
+fileFormatVersion: 2
+guid: e71814472afc2584e85fa8daf4cdee97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5510514710485562957
+    second: TBM_Frontpage_0
+  - first:
+      213: 6075818920163589665
+    second: TBM_Frontpage_1
+  - first:
+      213: -2731098768937609224
+    second: TBM_Frontpage_2
+  - first:
+      213: -3802347699985838114
+    second: TBM_Frontpage_3
+  - first:
+      213: 6529950123944336941
+    second: TBM_Frontpage_4
+  - first:
+      213: 7796362681245620492
+    second: TBM_Frontpage_5
+  - first:
+      213: 8471895096214026998
+    second: TBM_Frontpage_6
+  - first:
+      213: -3666275211039869908
+    second: TBM_Frontpage_7
+  - first:
+      213: -4643125104923349191
+    second: TBM_Frontpage_8
+  - first:
+      213: -7861489653103148450
+    second: TBM_Frontpage_9
+  - first:
+      213: -458871034708784625
+    second: TBM_Frontpage_10
+  - first:
+      213: 7806508663132594221
+    second: TBM_Frontpage_11
+  - first:
+      213: -3624098270462129216
+    second: TBM_Frontpage_12
+  - first:
+      213: -6687879606586461492
+    second: TBM_Frontpage_13
+  - first:
+      213: 8392385847436820755
+    second: TBM_Frontpage_14
+  - first:
+      213: -4918876526135644393
+    second: TBM_Frontpage_15
+  - first:
+      213: 8372378698724069480
+    second: TBM_Frontpage_16
+  - first:
+      213: 2307582712221763660
+    second: TBM_Frontpage_17
+  - first:
+      213: 103124450612132796
+    second: TBM_Frontpage_18
+  - first:
+      213: -3307249009022669378
+    second: TBM_Frontpage_19
+  - first:
+      213: 2902516650233103504
+    second: TBM_Frontpage_20
+  - first:
+      213: 7215233009318008608
+    second: TBM_Frontpage_21
+  - first:
+      213: 4208012447616199334
+    second: TBM_Frontpage_22
+  - first:
+      213: -8214210969752050555
+    second: TBM_Frontpage_23
+  - first:
+      213: 7545866716139837137
+    second: TBM_Frontpage_24
+  - first:
+      213: 6169298232164813102
+    second: TBM_Frontpage_25
+  - first:
+      213: -2866233109555437813
+    second: TBM_Frontpage_26
+  - first:
+      213: 8902239451216557921
+    second: TBM_Frontpage_27
+  - first:
+      213: -5255332970865917050
+    second: TBM_Frontpage_30
+  - first:
+      213: -3180579743655894897
+    second: TBM_Frontpage_31
+  - first:
+      213: 2121706251893399060
+    second: TBM_Frontpage_32
+  - first:
+      213: 6478851323884578775
+    second: TBM_Frontpage_33
+  - first:
+      213: -1721571195219182037
+    second: TBM_Frontpage_36
+  - first:
+      213: 1278031849561594225
+    second: TBM_Frontpage_37
+  - first:
+      213: 556414616247312105
+    second: TBM_Frontpage_38
+  - first:
+      213: 5079154646263652284
+    second: TBM_Frontpage_39
+  - first:
+      213: -1424289024585874372
+    second: TBM_Frontpage_40
+  - first:
+      213: 7218535640407311967
+    second: TBM_Frontpage_41
+  - first:
+      213: 2537195275784396983
+    second: TBM_Frontpage_42
+  - first:
+      213: -1189935384051868447
+    second: TBM_Frontpage_43
+  - first:
+      213: -5804944846450959298
+    second: TBM_Frontpage_44
+  - first:
+      213: -4767000991855950604
+    second: TBM_Frontpage_45
+  - first:
+      213: -5216339666047317848
+    second: TBM_Frontpage_46
+  - first:
+      213: 4171136094461869784
+    second: TBM_Frontpage_28
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TBM_Frontpage_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1277
+        width: 55
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13801533da786ca4f9485e14d8aa72f1
+      internalID: -5510514710485562957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_1
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1369
+        width: 112
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c9df4fcca8d314f9f37655ca8c90cd
+      internalID: 6075818920163589665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_2
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 688
+        width: 886
+        height: 779
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab600b8fedcf58a468d5e009aff754c2
+      internalID: -2731098768937609224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 948
+        width: 110
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bd73f2c55e46d4785360bf3e42682c
+      internalID: -3802347699985838114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_4
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 117
+        width: 577
+        height: 1173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84eedba4f0d10e743986ec470356019c
+      internalID: 6529950123944336941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_5
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1201
+        width: 109
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a01c75ed1d86949a615f3b03ef0cc4
+      internalID: 7796362681245620492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_6
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1074
+        width: 141
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6525f2dff6da26b47832b6b0e02e1cf5
+      internalID: 8471895096214026998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_7
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 868
+        width: 100
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4163665074cf80a48a40cb238006a02c
+      internalID: -3666275211039869908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_8
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1208
+        width: 96
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fc3f364c40d65458d95c53c0b88bd2
+      internalID: -4643125104923349191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_9
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1142
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5a29da50300f445a0f352d8a5f6043
+      internalID: -7861489653103148450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_10
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 935
+        width: 113
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cec820867b30cc4f8fe3025510f525c
+      internalID: -458871034708784625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_11
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1268
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a91e8d4d7ca4c4da371bfa6febf677
+      internalID: 7806508663132594221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_12
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1064
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9f63ac2d14130478d177ca7be7517b
+      internalID: -3624098270462129216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_13
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1000
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3879e39ed6f795d4189d77ee70cb2002
+      internalID: -6687879606586461492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_14
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 928
+        width: 114
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa64873520c22d4ea0ed5ae5a262b39
+      internalID: 8392385847436820755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_15
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 988
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc08f19e284f9243af8d8ca8ecb215a
+      internalID: -4918876526135644393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_16
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 934
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50455bee14a30ea4cb1273ad3e52e101
+      internalID: 8372378698724069480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_17
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 880
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3979d2d6efaba44a8685d2f16dc32c
+      internalID: 2307582712221763660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_18
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 877
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54047ee7201af7342b46dc8da055308c
+      internalID: 103124450612132796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_19
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 758
+        width: 109
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3dd1afc43237240ade1a35c1706009
+      internalID: -3307249009022669378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_20
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 840
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b466108e91a66e14daa825f176aefc74
+      internalID: 2902516650233103504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_21
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 719
+        width: 5
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860723ed782a1034eb0c5b3b05e6b929
+      internalID: 7215233009318008608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_22
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 630
+        width: 97
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0831fb2f26790e4db2cc53473e88369
+      internalID: 4208012447616199334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_23
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 671
+        width: 99
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437e82ead2435074b8d22f6616bebf00
+      internalID: -8214210969752050555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_24
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 688
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4627a0c0c1beb48ae7d0a94301cf05
+      internalID: 7545866716139837137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_25
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 658
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb13640ccb3dffd4d86ccd01cb7005e8
+      internalID: 6169298232164813102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_26
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 638
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e3fc145dee5ed4995e6abb3e34f172
+      internalID: -2866233109555437813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_27
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 544
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05f781490b0b0644865ac717c5baf49
+      internalID: 8902239451216557921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_30
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 440
+        width: 119
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91c207833bccfb41886820018091948
+      internalID: -5255332970865917050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_31
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 537
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dd276c3c60eaf48b0dd178bfebeb6f
+      internalID: -3180579743655894897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_32
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 456
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2dbcdc6f65cd04e8a028ded14568e6
+      internalID: 2121706251893399060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_33
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 451
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3536176ac27c2014cb54d1050e8a27c4
+      internalID: 6478851323884578775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_36
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 26
+        width: 326
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e3970f8ffb89442b244080d381ea57
+      internalID: -1721571195219182037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_37
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 249
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a465b6c1279bf499d0690fb0498c07
+      internalID: 1278031849561594225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_38
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 249
+        width: 93
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5411fd0474f328c4fb016267a28834d5
+      internalID: 556414616247312105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_39
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 239
+        width: 71
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a194d3837abfc64a985c942104af12e
+      internalID: 5079154646263652284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_40
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 307
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb843de6e167ac43a2299aa3ed9300a
+      internalID: -1424289024585874372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_41
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 275
+        width: 104
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711ca027d925ce948b4dfe9e28c3f768
+      internalID: 7218535640407311967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_42
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 221
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fa721e7b73eb64eb083c97d361f0e5
+      internalID: 2537195275784396983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_43
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 221
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9683cf839c3654bb5fcfa4433ba869
+      internalID: -1189935384051868447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_44
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 140
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d057ea81172b846a41bcbb7bbd881b
+      internalID: -5804944846450959298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_45
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 124
+        width: 28
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767e100a08ffc404988d5af09da26961
+      internalID: -4767000991855950604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_46
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 46
+        width: 186
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fde19f8b3d37214e8c7c249bb959cc9
+      internalID: -5216339666047317848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TBM_Frontpage_28
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 108
+        width: 532
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b54b3d9ff3407344a6c40a00ffb221d
+      internalID: 4171136094461869784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5091fbc5eec0b0941bd47314e9fd6762
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
