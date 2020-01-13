@@ -13,10 +13,11 @@ namespace ThuisBijMuis.Games.Interactables {
         protected bool selected = false;
         private Vector3 originalPosition;
         protected DropZone currentDropZone;
+        private MovingBehaviour behaviour;
 
         //Sets the originalPosition at start to be used in the snap back when the object is released where it is not allowed
         private void Start() {
-            originalPosition = transform.localPosition;
+            behaviour = GetComponent<MovingBehaviour>();
         }
 
         public void FixedUpdate() {
@@ -33,6 +34,10 @@ namespace ThuisBijMuis.Games.Interactables {
         public virtual void Release() {
             if (currentDropZone != null && currentDropZone.CheckTags(ItemTags)) {
                 Drop(currentDropZone);
+                foreach (IDropBehaviour b in GetComponents(typeof (IDropBehaviour)))
+                {
+                    b.IsActive = true;
+                }
             } else Return();
             currentDropZone = null;
             selected = false;

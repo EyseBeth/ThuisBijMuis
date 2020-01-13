@@ -11,8 +11,7 @@ namespace ThuisBijMuis.Games.Interactables
     {
         [SerializeField] protected List<DroppableTags> updateTags;
         private bool filledUp = false;
-        public override void Release()
-        {
+        public override void Release() {
             if (currentDropZone != null && currentDropZone.CheckTags(ItemTags))
             {
                 if (filledUp != true)
