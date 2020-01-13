@@ -1386,6 +1386,7 @@ GameObject:
   - component: {fileID: 75402667}
   - component: {fileID: 75402666}
   - component: {fileID: 75402665}
+  - component: {fileID: 75402668}
   - component: {fileID: 75402664}
   m_Layer: 0
   m_Name: Bee 3
@@ -1422,12 +1423,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 75402662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
+  m_Script: {fileID: 11500000, guid: e17d88ea6ec283444914a2df7723996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
-  canvasRectTransform: {fileID: 889993031}
-  updateTags: 0b000000
+  target: {fileID: 375805408}
 --- !u!54 &75402665
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1508,6 +1507,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &75402668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75402662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemTags: 0a000000
+  canvasRectTransform: {fileID: 889993031}
 --- !u!1 &76243441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,6 +3503,7 @@ GameObject:
   - component: {fileID: 175843697}
   - component: {fileID: 175843696}
   - component: {fileID: 175843695}
+  - component: {fileID: 175843698}
   - component: {fileID: 175843694}
   m_Layer: 0
   m_Name: Bee 6
@@ -3526,12 +3540,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 175843692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
+  m_Script: {fileID: 11500000, guid: e17d88ea6ec283444914a2df7723996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
-  canvasRectTransform: {fileID: 889993031}
-  updateTags: 0b000000
+  target: {fileID: 375805408}
 --- !u!54 &175843695
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3612,6 +3624,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &175843698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175843692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemTags: 0a000000
+  canvasRectTransform: {fileID: 889993031}
 --- !u!1 &181178460
 GameObject:
   m_ObjectHideFlags: 0
@@ -8745,6 +8771,7 @@ GameObject:
   - component: {fileID: 561325395}
   - component: {fileID: 561325394}
   - component: {fileID: 561325393}
+  - component: {fileID: 561325396}
   - component: {fileID: 561325392}
   m_Layer: 0
   m_Name: Bee 4
@@ -8781,12 +8808,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 561325390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
+  m_Script: {fileID: 11500000, guid: e17d88ea6ec283444914a2df7723996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
-  canvasRectTransform: {fileID: 889993031}
-  updateTags: 0b000000
+  target: {fileID: 375805408}
 --- !u!54 &561325393
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8867,6 +8892,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &561325396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561325390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemTags: 0a000000
+  canvasRectTransform: {fileID: 889993031}
 --- !u!224 &570822544 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3107750373822366046, guid: d5176509409ecba4999efa58e026f21c,
@@ -12973,6 +13012,7 @@ GameObject:
   - component: {fileID: 916184389}
   - component: {fileID: 916184388}
   - component: {fileID: 916184387}
+  - component: {fileID: 916184390}
   - component: {fileID: 916184386}
   m_Layer: 0
   m_Name: Bee 7
@@ -13009,12 +13049,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 916184384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
+  m_Script: {fileID: 11500000, guid: e17d88ea6ec283444914a2df7723996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
-  canvasRectTransform: {fileID: 889993031}
-  updateTags: 0b000000
+  target: {fileID: 375805408}
 --- !u!54 &916184387
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13095,6 +13133,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &916184390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916184384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemTags: 0a000000
+  canvasRectTransform: {fileID: 889993031}
 --- !u!1001 &925229525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14082,6 +14134,7 @@ GameObject:
   - component: {fileID: 994821491}
   - component: {fileID: 994821490}
   - component: {fileID: 994821489}
+  - component: {fileID: 994821492}
   - component: {fileID: 994821488}
   m_Layer: 0
   m_Name: Bee 5
@@ -14118,12 +14171,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 994821486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
+  m_Script: {fileID: 11500000, guid: e17d88ea6ec283444914a2df7723996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
-  canvasRectTransform: {fileID: 889993031}
-  updateTags: 0b000000
+  target: {fileID: 375805408}
 --- !u!54 &994821489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14204,6 +14255,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &994821492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994821486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemTags: 0a000000
+  canvasRectTransform: {fileID: 889993031}
 --- !u!1 &996921175
 GameObject:
   m_ObjectHideFlags: 0
@@ -18511,6 +18576,7 @@ GameObject:
   - component: {fileID: 1282310811}
   - component: {fileID: 1282310810}
   - component: {fileID: 1282310809}
+  - component: {fileID: 1282310812}
   - component: {fileID: 1282310808}
   m_Layer: 0
   m_Name: Bee 2
@@ -18547,12 +18613,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1282310806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
+  m_Script: {fileID: 11500000, guid: e17d88ea6ec283444914a2df7723996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
-  canvasRectTransform: {fileID: 889993031}
-  updateTags: 0b000000
+  target: {fileID: 375805408}
 --- !u!54 &1282310809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18633,6 +18697,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1282310812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282310806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemTags: 0a000000
+  canvasRectTransform: {fileID: 889993031}
 --- !u!1 &1284080600
 GameObject:
   m_ObjectHideFlags: 0
@@ -20495,6 +20573,7 @@ GameObject:
   - component: {fileID: 1390620590}
   - component: {fileID: 1390620589}
   - component: {fileID: 1390620592}
+  - component: {fileID: 1390620588}
   m_Layer: 0
   m_Name: Bee
   m_TagString: Untagged
@@ -20521,6 +20600,19 @@ RectTransform:
   m_AnchoredPosition: {x: 1.6599998, y: -1.1799998}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1390620588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390620586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17d88ea6ec283444914a2df7723996d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 375805408}
 --- !u!54 &1390620589
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20610,12 +20702,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1390620586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd8c508f671b564eb3241c4992e5f00, type: 3}
+  m_Script: {fileID: 11500000, guid: d79151dc59ad7db45a89eaed37cf5f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTags: 
+  ItemTags: 0a000000
   canvasRectTransform: {fileID: 889993031}
-  updateTags: 0b000000
 --- !u!1 &1411249379
 GameObject:
   m_ObjectHideFlags: 0
