@@ -4,9 +4,11 @@ using ThuisBijMuis.Games.PageSliding;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ThuisBijMuis.Games.Colouring {
+namespace ThuisBijMuis.Games.Colouring
+{
 #pragma warning disable 0649
-    public class ColourPlacing : MonoBehaviour {
+    public class ColourPlacing : MonoBehaviour
+    {
         private bool firstPlace;
         private bool ableToPlace = false;
         public GameObject ColourSprite { private get; set; }
@@ -21,8 +23,10 @@ namespace ThuisBijMuis.Games.Colouring {
         void Start() => cam = Camera.main;
 
         // Update is called once per frame
-        void Update() {
-            if (Input.GetMouseButton(0) && ableToPlace) {
+        void Update()
+        {
+            if (Input.GetMouseButton(0) && ableToPlace)
+            {
                 Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = -.1f;
                 if (IsPositionInCameraView(ColourCamera, mousePos)) PlaceColour(mousePos);
@@ -35,14 +39,18 @@ namespace ThuisBijMuis.Games.Colouring {
         /// <param name="cam">The Camera to check for</param>
         /// <param name="pos">The position that needs to be checked</param>
         /// <returns>True if the position is in view</returns>
-        private bool IsPositionInCameraView(Camera cam, Vector3 pos) {
+        private bool IsPositionInCameraView(Camera cam, Vector3 pos)
+        {
             Vector3 viewPos = cam.WorldToViewportPoint(pos);
             return viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0;
         }
 
-        private void PlaceColour(Vector3 position) {
+        private void PlaceColour(Vector3 position)
+        {
+            Debug.Log("Placed Colour");
             spriteList.Add(Instantiate(ColourSprite, position, Quaternion.identity, transform));
-            if (firstPlace) {
+            if (firstPlace)
+            {
                 firstPlace = false;
                 OnStartEvent?.Invoke();
             }
@@ -51,7 +59,8 @@ namespace ThuisBijMuis.Games.Colouring {
         /// <summary>
         /// Clears all the sprites/colour on the screen
         /// </summary>
-        public void ClearSprites() {
+        public void ClearSprites()
+        {
             foreach (GameObject s in spriteList) Destroy(s);
 
             spriteList.Clear();

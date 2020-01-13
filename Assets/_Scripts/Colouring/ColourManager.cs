@@ -6,18 +6,22 @@ using ThuisBijMuis.Games.PageSliding;
 
 namespace ThuisBijMuis.Games.Colouring
 {
+
 #pragma warning disable 0649
     /// <summary>
     /// This class exists to manage the colourplacing and centralize the variables used.
     /// This makes life easier for new isntances of the prefab
     /// </summary>
-    [RequireComponent(typeof(SpriteRenderer))]
     public class ColourManager : MonoBehaviour, IPageActivatable
     {
         [SerializeField]
         private SpriteRenderer spriteToColourWith;
         [SerializeField]
+        private Color colour;
+        [SerializeField]
         private Camera colourCamera;
+        [SerializeField]
+        private Sprite imageToReplace;
         [SerializeField]
         private Sprite newImage;
         [SerializeField]
@@ -35,7 +39,7 @@ namespace ThuisBijMuis.Games.Colouring
 
         public void CheckPage(int pageNumber)
         {
-            if (pageNumber == this.PageNumber)
+            if (pageNumber == PageNumber)
             {
                 Setup();
                 colourPlacing.StartPlacing();
@@ -51,14 +55,17 @@ namespace ThuisBijMuis.Games.Colouring
         private void Setup()
         {
             spriteMask = GetComponentInChildren<SpriteMask>();
-            changePicture = GetComponent<ChangePicture>();
-            colourPlacing = GetComponent<ColourPlacing>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            changePicture = GetComponentInChildren<ChangePicture>();
+            colourPlacing = GetComponentInChildren<ColourPlacing>();
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
             colourPlacing.OnCompletionEvent.AddListener(OnEnd);
 
+            spriteRenderer.sprite = imageToReplace;
+
             colourPlacing.ColourCamera = colourCamera;
             colourPlacing.ColourSprite = spriteToColourWith.gameObject;
+            spriteToColourWith.color = colour;
 
             currentSprite = spriteRenderer.sprite;
             spriteMask.sprite = currentSprite;
