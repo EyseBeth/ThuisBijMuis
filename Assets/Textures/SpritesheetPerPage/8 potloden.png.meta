@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: d6344c2e121fbe943b3f27e373fe5d45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3092522296557881985
+    second: 8 potloden_0
+  - first:
+      213: 2715253699107806257
+    second: 8 potloden_1
+  - first:
+      213: -1341920908067850439
+    second: 8 potloden_2
+  - first:
+      213: 1991075131810572638
+    second: 8 potloden_3
+  - first:
+      213: 882786138845482659
+    second: 8 potloden_4
+  - first:
+      213: -3825296268289443328
+    second: 8 potloden_5
+  - first:
+      213: -3078584843954222524
+    second: 8 potloden_6
+  - first:
+      213: 5856863948572345102
+    second: 8 potloden_7
+  - first:
+      213: -5303542042605588407
+    second: 8 potloden_8
+  - first:
+      213: 1779319057612729914
+    second: 8 potloden_9
+  - first:
+      213: 2084642908582838039
+    second: 8 potloden_10
+  - first:
+      213: 2543588836557835654
+    second: 8 potloden_11
+  - first:
+      213: -1813522725815684953
+    second: 8 potloden_12
+  - first:
+      213: -776199727630042612
+    second: 8 potloden_13
+  - first:
+      213: 6380657521063692481
+    second: 8 potloden_14
+  - first:
+      213: -6294925079661597984
+    second: 8 potloden_15
+  - first:
+      213: -5753863752916132994
+    second: 8 potloden_16
+  - first:
+      213: 719899413900018796
+    second: 8 potloden_17
+  - first:
+      213: 8027786121865467228
+    second: 8 potloden_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 8 potloden_0
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 951
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603e6426e2c5de94caba9cbb25dc83bd
+      internalID: -3092522296557881985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_1
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 668
+        width: 197
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6ba6c2a557adf4aaa6c7481c9bfcc8
+      internalID: 2715253699107806257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_2
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 666
+        width: 199
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cd107f09de1134590dc7bd6f11f4ee
+      internalID: -1341920908067850439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_3
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 664
+        width: 199
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94597d2e8df048c4d8f539d710d6502e
+      internalID: 1991075131810572638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_4
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 662
+        width: 199
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c47bbbd4097e5544b30d4656ca666b4
+      internalID: 882786138845482659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_5
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 653
+        width: 197
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1917196640481e742aefb9dc2959a267
+      internalID: -3825296268289443328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_6
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 912
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47a01a71d766ff4ab8669d006e05f4a
+      internalID: -3078584843954222524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_7
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 682
+        width: 177
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e05f095a29544e4a8f14d53b73d5f94
+      internalID: 5856863948572345102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_8
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 684
+        width: 190
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5404c9802914a4f988dc71adcbcf26
+      internalID: -5303542042605588407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_9
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 680
+        width: 199
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3052659ab6b9e4aa6fb5915b98d89b
+      internalID: 1779319057612729914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_10
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 669
+        width: 199
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9516e18df78984545901e45d415009b1
+      internalID: 2084642908582838039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_11
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 277
+        width: 188
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0335dea5777bbc046a56b14c3d4b42f2
+      internalID: 2543588836557835654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_12
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 297
+        width: 196
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff58634ef1cabf47b3ee6ccee649c42
+      internalID: -1813522725815684953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_13
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 293
+        width: 188
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8150daaa720a73f459e1c7ce727d345c
+      internalID: -776199727630042612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_14
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 177
+        width: 249
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbc1c23e8c092942919eed466017f39
+      internalID: 6380657521063692481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_15
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 177
+        width: 186
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb06ad597530ed343917dada72b2e2ba
+      internalID: -6294925079661597984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_16
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 202
+        width: 182
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4714c6406b2d2384c8665c7f28b59fe7
+      internalID: -5753863752916132994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_17
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 106
+        width: 210
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c25c3388710fac40acb7ca3e8922aaa
+      internalID: 719899413900018796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8 potloden_18
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 137
+        width: 188
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372f870604f361847a395cb3b0905390
+      internalID: 8027786121865467228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6afbf018c24dfef4dae1eaed38f457a5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
