@@ -4,14 +4,13 @@ using ThuisBijMuis.Games.PageSliding;
 using UnityEngine;
 
 #pragma warning disable 0649
-[RequireComponent(typeof(AudioSource))]
 public class PageTextAudio : MonoBehaviour, IPageActivatable
 {
     [SerializeField] private List<AudioObject> pageAudioFiles=new List<AudioObject>();
+    [SerializeField] private List<GameObject> instructionsButtons = new List<GameObject>();
 
     private List<bool> playedPages=new List<bool>();
     private PageSlider pageSlider;
-    private AudioSource audioSource;
     private bool shouldPlayInstructions;
 
     public int PageNumber { get; set; }
@@ -25,28 +24,38 @@ public class PageTextAudio : MonoBehaviour, IPageActivatable
 
         pageSlider = GetComponent<PageSlider>();
         pageSlider.OnPageSlideEnd.AddListener(PlayPageAudio);
-
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        if (shouldPlayInstructions && !audioSource.isPlaying)
+        if (shouldPlayInstructions && !GlobalAudioSource.Instance.AudioSource.isPlaying)
         {
-            audioSource.PlayOneShot(pageAudioFiles[PageNumber].instruction);
+            GlobalAudioSource.Instance.AudioSource.PlayOneShot(pageAudioFiles[PageNumber].instruction);
             shouldPlayInstructions = false;
+
+            if (!instructionsButtons[PageNumber].activeSelf)
+                instructionsButtons[PageNumber].SetActive(true);
+
         }
     }
 
     private void PlayPageAudio()
     {
+        if (GlobalAudioSource.Instance.AudioSource.isPlaying)
+        {
+            GlobalAudioSource.Instance.AudioSource.Stop();
+            shouldPlayInstructions = false;
+        }
+
         if (playedPages[PageNumber])
+        {
+            if (!instructionsButtons[PageNumber].activeSelf)
+                instructionsButtons[PageNumber].SetActive(true);
+
             return;
+        }
 
-        if (audioSource.isPlaying)
-            audioSource.Stop();
-
-        audioSource.PlayOneShot(pageAudioFiles[PageNumber].rhyme);
+        GlobalAudioSource.Instance.AudioSource.PlayOneShot(pageAudioFiles[PageNumber].rhyme);
         playedPages[PageNumber] = true;
         shouldPlayInstructions = true;
     }

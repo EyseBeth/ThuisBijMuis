@@ -5,14 +5,9 @@ using UnityEngine;
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
 #pragma warning disable 0649
-    [RequireComponent(typeof(AudioSource))]
     public class DraggableAudio : DraggableItem
     {
         [SerializeField] private AudioClipObject clip;
-
-        private AudioSource audioSource;
-
-        private void Start() => audioSource = GetComponent<AudioSource>();
 
         public override void Release()
         {
@@ -28,8 +23,8 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         private void PlayAudio()
         {
-            if (!audioSource.isPlaying && clip)
-                audioSource.PlayOneShot(clip.audioClip[clip.counter++]);
+            if (!GlobalAudioSource.Instance.AudioSource.isPlaying && clip)
+                GlobalAudioSource.Instance.AudioSource.PlayOneShot(clip.audioClip[clip.counter++]);
 
             if (clip.counter >= clip.audioClip.Length)
                 clip.counter = clip.audioClip.Length - 1;
