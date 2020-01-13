@@ -16,11 +16,12 @@ namespace ThuisBijMuis.Games.Interactables {
         private MovingBehaviour behaviour;
 
         //Sets the originalPosition at start to be used in the snap back when the object is released where it is not allowed
-        private void Start() {
+        public virtual void Start() {
+            originalPosition = transform.localPosition;
             behaviour = GetComponent<MovingBehaviour>();
         }
 
-        public void FixedUpdate() {
+        public virtual void FixedUpdate() {
             if (selected) Drag();
         }
 
@@ -55,6 +56,7 @@ namespace ThuisBijMuis.Games.Interactables {
         }
         // ReSharper disable UnusedMember.Local
         private void OnTriggerEnter(Collider collision) {
+            collision?.GetComponent<HoverZone>()?.ActivateHover(ItemTags);
             currentDropZone = collision.transform.GetComponent<DropZone>();
 
         }
