@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: 10a93a69006e6a14fbcd4a997b9dcd61
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7607637328200264397
+    second: 7 bijen_0
+  - first:
+      213: 5379848490123700070
+    second: 7 bijen_1
+  - first:
+      213: -8815215879642041803
+    second: 7 bijen_2
+  - first:
+      213: 1475827867616161643
+    second: 7 bijen_3
+  - first:
+      213: 2992029585231015388
+    second: 7 bijen_4
+  - first:
+      213: -5828870458703877151
+    second: 7 bijen_5
+  - first:
+      213: -5930929585317281309
+    second: 7 bijen_6
+  - first:
+      213: -4512387525238180732
+    second: 7 bijen_7
+  - first:
+      213: 9177601314573800669
+    second: 7 bijen_8
+  - first:
+      213: 5011171984572980502
+    second: 7 bijen_9
+  - first:
+      213: 2518311386220162251
+    second: 7 bijen_10
+  - first:
+      213: 150365634870927222
+    second: 7 bijen_11
+  - first:
+      213: 6172212849414258417
+    second: 7 bijen_12
+  - first:
+      213: 3073340605622361711
+    second: 7 bijen_13
+  - first:
+      213: -7682697234158404424
+    second: 7 bijen_14
+  - first:
+      213: -3094885518240510249
+    second: 7 bijen_15
+  - first:
+      213: 4443142489344209858
+    second: 7 bijen_16
+  - first:
+      213: 1354106503639207164
+    second: 7 bijen_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 7 bijen_0
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1514
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc79ffd4246ebb469b4181d377d9ac9
+      internalID: 7607637328200264397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_1
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 1467
+        width: 126
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce28bea6dce2cd745920f728c2aa9cca
+      internalID: 5379848490123700070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_2
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1475
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde95cab66981e64aa9e9a997f2a848f
+      internalID: -8815215879642041803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_3
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1478
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844211e9af7f4594682ba92fbbe4703c
+      internalID: 1475827867616161643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_4
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1420
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d11b29e2842db4d908a5c628aa04b0
+      internalID: 2992029585231015388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_5
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1399
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b6ed7e6298c9c4fbba64e767affffb
+      internalID: -5828870458703877151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_6
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1304
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114c08633d64ce640b2ddc29f8dc7f69
+      internalID: -5930929585317281309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_7
+      rect:
+        serializedVersion: 2
+        x: 2637
+        y: 1349
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f5c168ef41536419c97c2ac26a7402
+      internalID: -4512387525238180732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_8
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1232
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6091294769bcf0f42bf2a5bf561e23d3
+      internalID: 9177601314573800669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_9
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 1170
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230819455898c504cbb3014ba7734d30
+      internalID: 5011171984572980502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_10
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1148
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6d1331faccb8a4081f3652edf0ab8f
+      internalID: 2518311386220162251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_11
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 1143
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814d976074dc8eb40833c7fb3fb2cb85
+      internalID: 150365634870927222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_12
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1075
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70eb8425335be474abeb9b9684c180fe
+      internalID: 6172212849414258417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_13
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1036
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c83e90a667be24a9e6d7df6ed19732
+      internalID: 3073340605622361711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_14
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 474
+        width: 757
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33284d40468ea8543a3ddce0d6e7399c
+      internalID: -7682697234158404424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_15
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 482
+        width: 983
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b750b2328421941802d1414fc33c52
+      internalID: -3094885518240510249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_16
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 461
+        width: 18
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c66f4bca25b064e8b8cb214a58368f
+      internalID: 4443142489344209858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7 bijen_17
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 459
+        width: 90
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78ffa2761f405f4f8320b3bf5745320
+      internalID: 1354106503639207164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2df18774a2f701847815654e445d4f85
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
