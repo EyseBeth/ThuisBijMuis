@@ -9,5 +9,4 @@ namespace ThuisBijMuis.Games.PageSliding
         int PageNumber { get; set; }
         void CheckPage(int pageNumber);
     }
-
 }
