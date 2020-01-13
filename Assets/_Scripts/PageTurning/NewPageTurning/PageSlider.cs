@@ -23,6 +23,8 @@ namespace ThuisBijMuis.Games.PageSliding {
         private List<IPageActivatable> pageObjects = new List<IPageActivatable>();
         private Timer timer;
 
+        public UnityEvent OnPageSlideEnd;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -65,6 +67,7 @@ namespace ThuisBijMuis.Games.PageSliding {
             isCurrentlyLerping = false;
             DisablePanels(frontPanelIndex);
             ActivatePageObjects();
+            OnPageSlideEnd?.Invoke();
         }
 
         private void ActivatePageObjects()
@@ -136,5 +139,4 @@ namespace ThuisBijMuis.Games.PageSliding {
     }
 
     public class UnityBooleanEvent : UnityEvent<bool> { }
-    public class UntiyIntEvent : UnityEvent<int> { }
 }
