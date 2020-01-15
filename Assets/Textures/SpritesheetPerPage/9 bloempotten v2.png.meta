@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: bd2045587860664489a028dbd632b38c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1767740725620312935
+    second: 9 bloempotten v2_0
+  - first:
+      213: -5071073759541543305
+    second: 9 bloempotten v2_1
+  - first:
+      213: 3003411672577239951
+    second: 9 bloempotten v2_2
+  - first:
+      213: 7633210102555364261
+    second: 9 bloempotten v2_3
+  - first:
+      213: 1936127893162945849
+    second: 9 bloempotten v2_4
+  - first:
+      213: -8553037559334122869
+    second: 9 bloempotten v2_5
+  - first:
+      213: 5262455597082142187
+    second: 9 bloempotten v2_6
+  - first:
+      213: -1894332177532648127
+    second: 9 bloempotten v2_7
+  - first:
+      213: -3200185622872833954
+    second: 9 bloempotten v2_8
+  - first:
+      213: -3000705123569808078
+    second: 9 bloempotten v2_9
+  - first:
+      213: 4673384700396238460
+    second: 9 bloempotten v2_10
+  - first:
+      213: -6738015840346660741
+    second: 9 bloempotten v2_11
+  - first:
+      213: -4261958659331195585
+    second: 9 bloempotten v2_12
+  - first:
+      213: 2271272640846978979
+    second: 9 bloempotten v2_13
+  - first:
+      213: 8351009170177048782
+    second: 9 bloempotten v2_14
+  - first:
+      213: 6603383733938052089
+    second: 9 bloempotten v2_15
+  - first:
+      213: -3417386511093481210
+    second: 9 bloempotten v2_16
+  - first:
+      213: -8657845880386581128
+    second: 9 bloempotten v2_17
+  - first:
+      213: -3300649251207164438
+    second: 9 bloempotten v2_18
+  - first:
+      213: 7485795048556240140
+    second: 9 bloempotten v2_19
+  - first:
+      213: 2187930939119888617
+    second: 9 bloempotten v2_20
+  - first:
+      213: 6336412592455430970
+    second: 9 bloempotten v2_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 9 bloempotten v2_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1674
+        width: 223
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaffe6c796b60314bbe72de0dd78bad5
+      internalID: -1767740725620312935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1677
+        width: 157
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3517fac6f05de3443b5a424071a218bf
+      internalID: -5071073759541543305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_2
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1677
+        width: 117
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12108e6e793c12478a257d6cb99eb58
+      internalID: 3003411672577239951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_3
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1626
+        width: 321
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105f4d76dc28a594fbd27a7d140d265d
+      internalID: 7633210102555364261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_4
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 1621
+        width: 196
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310a2d009b98c724c8d76f3ebea9d215
+      internalID: 1936127893162945849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_5
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 1621
+        width: 136
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f5f176f5fef834c972aa71260f50e8
+      internalID: -8553037559334122869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_6
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1623
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2114c6c69427bcc4cbbf43ec5d2e0f7c
+      internalID: 5262455597082142187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_7
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1102
+        width: 220
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67b865f3e4c07e4e9e1ddffe2fce0e3
+      internalID: -1894332177532648127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_8
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1103
+        width: 308
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d337925985a48d64bbdda78a4971b957
+      internalID: -3200185622872833954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_9
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1099
+        width: 256
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78155392367bf2743906c15e9d9164c6
+      internalID: -3000705123569808078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_10
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 971
+        width: 336
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e13ee4926d64146b7b861127074dcd
+      internalID: 4673384700396238460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_11
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 975
+        width: 183
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4e7e5a21c62984c9b0570bf2eea5c4
+      internalID: -6738015840346660741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_12
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 1218
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e42e2ec802914478c0079bad26a121
+      internalID: -4261958659331195585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_13
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 975
+        width: 116
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3482bf2923e9949b22985e957d4a59
+      internalID: 2271272640846978979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 503
+        width: 463
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6143f0bb4aad1f4ca2adb547178f348
+      internalID: 8351009170177048782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_15
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 550
+        width: 196
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e5d453e5d37bf4784835d8bcc499cc
+      internalID: 6603383733938052089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_16
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 443
+        width: 164
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc56025a29d1fd40a254bdab68fbe18
+      internalID: -3417386511093481210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_17
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 357
+        width: 325
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c7496b4647b1f4f93a45f6c1e479cf
+      internalID: -8657845880386581128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_18
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 357
+        width: 342
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbbb21bd76974e4f86e88b8d26be6a3
+      internalID: -3300649251207164438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_19
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 678
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc692b3f52b6cdf4eb3846b37a2c725a
+      internalID: 7485795048556240140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_20
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 501
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b29cc7040b457946a052f30a680aadf
+      internalID: 2187930939119888617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9 bloempotten v2_21
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 23
+        width: 350
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6e83af3303e9f4686dc36b1a36a679
+      internalID: 6336412592455430970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3d60e61fcd2586543b0e77fb92e35788
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
