@@ -1894,6 +1894,7 @@ GameObject:
   - component: {fileID: 111752540}
   - component: {fileID: 111752539}
   - component: {fileID: 111752538}
+  - component: {fileID: 111752542}
   m_Layer: 0
   m_Name: butterfly 5
   m_TagString: Untagged
@@ -2009,6 +2010,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &111752542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111752536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1 &127984708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5053,6 +5067,7 @@ GameObject:
   - component: {fileID: 329724941}
   - component: {fileID: 329724940}
   - component: {fileID: 329724939}
+  - component: {fileID: 329724943}
   m_Layer: 0
   m_Name: butterfly 9
   m_TagString: Untagged
@@ -5167,6 +5182,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &329724943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329724937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1 &333765465 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3107750374027291462, guid: d5176509409ecba4999efa58e026f21c,
@@ -7152,6 +7180,7 @@ GameObject:
   - component: {fileID: 499997064}
   - component: {fileID: 499997063}
   - component: {fileID: 499997062}
+  - component: {fileID: 499997066}
   m_Layer: 0
   m_Name: butterfly 7
   m_TagString: Untagged
@@ -7267,6 +7296,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &499997066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499997060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1 &500115761
 GameObject:
   m_ObjectHideFlags: 0
@@ -15317,6 +15359,7 @@ GameObject:
   - component: {fileID: 1033180988}
   - component: {fileID: 1033180987}
   - component: {fileID: 1033180986}
+  - component: {fileID: 1033180990}
   m_Layer: 0
   m_Name: butterfly 10
   m_TagString: Untagged
@@ -15432,6 +15475,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1033180990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033180984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1 &1051414621
 GameObject:
   m_ObjectHideFlags: 0
@@ -15619,6 +15675,7 @@ GameObject:
   - component: {fileID: 1060503093}
   - component: {fileID: 1060503092}
   - component: {fileID: 1060503091}
+  - component: {fileID: 1060503095}
   m_Layer: 0
   m_Name: butterfly 3
   m_TagString: Untagged
@@ -15734,6 +15791,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1060503095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060503089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1001 &1072383881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18007,6 +18077,7 @@ GameObject:
   - component: {fileID: 1193920318}
   - component: {fileID: 1193920317}
   - component: {fileID: 1193920316}
+  - component: {fileID: 1193920320}
   m_Layer: 0
   m_Name: butterfly 6
   m_TagString: Untagged
@@ -18122,6 +18193,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1193920320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193920314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1 &1204353387
 GameObject:
   m_ObjectHideFlags: 0
@@ -18883,6 +18967,7 @@ GameObject:
   - component: {fileID: 1292538356}
   - component: {fileID: 1292538355}
   - component: {fileID: 1292538354}
+  - component: {fileID: 1292538358}
   m_Layer: 0
   m_Name: butterfly 8
   m_TagString: Untagged
@@ -18998,6 +19083,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1292538358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292538352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1001 &1293816117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24804,6 +24902,7 @@ GameObject:
   - component: {fileID: 1672095833}
   - component: {fileID: 1672095832}
   - component: {fileID: 1672095831}
+  - component: {fileID: 1672095834}
   m_Layer: 0
   m_Name: butterfly
   m_TagString: Untagged
@@ -24918,6 +25017,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead280a2dfd4ac64081baf18ae80751f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1672095834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672095828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1 &1674687851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3107750372397494855, guid: d5176509409ecba4999efa58e026f21c,
@@ -29306,6 +29418,7 @@ GameObject:
   - component: {fileID: 2066835932}
   - component: {fileID: 2066835931}
   - component: {fileID: 2066835930}
+  - component: {fileID: 2066835934}
   m_Layer: 0
   m_Name: butterfly 4
   m_TagString: Untagged
@@ -29420,6 +29533,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2066835934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066835928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1 &2069335921
 GameObject:
   m_ObjectHideFlags: 0
@@ -30032,6 +30158,7 @@ GameObject:
   - component: {fileID: 2116444967}
   - component: {fileID: 2116444966}
   - component: {fileID: 2116444965}
+  - component: {fileID: 2116444969}
   m_Layer: 0
   m_Name: butterfly 2
   m_TagString: Untagged
@@ -30147,6 +30274,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2116444969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116444963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7146b6ca59513b4cb10b7301d297ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!1001 &2117961761
 PrefabInstance:
   m_ObjectHideFlags: 0

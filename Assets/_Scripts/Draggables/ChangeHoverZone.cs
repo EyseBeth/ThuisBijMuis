@@ -5,7 +5,7 @@ using ThuisBijMuis.Games.Interactables.CustomBehaviours;
 using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables {
-    public class HoverZone : MonoBehaviour {
+    public class ChangeHoverZone : MonoBehaviour, IHoverable {
         private bool isActivated = false;
 
         public void ActivateHover(List<DroppableTags> tags) {

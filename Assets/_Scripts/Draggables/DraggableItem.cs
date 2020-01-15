@@ -56,7 +56,7 @@ namespace ThuisBijMuis.Games.Interactables {
         }
         // ReSharper disable UnusedMember.Local
         private void OnTriggerEnter(Collider collision) {
-            collision?.GetComponent<HoverZone>()?.ActivateHover(ItemTags);
+            collision?.GetComponent<IHoverable>()?.ActivateHover(ItemTags);
             currentDropZone = collision.transform.GetComponent<DropZone>();
 
         }
