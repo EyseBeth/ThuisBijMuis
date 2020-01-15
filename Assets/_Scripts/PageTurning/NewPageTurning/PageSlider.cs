@@ -55,8 +55,8 @@ namespace ThuisBijMuis.Games.PageSliding {
         {
             if (reactsToSwipe)
             {
-                if (data.Direction == SwipeDirection.Right) NextPageButton();
-                if (data.Direction == SwipeDirection.Left) PreviousPageButton();
+                if (data.Direction == SwipeDirection.Right) PreviousPageButton();
+                if (data.Direction == SwipeDirection.Left) NextPageButton();
             }
         }
 
