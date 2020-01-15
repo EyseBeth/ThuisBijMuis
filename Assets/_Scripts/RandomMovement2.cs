@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using ThuisBijMuis.Timers;
 
-namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
-{
+namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
+#pragma warning disable 0649
     public class RandomMovement2 : MonoBehaviour, IClickable
     {
         [SerializeField] private float moveSpeed;

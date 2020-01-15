@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/Draggable Testing.unity
     guid: d35cbb4d774ef34459f02e938d0c9c1b
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Colouring/ColouringTestScene.unity
     guid: fea476fbb14fca241892b7e12481ea56
+  - enabled: 1
+    path: Assets/_Scenes/Demo_Illustrations.unity
+    guid: 992481e7b1049a94b84508f98b860668
   m_configObjects: {}

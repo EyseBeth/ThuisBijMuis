@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7516311468232223644}
+  - component: {fileID: 3656122376572439159}
   m_Layer: 0
   m_Name: ColouringObject
   m_TagString: Untagged
@@ -37,6 +38,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3656122376572439159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516311468232223645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3ebdd2c9048f245b6f18ef9f4815d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteToColourWith: {fileID: 923362758865235756, guid: 0cdcf04eacdb324469dee32a3981a88e,
+    type: 3}
+  colour: {r: 0, g: 0, b: 0, a: 0}
+  colourCamera: {fileID: 7516311469875951152}
+  imageToReplace: {fileID: 0}
+  newImage: {fileID: -5906598218874874896, guid: dacd6c3084b98e240b3ac77f2b984f48,
+    type: 3}
+  percentageToFill: 80
 --- !u!1 &7516311469402436189
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +148,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7516311469719597760}
   - component: {fileID: 7516311469719597764}
-  - component: {fileID: 7516311469719597766}
   - component: {fileID: 7516311469719597763}
   - component: {fileID: 7516311469719597762}
   - component: {fileID: 7516311469719597765}
@@ -166,23 +186,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7516311469719597761}
   m_CullTransparentMesh: 0
---- !u!114 &7516311469719597766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7516311469719597761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3ebdd2c9048f245b6f18ef9f4815d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteToColourWith: {fileID: 0}
-  colourCamera: {fileID: 7516311469875951152}
-  newImage: {fileID: 0}
-  percentageToFill: 0
-  pageNumber: 0
 --- !u!212 &7516311469719597763
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -257,6 +260,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf450deaa53c13428c4dae035eea70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCompletionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7516311469875951151
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,13 +290,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7516311469875951151}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -202}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7516311468232223644}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &7516311469875951152
 Camera:
   m_ObjectHideFlags: 0
@@ -315,7 +324,7 @@ Camera:
   far clip plane: 11
   field of view: 60
   orthographic: 1
-  orthographic size: 2.7925916
+  orthographic size: 3
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

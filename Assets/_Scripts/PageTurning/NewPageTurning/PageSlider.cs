@@ -12,6 +12,9 @@ namespace ThuisBijMuis.Games.PageSliding {
         [SerializeField]
         private float duration;
 
+        [SerializeField]
+        private bool reactsToSwipe;
+
         private RectTransform canvas;
         private List<RectTransform> Panels = new List<RectTransform>();
         private float canvasWidth;
@@ -23,12 +26,14 @@ namespace ThuisBijMuis.Games.PageSliding {
         private List<IPageActivatable> pageObjects = new List<IPageActivatable>();
         private Timer timer;
 
+        private void Awake() => SwipeDetector.OnSwipe += OnSwipe;
+
         public UnityEvent OnPageSlideEnd;
 
         // Start is called before the first frame update
         void Start()
         {
-            canvas = this.GetComponent<RectTransform>();
+            canvas = GetComponent<RectTransform>();
 
             canvasWidth = canvas.rect.width; //Canvas.width is always the width of the screen. The Canvas is set to stretch
 
@@ -47,6 +52,15 @@ namespace ThuisBijMuis.Games.PageSliding {
         }
 
         private void Update() => timer?.Tick(Time.deltaTime);
+
+        private void OnSwipe(SwipeData data)
+        {
+            if (reactsToSwipe)
+            {
+                if (data.Direction == SwipeDirection.Right) NextPageButton();
+                if (data.Direction == SwipeDirection.Left) PreviousPageButton();
+            }
+        }
 
         public void NextPageButton()
         {

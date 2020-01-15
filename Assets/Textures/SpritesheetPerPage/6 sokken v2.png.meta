@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: 73ebefe8c0784f04fa23f428a2f41efb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3325127814561391207
+    second: 6 sokken v2_0
+  - first:
+      213: -3753325148587363860
+    second: 6 sokken v2_1
+  - first:
+      213: -3981778435500547487
+    second: 6 sokken v2_2
+  - first:
+      213: -2852185667590203773
+    second: 6 sokken v2_3
+  - first:
+      213: -5459247024408774815
+    second: 6 sokken v2_4
+  - first:
+      213: -8925464785425288344
+    second: 6 sokken v2_5
+  - first:
+      213: -2637670481270147143
+    second: 6 sokken v2_6
+  - first:
+      213: -1127088657992527771
+    second: 6 sokken v2_7
+  - first:
+      213: 28391488169681623
+    second: 6 sokken v2_8
+  - first:
+      213: 4873319578851365855
+    second: 6 sokken v2_9
+  - first:
+      213: 377879868137950339
+    second: 6 sokken v2_10
+  - first:
+      213: -2080321139156968595
+    second: 6 sokken v2_11
+  - first:
+      213: 4828225396108566647
+    second: 6 sokken v2_12
+  - first:
+      213: -2972024899207974678
+    second: 6 sokken v2_13
+  - first:
+      213: -814509900398814632
+    second: 6 sokken v2_14
+  - first:
+      213: 9025457927960341313
+    second: 6 sokken v2_15
+  - first:
+      213: -3474592162414073625
+    second: 6 sokken v2_16
+  - first:
+      213: -4244170114514541041
+    second: 6 sokken v2_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 6 sokken v2_0
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1438
+        width: 462
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8b486ff10e35d40be27c1c1b5d812d
+      internalID: 3325127814561391207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_1
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1674
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe05c7efa2488747a9392feeb3266f6
+      internalID: -3753325148587363860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_2
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 1312
+        width: 1070
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23098d0f0cfa46e4dbac3028e8de68dc
+      internalID: -3981778435500547487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1311
+        width: 315
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e169a43e739704a84e4b2bad96b441
+      internalID: -2852185667590203773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 846
+        width: 2007
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540c4b15e7f31154b88fa9dee812c1b4
+      internalID: -5459247024408774815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_5
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 778
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4d1d079e665744a8ac2ada99d98bdc
+      internalID: -8925464785425288344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 201
+        width: 119
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d3ef5906aba0c4fb45a0893c6095af
+      internalID: -2637670481270147143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_7
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 455
+        width: 8
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb7f18ff67c7b0498772f22c49546f4
+      internalID: -1127088657992527771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 199
+        width: 127
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a968e8dcc45d4f343b54e92b357e5eb8
+      internalID: 28391488169681623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_9
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 226
+        width: 118
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8caf044527cde4f9887b4b3d1940eb
+      internalID: 4873319578851365855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_10
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 197
+        width: 126
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d5eb00fc087f046b53e05d8a99dce5
+      internalID: 377879868137950339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_11
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 201
+        width: 122
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe4090b6c9ca864ab4d48764bafa8c8
+      internalID: -2080321139156968595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_12
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 199
+        width: 133
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d498500065a9ee44bb08b97ccfccdb01
+      internalID: 4828225396108566647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_13
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 325
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df464f3d0be9fda488ba3c36ba24b1eb
+      internalID: -2972024899207974678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_14
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 281
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be93278970a255940812a8444e6fc006
+      internalID: -814509900398814632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_15
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 256
+        width: 6
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8653e7556a0639a47904682abe180d90
+      internalID: 9025457927960341313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_16
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 258
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab756c4ff370c0643b5a7951cef2e9b8
+      internalID: -3474592162414073625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6 sokken v2_17
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 188
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f929cf6ba6cb4429c837f28dba71c7
+      internalID: -4244170114514541041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 609ee893c9e4f7d4eaf1fb82ad284b4c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
