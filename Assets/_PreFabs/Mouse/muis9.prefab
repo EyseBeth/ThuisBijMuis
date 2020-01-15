@@ -133,7 +133,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9053923687224673148}
+  - component: {fileID: 4939941401292350626}
   - component: {fileID: 7306802819745006885}
   m_Layer: 0
   m_Name: muis9
@@ -142,15 +142,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9053923687224673148
-Transform:
+--- !u!224 &4939941401292350626
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944319423247181497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.26, y: -4.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 2305794061204617656}
@@ -160,6 +160,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.26, y: -4.65}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &7306802819745006885
 Animator:
   serializedVersion: 3
@@ -238,7 +243,7 @@ Transform:
   m_Children:
   - {fileID: 334355887579999675}
   - {fileID: 7643436296693970164}
-  m_Father: {fileID: 9053923687224673148}
+  m_Father: {fileID: 4939941401292350626}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4857282356128608810
@@ -300,7 +305,7 @@ Transform:
   m_LocalPosition: {x: -0.17999983, y: 1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9053923687224673148}
+  m_Father: {fileID: 4939941401292350626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7297313841680983858
@@ -403,7 +408,7 @@ Transform:
   m_LocalPosition: {x: -0.009999752, y: 3.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9053923687224673148}
+  m_Father: {fileID: 4939941401292350626}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3867597642883357429
@@ -537,7 +542,7 @@ Transform:
   m_LocalPosition: {x: 1.5999999, y: 2.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9053923687224673148}
+  m_Father: {fileID: 4939941401292350626}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5036877167279495902
