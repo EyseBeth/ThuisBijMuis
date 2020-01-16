@@ -72,7 +72,6 @@ namespace ThuisBijMuis.Games.Colouring
             spriteToColourWith.color = colour;
 
             spriteMask.sprite = mask;
-            spriteMask.alphaCutoff = 1f;
 
             changePicture.NewImage = newImage;
             changePicture.ColourPlacing = colourPlacing;
