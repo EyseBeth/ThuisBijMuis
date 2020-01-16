@@ -31,7 +31,12 @@ namespace ThuisBijMuis.Games.Interactables {
 
         //If the released gameobject is an IReleasable it will activate its release function and set the selection to null
         private void ReleaseSelection() {
-            selection?.GetComponent<IReleasable>()?.ReleaseInteractable();
+            if (!selection)
+                return;
+
+            foreach (IReleasable releaseables in selection.GetComponents<IReleasable>())
+                releaseables.ReleaseInteractable();
+
             selection = null;
         }
     }
