@@ -53,10 +53,6 @@ namespace ThuisBijMuis.Games.Interactables
             Selection = null;
         }
 
-        private void SetHasSelection(bool value)
-        {
-            HasSelection = value;
-            Debug.Log(value);
-        }
+        private void SetHasSelection(bool value) => HasSelection = value;
     }
 }

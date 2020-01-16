@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7516311468232223644}
   - component: {fileID: 3656122376572439159}
   m_Layer: 0
-  m_Name: ColouringObject
+  m_Name: ColouringObject 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,11 +52,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteToColourWith: {fileID: 923362758865235756, guid: 0cdcf04eacdb324469dee32a3981a88e,
     type: 3}
-  colour: {r: 0, g: 0, b: 0, a: 0}
+  colour: {r: 0.9176471, g: 0.32941177, b: 0.32941177, a: 1}
   colourCamera: {fileID: 7516311469875951152}
-  imageToReplace: {fileID: 21300000, guid: be9746c360f4ead448ab7a08e3be065a, type: 3}
-  newImage: {fileID: -5510514710485562957, guid: e71814472afc2584e85fa8daf4cdee97,
+  imageToReplace: {fileID: 21300000, guid: 5fa9be3ae8a7e7f46b4f9e1360247e15, type: 3}
+  newImage: {fileID: -3802347699985838114, guid: e71814472afc2584e85fa8daf4cdee97,
     type: 3}
+  mask: {fileID: 21300000, guid: 14e31f840fc43dc4c9841418db495c81, type: 3}
   percentageToFill: 80
 --- !u!1 &7516311469402436189
 GameObject:
@@ -128,7 +129,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be9746c360f4ead448ab7a08e3be065a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 14e31f840fc43dc4c9841418db495c81, type: 3}
   m_MaskAlphaCutoff: 1
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
@@ -225,7 +226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: be9746c360f4ead448ab7a08e3be065a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5fa9be3ae8a7e7f46b4f9e1360247e15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
