@@ -13,7 +13,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
         public override void ExecuteCustomBehaviour()
         {
             //Checks if the objects have already been switched, if it hasnt, it does so.
-            if (objectsChanged == false && isWatered)
+            if (objectsChanged == false)
             {
                 objectsChanged = true;
 

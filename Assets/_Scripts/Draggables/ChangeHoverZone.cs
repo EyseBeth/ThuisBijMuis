@@ -14,6 +14,8 @@ namespace ThuisBijMuis.Games.Interactables {
                 c.ExecuteCustomBehaviour();
             }
 
+            if(GetComponent<ClickableAudio>()) Destroy(GetComponent<ClickableAudio>());
+
             //isActivated = true;
 
         }

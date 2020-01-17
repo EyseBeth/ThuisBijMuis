@@ -28,9 +28,9 @@ public class PageTextAudio : MonoBehaviour, IPageActivatable
 
     private void Update()
     {
-        if (shouldPlayInstructions && !GlobalAudioSource.Instance.AudioSource.isPlaying)
+        if (shouldPlayInstructions && !GlobalAudioSource.Instance.IsPlaying())
         {
-            GlobalAudioSource.Instance.AudioSource.PlayOneShot(pageAudioFiles[PageNumber].instruction);
+            GlobalAudioSource.Instance.PlayAudio(pageAudioFiles[PageNumber].instruction);
             shouldPlayInstructions = false;
 
             if (!instructionsButtons[PageNumber].activeSelf)
@@ -41,9 +41,9 @@ public class PageTextAudio : MonoBehaviour, IPageActivatable
 
     private void PlayPageAudio()
     {
-        if (GlobalAudioSource.Instance.AudioSource.isPlaying)
+        if (GlobalAudioSource.Instance.IsPlaying())
         {
-            GlobalAudioSource.Instance.AudioSource.Stop();
+            GlobalAudioSource.Instance.Stop();
             shouldPlayInstructions = false;
         }
 
@@ -55,7 +55,7 @@ public class PageTextAudio : MonoBehaviour, IPageActivatable
             return;
         }
 
-        GlobalAudioSource.Instance.AudioSource.PlayOneShot(pageAudioFiles[PageNumber].rhyme);
+        GlobalAudioSource.Instance.PlayAudio(pageAudioFiles[PageNumber].rhyme);
         playedPages[PageNumber] = true;
         shouldPlayInstructions = true;
     }
