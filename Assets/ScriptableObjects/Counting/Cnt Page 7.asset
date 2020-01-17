@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f8e406d2c173945927a3de7706fae8, type: 3}
+  m_Name: Cnt Page 7
+  m_EditorClassIdentifier: 
+  audioClip:
+  - {fileID: 8300000, guid: c58cb054b997b804c9f2a8f883aea0df, type: 3}
+  - {fileID: 8300000, guid: 7e0497241b989244a80da7a2066faa1c, type: 3}
+  - {fileID: 8300000, guid: f9b8f39d1eeb7be42906332867348286, type: 3}
+  - {fileID: 8300000, guid: fa7713167a85dcc41a56f2509c2f7d9f, type: 3}
+  - {fileID: 8300000, guid: 18d6571a298574943aff1d717175cc9d, type: 3}
+  - {fileID: 8300000, guid: b1ee38cca30abdc4db0ac8c4b385c285, type: 3}
+  - {fileID: 8300000, guid: adedbbcc64423b34ab9712a2ce2450da, type: 3}
+  - {fileID: 8300000, guid: 4d8a3afb9e24b554fb0ed887da7dcbd2, type: 3}

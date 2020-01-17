@@ -20,11 +20,28 @@ public class GlobalAudioSource : MonoBehaviour
     }
     #endregion
 
-    public AudioSource AudioSource { get; private set; }
+    private AudioSource audioSource;
 
     public void Awake()
     {
         instance = this;
-        AudioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public void PlayAudio(AudioClip clip)
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(clip);
+    }
+
+    public bool IsPlaying()
+    {
+
+        return audioSource.isPlaying;
+    }
+
+    public void Stop()
+    {
+        audioSource.Stop();
     }
 }

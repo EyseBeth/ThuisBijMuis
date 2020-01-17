@@ -9,8 +9,8 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         public void ExecuteCustomBehaviour()
         {
-            if (!GlobalAudioSource.Instance.AudioSource.isPlaying && clip)
-                GlobalAudioSource.Instance.AudioSource.PlayOneShot(clip.audioClip[clip.counter++]);
+            if (clip)
+                GlobalAudioSource.Instance.PlayAudio(clip.audioClip[clip.counter++]);
 
             if (clip.counter >= clip.audioClip.Length)
                 clip.counter = clip.audioClip.Length - 1;
