@@ -25,6 +25,8 @@ namespace ThuisBijMuis.Games.Colouring
         [SerializeField]
         private Sprite newImage;
         [SerializeField]
+        private Sprite mask;
+        [SerializeField]
         private float percentageToFill;
 
         public int PageNumber { get; set; } = -1;
@@ -39,8 +41,10 @@ namespace ThuisBijMuis.Games.Colouring
 
         public void CheckPage(int pageNumber)
         {
+            Debug.Log("@CheckPage - " + pageNumber + " - " + PageNumber);
             if (pageNumber == PageNumber)
             {
+                Debug.Log("Setup RUN!");
                 Setup();
                 colourPlacing.StartPlacing();
                 changePicture.ActivateTimer();
@@ -67,9 +71,7 @@ namespace ThuisBijMuis.Games.Colouring
             colourPlacing.ColourSprite = spriteToColourWith.gameObject;
             spriteToColourWith.color = colour;
 
-            currentSprite = spriteRenderer.sprite;
-            spriteMask.sprite = currentSprite;
-            spriteMask.alphaCutoff = 1f;
+            spriteMask.sprite = mask;
 
             changePicture.NewImage = newImage;
             changePicture.ColourPlacing = colourPlacing;

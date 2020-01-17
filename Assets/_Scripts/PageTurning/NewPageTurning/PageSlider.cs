@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using ThuisBijMuis.Timers;
 using System.Linq;
+using ThuisBijMuis.Games.Interactables;
+using ThuisBijMuis.Swiping;
 
 namespace ThuisBijMuis.Games.PageSliding {
 #pragma warning disable 0649
@@ -55,7 +57,7 @@ namespace ThuisBijMuis.Games.PageSliding {
 
         private void OnSwipe(SwipeData data)
         {
-            if (reactsToSwipe)
+            if (reactsToSwipe && !InputHandler.Singleton.HasSelection)
             {
                 if (data.Direction == SwipeDirection.Right) NextPageButton();
                 if (data.Direction == SwipeDirection.Left) PreviousPageButton();
@@ -79,7 +81,7 @@ namespace ThuisBijMuis.Games.PageSliding {
         private void HandleTimerEnd()
         {
             isCurrentlyLerping = false;
-            DisablePanels(frontPanelIndex);
+            //DisablePanels(frontPanelIndex);
             ActivatePageObjects();
             OnPageSlideEnd?.Invoke();
         }
@@ -102,7 +104,7 @@ namespace ThuisBijMuis.Games.PageSliding {
                 lerpEvent.Invoke(true);
                 SetTimer(duration);
                 frontPanelIndex--;
-                EnablePanel(frontPanelIndex);
+                //EnablePanel(frontPanelIndex);
             }
         }
 
@@ -116,7 +118,7 @@ namespace ThuisBijMuis.Games.PageSliding {
                 lerpEvent.Invoke(false);
                 SetTimer(duration);
                 frontPanelIndex++;
-                EnablePanel(frontPanelIndex);
+                //EnablePanel(frontPanelIndex);
             }
         }
 

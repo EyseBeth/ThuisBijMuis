@@ -30,7 +30,9 @@ namespace ThuisBijMuis.Games.Colouring
                 Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = -.1f;
                 if (IsPositionInCameraView(ColourCamera, mousePos)) PlaceColour(mousePos);
+                else Debug.Log("Not In View!");
             }
+            else if (Input.GetMouseButton(0) && !ableToPlace) Debug.Log("Not able to place!");
         }
 
         /// <summary>
