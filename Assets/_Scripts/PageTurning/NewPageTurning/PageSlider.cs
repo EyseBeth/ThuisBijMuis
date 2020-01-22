@@ -57,7 +57,7 @@ namespace ThuisBijMuis.Games.PageSliding {
 
         private void OnSwipe(SwipeData data)
         {
-            if (reactsToSwipe && !InputHandler.Singleton.HasSelection)
+            if (reactsToSwipe && !InputHandler.Singleton.Selection)
             {
                 if (data.Direction == SwipeDirection.Right) NextPageButton();
                 if (data.Direction == SwipeDirection.Left) PreviousPageButton();

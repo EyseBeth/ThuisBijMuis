@@ -4,7 +4,16 @@ namespace ThuisBijMuis.Games.Interactables {
     public class InputHandler : MonoBehaviour {
 
         private Camera mainCamera;
-        private GameObject selection;
+        
+        public GameObject Selection { get; private set; }
+
+        public static InputHandler Singleton { get; private set; }
+
+        private void Awake()
+        {
+            Singleton = this;
+        }
+
         void Start() {
             Application.targetFrameRate = 300; //Sets the target frame-rate higher for smoother game-play
             Input.multiTouchEnabled = false; //Prevents multitouch due to page transition errors
@@ -13,9 +22,14 @@ namespace ThuisBijMuis.Games.Interactables {
 
         private void Update() {
             if (Input.GetMouseButtonDown(0)) {
-                selection = CheckedForClickedObject();
+                Selection = CheckedForClickedObject();
                 ActivateSelection();
-            } else if (Input.GetMouseButtonUp(0)) ReleaseSelection();
+            } 
+        }
+
+        private void LateUpdate()
+        {
+            if (Input.GetMouseButtonUp(0)) ReleaseSelection();
         }
 
         //Returns the gameobject hit by the raycast
@@ -26,18 +40,18 @@ namespace ThuisBijMuis.Games.Interactables {
 
         //If the selected gameobject is an IInteractable it will activate it
         private void ActivateSelection() {
-            selection?.GetComponent<IInteractable>()?.ActivateInteractable();
+            Selection?.GetComponent<IInteractable>()?.ActivateInteractable();
         }
 
         //If the released gameobject is an IReleasable it will activate its release function and set the selection to null
         private void ReleaseSelection() {
-            if (!selection)
+            if (!Selection)
                 return;
 
-            foreach (IReleasable releaseables in selection.GetComponents<IReleasable>())
+            foreach (IReleasable releaseables in Selection.GetComponents<IReleasable>())
                 releaseables.ReleaseInteractable();
 
-            selection = null;
+            Selection = null;
         }
     }
 }
