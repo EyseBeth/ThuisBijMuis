@@ -1,22 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class InterfaceFinder
+namespace ThuisBijMuis.Games
 {
-    public static List<T> Find<T>()
+    public static class InterfaceFinder
     {
-        List<T> interfaces = new List<T>();
-        GameObject[] rootGameObjects = SceneManager.GetActiveScene().GetRootGameObjects();
-        foreach (var rootGameObject in rootGameObjects)
+        public static List<T> Find<T>()
         {
-            T[] childrenInterfaces = rootGameObject.GetComponentsInChildren<T>();
-            foreach (var childInterface in childrenInterfaces)
+            List<T> interfaces = new List<T>();
+            GameObject[] rootGameObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+
+            foreach (var rootGameObject in rootGameObjects)
             {
-                interfaces.Add(childInterface);
+                T[] childrenInterfaces = rootGameObject.GetComponentsInChildren<T>();
+                foreach (var childInterface in childrenInterfaces)
+                {
+                    interfaces.Add(childInterface);
+                }
             }
+
+            return interfaces;
         }
-        return interfaces;
     }
 }

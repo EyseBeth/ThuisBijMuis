@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ThuisBijMuis.Games.PageSliding
 {
@@ -26,7 +24,7 @@ namespace ThuisBijMuis.Games.PageSliding
         }
 
         /// <summary>
-        /// Sets the target position relative to the start position
+        /// Sets the target position relative to the start position.
         /// </summary>
         /// <param name="moveAmount"></param>
         private void SetTargetPositions(float moveAmount)
@@ -42,7 +40,7 @@ namespace ThuisBijMuis.Games.PageSliding
         }
 
         /// <summary>
-        /// Sets the lerp direction. This is called by the event in PageSlider
+        /// Sets the lerp direction. This is called by the event in PageSlider.
         /// </summary>
         /// <param name="left"></param>
         public void SetLerpDirection(bool left)
@@ -50,7 +48,6 @@ namespace ThuisBijMuis.Games.PageSliding
             canLerp = true;
             lerpDirection = left;
         }
-
 
         private bool LerpPanel(bool left)
         {

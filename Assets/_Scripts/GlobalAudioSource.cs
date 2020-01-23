@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class GlobalAudioSource : MonoBehaviour
@@ -34,14 +32,7 @@ public class GlobalAudioSource : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
-    public bool IsPlaying()
-    {
+    public bool IsPlaying => audioSource.isPlaying;
 
-        return audioSource.isPlaying;
-    }
-
-    public void Stop()
-    {
-        audioSource.Stop();
-    }
+    public void Stop() => audioSource.Stop();
 }

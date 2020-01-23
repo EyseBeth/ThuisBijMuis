@@ -1,17 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class NumberColoringMosue : MonoBehaviour
+namespace ThuisBijMuis.Games
 {
-    [SerializeField]
-    Transform obj = null;
-
-    // Update is called once per frame
-    void Update()
+    public class NumberColoringMosue : MonoBehaviour
     {
-        Vector3 mousepos = Input.mousePosition;
-        mousepos.z = 10f;
-        obj.position = Camera.main.ScreenToWorldPoint(mousepos);
-    }
+        [SerializeField] Transform obj = null;
+
+        private void Update()
+        {
+            Vector3 mousepos = Input.mousePosition;
+            mousepos.z = 10f;
+            obj.position = Camera.main.ScreenToWorldPoint(mousepos);
+        }
+    } 
 }

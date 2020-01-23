@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -10,8 +9,11 @@ namespace ThuisBijMuis.Games.Interactables
     public class UpdateDraggable : DraggableItem
     {
         [SerializeField] protected List<DroppableTags> updateTags;
+
         private bool filledUp = false;
-        public override void Release() {
+        
+        public override void Release()
+        {
             if (currentDropZone != null && currentDropZone.CheckTags(ItemTags))
             {
                 if (filledUp != true)
@@ -26,9 +28,9 @@ namespace ThuisBijMuis.Games.Interactables
                     GetComponent<SpriteRenderer>().enabled = false;
                     GetComponent<BoxCollider>().enabled = false;
                 }
-                
             }
             else Return();
+
             currentDropZone = null;
             selected = false;
         }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables.Indicators {
-#pragma warning disable 0649
+namespace ThuisBijMuis.Games.Interactables.Indicators
+{
     public abstract class ClickableIndicatorBase : MonoBehaviour
     {
         protected ClickableItem[] clickableItems;

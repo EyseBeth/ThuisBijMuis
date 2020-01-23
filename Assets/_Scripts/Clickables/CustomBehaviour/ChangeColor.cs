@@ -21,12 +21,11 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         private void Update()
         {
-            if (changeColor)
-                spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
+            if (changeColor) spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
         }
 
         public void ExecuteCustomBehaviour() => changeColor = true;
 
         private void StopChangeColor() => changeColor = false;
-    } 
+    }
 }

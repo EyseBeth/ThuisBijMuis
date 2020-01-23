@@ -1,47 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-/// <summary>
-/// Used on page 3, checks which of the colours has been selected.
-/// </summary>
-namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
+﻿using UnityEngine;
+
+namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
+{
 #pragma warning disable 0649
+    /// <summary>
+    /// Used on page 3, checks which of the colours has been selected.
+    /// </summary>
     public class BoolChanger : MonoBehaviour, IClickable
     {
-        public string boolName;
-        VariableKeeper variableKeeper;
+        [SerializeField] private string boolName;
 
-        public void Start()
-        {
-            variableKeeper = GameObject.Find("BookParent").GetComponent<VariableKeeper>();
-        }
-        public void ExecuteCustomBehaviour()
-        {
-            ChangeBool();
-        }
+        private VariableKeeper variableKeeper;
+
+        public void Start() => variableKeeper = GameObject.Find("BookParent").GetComponent<VariableKeeper>();
+
+        public void ExecuteCustomBehaviour() => ChangeBool();
 
         private void ChangeBool()
         {
-            if (boolName == "red")
+            switch (boolName)
             {
-                variableKeeper.clrSelected= true;
-                variableKeeper.red = true;
-                variableKeeper.blue = false;
-                variableKeeper.yellow = false;
-            }
-            if (boolName == "blue")
-            {
-                variableKeeper.clrSelected = true;
-                variableKeeper.blue = true;
-                variableKeeper.yellow = false;
-                variableKeeper.red = false;
-            }
-            if (boolName == "yellow")
-            {
-                variableKeeper.clrSelected = true;
-                variableKeeper.yellow = true;
-                variableKeeper.red = false;
-                variableKeeper.blue = false;
+                case "red":
+                    variableKeeper.ClrSelected = true;
+                    variableKeeper.Red = true;
+                    variableKeeper.Blue = false;
+                    variableKeeper.Yellow = false;
+                    break;
+                case "blue":
+                    variableKeeper.ClrSelected = true;
+                    variableKeeper.Blue = true;
+                    variableKeeper.Red = false;
+                    variableKeeper.Yellow = false;
+                    break;
+                case "yellow":
+                    variableKeeper.ClrSelected = true;
+                    variableKeeper.Yellow = true;
+                    variableKeeper.Red = false;
+                    variableKeeper.Blue = false;
+                    break;
             }
         }
     }

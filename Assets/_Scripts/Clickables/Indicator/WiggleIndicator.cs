@@ -20,8 +20,7 @@ namespace ThuisBijMuis.Games.Interactables.Indicators
 
         protected override void Awake()
         {
-            if (!isAdder)
-                return;
+            if (!isAdder) return;
 
             base.Awake();
 
@@ -58,8 +57,7 @@ namespace ThuisBijMuis.Games.Interactables.Indicators
                     nextWiggle = wiggleTimeout + Random.Range(0, wiggleTimeoutVariation);
                     isWiggling = true;
                 }
-                else
-                    nextWiggle -= Time.deltaTime;
+                else nextWiggle -= Time.deltaTime;
 
                 // After wiggling our rotation might not be the same as before wiggling,
                 // so if thats we case we lerp towards it.
@@ -74,16 +72,16 @@ namespace ThuisBijMuis.Games.Interactables.Indicators
                 transform.localRotation = Quaternion.Euler(0, 0, Mathf.Sin(Time.time * wiggleSpeed) * wiggleStrength);
                 wiggledTime += Time.deltaTime;
             }
-            else
-                isWiggling = false;
+            else isWiggling = false;
         }
 
         protected override void Init()
         {
             nextWiggle = wiggleTimeout + Random.Range(0, wiggleTimeoutVariation);
+            
             // wiggledTime needs to be set to the wiggleTime or higher otherwise everthing 
             // would start wiggling on the first frame.
-            wiggledTime = wiggleTime; 
+            wiggledTime = wiggleTime;
             transform.localRotation = lastRotation;
         }
     }

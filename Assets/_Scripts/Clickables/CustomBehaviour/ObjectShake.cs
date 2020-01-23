@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 {
@@ -8,32 +6,28 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
     {
         private Vector3 originPosition;
         private Quaternion originRotation;
-        public float shake_decay = 0.002f;
-        public float shake_intensity = .3f;
 
-        private float temp_shake_intensity = 0;
+        private float shakeDecay = 0.002f;
+        private float shakeIntensity = .3f;
+        private float tempShakeIntensity = 0;
 
-
-        void Update()
+        private void Update()
         {
-            if (temp_shake_intensity > 0)
-            {
-                transform.position = originPosition + Random.insideUnitSphere * temp_shake_intensity;
-                transform.rotation = new Quaternion(
-                    originRotation.x + Random.Range(-temp_shake_intensity, temp_shake_intensity) * .2f,
-                    originRotation.y + Random.Range(-temp_shake_intensity, temp_shake_intensity) * .2f,
-                    originRotation.z + Random.Range(-temp_shake_intensity, temp_shake_intensity) * .2f,
-                    originRotation.w + Random.Range(-temp_shake_intensity, temp_shake_intensity) * .2f);
-                temp_shake_intensity -= shake_decay;
-            }
+            if (tempShakeIntensity <= 0) return;
+
+            transform.position = originPosition + Random.insideUnitSphere * tempShakeIntensity;
+            transform.rotation = new Quaternion(originRotation.x + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                                                originRotation.y + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                                                originRotation.z + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f,
+                                                originRotation.w + Random.Range(-tempShakeIntensity, tempShakeIntensity) * .2f);
+            tempShakeIntensity -= shakeDecay;
         }
 
         public void ExecuteCustomBehaviour()
         {
             originPosition = transform.position;
             originRotation = transform.rotation;
-            temp_shake_intensity = shake_intensity;
-
+            tempShakeIntensity = shakeIntensity;
         }
     }
 }

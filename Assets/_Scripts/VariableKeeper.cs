@@ -1,8 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class VariableKeeper : MonoBehaviour
+namespace ThuisBijMuis.Games
 {
-    public bool red, blue, yellow, clrSelected = false;
+    public class VariableKeeper : MonoBehaviour
+    {
+        public bool Red { get; set; }
+        public bool Blue { get; set; }
+        public bool Yellow { get; set; }
+        public bool ClrSelected { get; set; }
+    } 
 }

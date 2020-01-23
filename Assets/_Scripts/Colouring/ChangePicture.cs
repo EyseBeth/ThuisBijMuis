@@ -4,23 +4,23 @@ using UnityEngine;
 namespace ThuisBijMuis.Games.Colouring
 {
     [RequireComponent(typeof(SpriteRenderer))]
-public class ChangePicture : MonoBehaviour
-{
-        // Start is called before the first frame update
-        Timer checkTextureTimer = null;
+    public class ChangePicture : MonoBehaviour
+    {
+        private Timer checkTextureTimer = null;
+        private SpriteRenderer SpriteComponent;
+        
         public RenderTexture RenderTexture { get; set; }
         public Sprite NewImage { get; set; }
         public Color ColorToCheckFor { get; set; }
         public float PercentageToFill { get; set; }
-        private SpriteRenderer SpriteComponent;
         public ColourPlacing ColourPlacing { get; set; }
 
-        // Update is called once per frame
-        void Update() => checkTextureTimer?.Tick(Time.deltaTime);
+        private void Update() => checkTextureTimer?.Tick(Time.deltaTime);
 
         private void CheckTexture()
         {
-            if (TextureFillChecker.CheckTextureFillPercentage(PercentageToFill, ColorToCheckFor, RenderTexture)) PictureChange();
+            if (TextureFillChecker.CheckTextureFillPercentage(PercentageToFill, ColorToCheckFor, RenderTexture)) 
+                PictureChange();
         }
 
         private void PictureChange()

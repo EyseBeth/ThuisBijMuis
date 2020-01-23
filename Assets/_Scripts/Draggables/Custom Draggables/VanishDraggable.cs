@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Makes draggable dissappear after it's beenn dropped on its respective drop zone.
@@ -18,6 +16,7 @@ namespace ThuisBijMuis.Games.Interactables
                 GetComponent<BoxCollider>().enabled = false;
             }
             else Return();
+
             currentDropZone = null;
             selected = false;
         }

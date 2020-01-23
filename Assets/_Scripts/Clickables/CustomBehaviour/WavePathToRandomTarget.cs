@@ -33,7 +33,8 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
                 counter += Time.deltaTime * frequency;
 
                 // We use dir.x and dir.y here because when we go straight down we want to use the cosine
-                // on the X-axis and vice versa. We put a minus in front of the Y-axis cosine because that works.
+                // on the X-axis and vice versa. We put a minus in front of the Y-axis cosine because 
+                // otherwise it moves in the opposite direction.
                 Vector3 cos = new Vector3(Mathf.Cos(counter) * dir.y, -Mathf.Cos(counter) * dir.x, 0) * magnitude;
                 Vector3 linear = dir * new Vector3(moveSpeed, moveSpeed, 0);
 

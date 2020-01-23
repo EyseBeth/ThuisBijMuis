@@ -1,10 +1,9 @@
-﻿using ThuisBijMuis.Games.Interactables;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace ThuisBijMuis.Games
+namespace ThuisBijMuis.Games.Interactables
 {
 #pragma warning disable 0649
-    public class ParticleSystemRotation : MonoBehaviour, IInteractable
+    public class ParticleSystemRotation : MonoBehaviour, IReleasable
     {
         [SerializeField] private ParticleSystem particles;
         [SerializeField] private Axis axisToRotate;
@@ -87,11 +86,7 @@ namespace ThuisBijMuis.Games
             isDragging = true;
         }
 
-        // Replace with IReleaseable.
-        private void OnMouseUp()
-        {
-            isDragging = false;
-        }
+        public void ReleaseInteractable() => isDragging = false;
     }
 
     public enum Axis

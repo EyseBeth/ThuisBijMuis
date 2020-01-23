@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using ThuisBijMuis.Games.Interactables;
 using UnityEngine;
 
 namespace ThuisBijMuis.Swiping
 {
     public class SwipeDetector : MonoBehaviour
     {
+        [SerializeField] private bool detectSwipeOnlyAfterRelease = false;
+        [SerializeField] private float minDistanceForSwipe = 20f;
 
         private Vector2 fingerDownPosition;
         private Vector2 fingerUpPosition;
-
-        [SerializeField]
-        private bool detectSwipeOnlyAfterRelease = false;
-
-        [SerializeField]
-        private float minDistanceForSwipe = 20f;
 
         public static event Action<SwipeData> OnSwipe = delegate { };
 
@@ -69,28 +62,17 @@ namespace ThuisBijMuis.Swiping
                 StartPosition = fingerDownPosition,
                 EndPosition = fingerUpPosition
             };
+
             OnSwipe(swipeData);
         }
 
-        private bool IsVerticalSwipe()
-        {
-            return VerticalMovementDistance() > HorizontalMovementDistance();
-        }
+        private bool IsVerticalSwipe() => VerticalMovementDistance() > HorizontalMovementDistance();
 
-        private bool SwipeDistanceCheckMet()
-        {
-            return VerticalMovementDistance() > minDistanceForSwipe || HorizontalMovementDistance() > minDistanceForSwipe;
-        }
+        private bool SwipeDistanceCheckMet() => VerticalMovementDistance() > minDistanceForSwipe || HorizontalMovementDistance() > minDistanceForSwipe;
 
-        private float HorizontalMovementDistance()
-        {
-            return Mathf.Abs(fingerDownPosition.x - fingerUpPosition.x);
-        }
+        private float HorizontalMovementDistance() => Mathf.Abs(fingerDownPosition.x - fingerUpPosition.x);
 
-        private float VerticalMovementDistance()
-        {
-            return Mathf.Abs(fingerDownPosition.y - fingerUpPosition.y);
-        }
+        private float VerticalMovementDistance() => Mathf.Abs(fingerDownPosition.y - fingerUpPosition.y);
     }
 
     public struct SwipeData
@@ -107,5 +89,4 @@ namespace ThuisBijMuis.Swiping
         Left,
         Right
     }
-
 }

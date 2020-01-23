@@ -1,21 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.PlayerLoop;
+﻿using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables {
+namespace ThuisBijMuis.Games.Interactables
+{
 #pragma warning disable 0649
-    public class DraggableReplaceItem : DraggableItem {
+    public class DraggableReplaceItem : DraggableItem
+    {
         [SerializeField] private Sprite draggingSprite;
+
         private Sprite restingSprite;
         private SpriteRenderer render;
 
-        public override void Start() {
+        public override void Start()
+        {
             base.Start();
             render = GetComponent<SpriteRenderer>();
             restingSprite = render.sprite;
         }
-        public override void FixedUpdate() {
+
+        public override void FixedUpdate()
+        {
             base.FixedUpdate();
             render.sprite = selected ? draggingSprite : restingSprite;
         }

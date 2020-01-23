@@ -6,12 +6,13 @@ namespace ThuisBijMuis.Games.PageSliding
     public class SetCanvasCamera : MonoBehaviour
     {
         private Canvas canvas;
-        //Sets the canvas camera and rendermode to the correct modes
-        void Start()
+
+        // Sets the canvas camera and rendermode to the correct modes.
+        private void Start()
         {
             canvas = GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceCamera;
             canvas.worldCamera = Camera.main;
         }
-    } 
+    }
 }

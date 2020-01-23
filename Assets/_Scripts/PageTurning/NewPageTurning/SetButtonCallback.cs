@@ -1,13 +1,12 @@
-﻿using ThuisBijMuis.Games.PageSliding;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace ThuisBijMuis.Games.PageSliding {
+namespace ThuisBijMuis.Games.PageSliding
+{
 #pragma warning disable 0649
     public class SetButtonCallback : MonoBehaviour
     {
-        [SerializeField]
-        private bool isNextButton;
+        [SerializeField] private bool isNextButton;
 
         private void Awake()
         {

@@ -1,21 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables
 {
+#pragma warning disable 0649
     public class UpdateZone : DropZone
     {
-        public Sprite[] zoneReplace;
-        public int counter = 0;
-        // Update is called once per frame
-        void Update()
+        [SerializeField] private Sprite[] zoneReplace;
+        
+        private int counter;
+        private SpriteRenderer spriteRenderer;
+
+        private void Start() => spriteRenderer = GetComponent<SpriteRenderer>();
+
+        private void Update()
         {
             if (IsDropped)
             {
                 IsDropped = false;
                 counter++;
-                GetComponent<SpriteRenderer>().sprite = zoneReplace[counter];
+                spriteRenderer.sprite = zoneReplace[counter];
             }
         }
     }

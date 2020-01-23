@@ -20,11 +20,10 @@ namespace ThuisBijMuis.Games.Interactables
         // In both cases the list will be completely rewritten which gives us an up to date list.
         public void UpdateCustomBehaviours() => clickableCustomBehaviours = GetComponentsInChildren<IClickable>();
 
-        public void ActivateInteractable() {
+        public void ActivateInteractable()
+        {
             clickableIndicator?.Pause();
-            foreach (IClickable item in clickableCustomBehaviours) {
-                item.ExecuteCustomBehaviour();
-            }
+            foreach (IClickable item in clickableCustomBehaviours) item.ExecuteCustomBehaviour();
         }
     }
 }

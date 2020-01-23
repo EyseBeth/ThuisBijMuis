@@ -1,17 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Page : MonoBehaviour
 {
-    private int pageIndex = 0;
-    public int PageIndex { get => pageIndex; set => pageIndex = value; }
+    public int PageIndex { get; private set; }
 
     void Awake()
-    { 
+    {
         for (int i = 0; i < transform.parent.childCount; i++)
-        {
-            if(transform.parent.GetChild(i) == transform) pageIndex = i;
-        }
+            if (transform.parent.GetChild(i) == transform) PageIndex = i;
     }
 }

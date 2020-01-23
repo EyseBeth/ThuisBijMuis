@@ -9,11 +9,8 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours
 
         public void ExecuteCustomBehaviour()
         {
-            if (clip)
-                GlobalAudioSource.Instance.PlayAudio(clip.audioClip[clip.counter++]);
-
-            if (clip.counter >= clip.audioClip.Length)
-                clip.counter = clip.audioClip.Length - 1;
+            if (clip) GlobalAudioSource.Instance.PlayAudio(clip.audioClip[clip.counter++]);
+            if (clip.counter >= clip.audioClip.Length) clip.counter = clip.audioClip.Length - 1;
         }
     }
 }

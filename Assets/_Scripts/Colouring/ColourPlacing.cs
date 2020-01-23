@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using ThuisBijMuis.Games.PageSliding;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,24 +9,24 @@ namespace ThuisBijMuis.Games.Colouring
     {
         private bool firstPlace;
         private bool ableToPlace = false;
-        public GameObject ColourSprite { private get; set; }
         private List<GameObject> spriteList = new List<GameObject>();
-        public Camera ColourCamera { private get; set; }
         private Camera cam;
+
+        public Camera ColourCamera { private get; set; }
+        public GameObject ColourSprite { private get; set; }
 
         public UnityEvent OnStartEvent = new UnityEvent();
         public UnityEvent OnCompletionEvent = new UnityEvent();
+        
+        private void Start() => cam = Camera.main;
 
-        // Start is called before the first frame update
-        void Start() => cam = Camera.main;
-
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (Input.GetMouseButton(0) && ableToPlace)
             {
                 Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = -.1f;
+                
                 if (IsPositionInCameraView(ColourCamera, mousePos)) PlaceColour(mousePos);
                 else Debug.Log("Not In View!");
             }
@@ -36,7 +34,7 @@ namespace ThuisBijMuis.Games.Colouring
         }
 
         /// <summary>
-        /// Checks wether or not a position is in view for a camera
+        /// Checks wether or not a position is in view for a camera.
         /// </summary>
         /// <param name="cam">The Camera to check for</param>
         /// <param name="pos">The position that needs to be checked</param>

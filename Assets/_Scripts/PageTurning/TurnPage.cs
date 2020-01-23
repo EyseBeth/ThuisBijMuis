@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ThuisBijMuis.Games.Interactables.PageTurning
 {
+#pragma warning disable 0649
     public class TurnPage : MonoBehaviour, IInteractable
     {
-        [SerializeField]
-        private bool backPage = false;
+        [SerializeField] private bool backPage;
 
         private BookController bookController;
 
@@ -36,17 +34,8 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning
             else rot.y = -180;
 
             targetRotation.eulerAngles = rot;
-
             pivotNumber = bookController.GetPivotNumber(pivot);
-
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, (pivotNumber + 1) / 1000);
-
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                // Switched this off, it sets all child objets to the centre of the page. which inhibits placements of objectson the page.
-
-                //transform.GetChild(i).localPosition = new Vector3(0, 0, -0.001f);
-            }
         }
 
         private void Update()
@@ -60,7 +49,8 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning
                     firstUpdate = true;
                 }
 
-                if (PageLerp(pageTurnTime)) //Lerp Done
+                // Lerp Done.
+                if (PageLerp(pageTurnTime))
                 {
                     bookController.SetTurningPage(false);
                     bookController.PageTurnEnd();
@@ -68,10 +58,10 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning
             }
         }
 
-
         private void FirstUpdate()
         {
             bookController.SetTurningPage(true);
+
             if (backPage) bookController.ChangeCurrentPage(false);
             else bookController.ChangeCurrentPage(true);
         }
@@ -99,20 +89,12 @@ namespace ThuisBijMuis.Games.Interactables.PageTurning
             {
                 Transform child = transform.GetChild(i);
                 child.gameObject.SetActive(state);
-
-                // Switched this off, it sets all child objets to the centre of the page. which inhibits placements of objectson the page.
-
-                //if (state) child.transform.localPosition = new Vector3(child.transform.localPosition.x, child.transform.localPosition.y, -1f);
-                //else child.localPosition = new Vector3(0, 0, -0.001f);
             }
         }
 
         public void ActivateInteractable()
         {
-            if (!bookController.isCurrentlyTurningPage)
-            {
-                isClicked = true;
-            }
+            if (!bookController.IsCurrentlyTurningPage) isClicked = true;
         }
     }
 }

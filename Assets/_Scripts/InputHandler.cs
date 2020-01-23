@@ -1,30 +1,34 @@
 ﻿using UnityEngine;
-namespace ThuisBijMuis.Games.Interactables {
+
+namespace ThuisBijMuis.Games.Interactables
+{
 #pragma warning disable 0649
-    public class InputHandler : MonoBehaviour {
-
+    public class InputHandler : MonoBehaviour
+    {
         private Camera mainCamera;
-        
-        public GameObject Selection { get; private set; }
 
+        public GameObject Selection { get; private set; }
         public static InputHandler Singleton { get; private set; }
 
-        private void Awake()
-        {
-            Singleton = this;
-        }
+        private void Awake() => Singleton = this;
 
-        void Start() {
-            Application.targetFrameRate = 300; //Sets the target frame-rate higher for smoother game-play
-            Input.multiTouchEnabled = false; //Prevents multitouch due to page transition errors
+        private void Start()
+        {
+            // Sets the target frame-rate higher for smoother game-play.
+            Application.targetFrameRate = 300;
+
+            // Prevents multitouch due to page transition errors.
+            Input.multiTouchEnabled = false;
             mainCamera = Camera.main;
         }
 
-        private void Update() {
-            if (Input.GetMouseButtonDown(0)) {
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
                 Selection = CheckedForClickedObject();
                 ActivateSelection();
-            } 
+            }
         }
 
         private void LateUpdate()
@@ -33,18 +37,18 @@ namespace ThuisBijMuis.Games.Interactables {
         }
 
         //Returns the gameobject hit by the raycast
-        private GameObject CheckedForClickedObject() {
+        private GameObject CheckedForClickedObject()
+        {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             return Physics.Raycast(ray, out RaycastHit hit) ? hit.collider.gameObject : null;
         }
 
         //If the selected gameobject is an IInteractable it will activate it
-        private void ActivateSelection() {
-            Selection?.GetComponent<IInteractable>()?.ActivateInteractable();
-        }
+        private void ActivateSelection() => Selection?.GetComponent<IInteractable>()?.ActivateInteractable();
 
         //If the released gameobject is an IReleasable it will activate its release function and set the selection to null
-        private void ReleaseSelection() {
+        private void ReleaseSelection()
+        {
             if (!Selection)
                 return;
 

@@ -4,9 +4,10 @@ namespace ThuisBijMuis.Timers
 {
     public class Timer
     {
-        public float RemainingSeconds { get; private set; }
         private float originalSeconds;
         private bool repeating;
+
+        public float RemainingSeconds { get; private set; }
 
         public Timer(float duration, bool repeating = false)
         {

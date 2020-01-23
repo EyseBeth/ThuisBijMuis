@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using ThuisBijMuis.Games.Interactables.CustomBehaviours;
 using ThuisBijMuis.Timers;
+using UnityEngine;
 
-namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
+namespace ThuisBijMuis.Games.Interactables
+{
 #pragma warning disable 0649
-    public class RandomMovement2 : MonoBehaviour, IClickable
+    public class RandomMovementNoClick : MonoBehaviour, IClickable
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float frequency;
@@ -22,7 +22,6 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
         private float counter;
         private int index;
         private Timer timer;
-
         private SpriteRenderer spriteRenderer;
 
         private void Awake()
@@ -42,7 +41,8 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
                 counter += Time.deltaTime * frequency;
 
                 // We use dir.x and dir.y here because when we go straight down we want to use the cosine
-                // on the X-axis and vice versa. We put a minus in front of the Y-axis cosine because that works.
+                // on the X-axis and vice versa. We put a minus in front of the Y-axis cosine because 
+                // otherwise it moves in the opposite direction.
                 Vector3 cos = new Vector3(Mathf.Cos(counter) * dir.y, -Mathf.Cos(counter) * dir.x, 0) * magnitude;
                 Vector3 linear = dir * new Vector3(moveSpeed, moveSpeed, 0);
 
@@ -52,7 +52,7 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
             }
         }
 
-        void DoTheMove()
+        private void DoTheMove()
         {
             if (!hasFinishedMoving)
             {
@@ -74,7 +74,6 @@ namespace ThuisBijMuis.Games.Interactables.CustomBehaviours {
                     spriteIsFacingRight = !spriteIsFacingRight;
                 }
             }
-
         }
 
         public void ExecuteCustomBehaviour()

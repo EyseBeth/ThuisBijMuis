@@ -1,12 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PageWipeTransition : MonoBehaviour
+namespace ThuisBijMuis.Games
 {
-    public Animator transitionAnim;
+#pragma warning disable 0649
+    public class PageWipeTransition : MonoBehaviour
+    {
+        [SerializeField] private Animator transitionAnim;
 
-    public void TransitionNext() => transitionAnim.SetTrigger("next");
+        public void TransitionNext() => transitionAnim.SetTrigger("next");
 
-    public void TransitionPrev() => transitionAnim.SetTrigger("prev");
+        public void TransitionPrev() => transitionAnim.SetTrigger("prev");
+    }
 }
