@@ -39,17 +39,16 @@ namespace ThuisBijMuis.Games.Colouring
         /// Checks wether or not a position is in view for a camera
         /// </summary>
         /// <param name="cam">The Camera to check for</param>
-        /// <param name="pos">The position that needs to be checked</param>
+        /// <param name="worldPos">The position in world space that needs to be checked</param>
         /// <returns>True if the position is in view</returns>
-        private bool IsPositionInCameraView(Camera cam, Vector3 pos)
+        private bool IsPositionInCameraView(Camera cam, Vector3 worldPos)
         {
-            Vector3 viewPos = cam.WorldToViewportPoint(pos);
+            Vector3 viewPos = cam.WorldToViewportPoint(worldPos);
             return viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0;
         }
 
         private void PlaceColour(Vector3 position)
         {
-            Debug.Log("Placed Colour");
             spriteList.Add(Instantiate(ColourSprite, position, Quaternion.identity, transform));
             if (firstPlace)
             {

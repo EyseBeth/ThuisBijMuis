@@ -18,24 +18,17 @@ public static class TextureFillChecker
         percentage = Mathf.Clamp(percentage, 10, 100);
         percentage /= 100;
 
-        Color[] pixels =  new Color[textureToCheck.width * textureToCheck.height];
+        int filledPixels = 0;
 
-        for (int w = 0, i = 0; w < textureToCheck.width; w++)
+        for (int w = 0; w < textureToCheck.width; w++)
         {
-            for (int h = 0; h < textureToCheck.height; h++, i++)
+            for (int h = 0; h < textureToCheck.height; h++)
             {
-                pixels[i] = textureToCheck.GetPixel(w, h);
+                if (textureToCheck.GetPixel(w, h) == fillColor) filledPixels++;
             }
         }
 
-        List<Color> filledPixels = new List<Color>();
-
-        for (int i = 0; i < pixels.Length; i++)
-        {
-            if (pixels[i] == fillColor) filledPixels.Add(pixels[i]);
-        }
-
-        if (filledPixels.Count >= pixels.Length * percentage) return true;
+        if (filledPixels >= (textureToCheck.width * textureToCheck.height) * percentage) return true;
         return false;
     }
     
@@ -59,3 +52,4 @@ public static class TextureFillChecker
         return tex;
     }
 }
+

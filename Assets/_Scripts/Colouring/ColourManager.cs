@@ -41,10 +41,8 @@ namespace ThuisBijMuis.Games.Colouring
 
         public void CheckPage(int pageNumber)
         {
-            Debug.Log("@CheckPage - " + pageNumber + " - " + PageNumber);
             if (pageNumber == PageNumber)
             {
-                Debug.Log("Setup RUN!");
                 Setup();
                 colourPlacing.StartPlacing();
                 changePicture.ActivateTimer();
@@ -63,8 +61,6 @@ namespace ThuisBijMuis.Games.Colouring
             colourPlacing = GetComponentInChildren<ColourPlacing>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-            colourPlacing.OnCompletionEvent.AddListener(OnEnd);
-
             spriteRenderer.sprite = imageToReplace;
 
             colourPlacing.ColourCamera = colourCamera;
@@ -79,12 +75,6 @@ namespace ThuisBijMuis.Games.Colouring
             changePicture.ColorToCheckFor = spriteToColourWith.color;
 
             changePicture.PercentageToFill = percentageToFill;
-        }
-
-        public void OnEnd()
-        {
-            spriteRenderer.maskInteraction = SpriteMaskInteraction.None;
-            spriteMask.gameObject.SetActive(false);
         }
     }
 }
