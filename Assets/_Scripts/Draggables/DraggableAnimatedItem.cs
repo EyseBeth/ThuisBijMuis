@@ -11,6 +11,9 @@ namespace ThuisBijMuis.Games.Interactables
         [SerializeField] protected List<DroppableTags> ItemTags;
         [SerializeField] private RectTransform canvasRectTransform;
 
+        // Clickable interaction
+        [SerializeField] private GameObject spriteIndication;
+
         protected bool selected = false;
         private Vector3 originalPosition;
         protected DropZone currentDropZone;
@@ -25,7 +28,11 @@ namespace ThuisBijMuis.Games.Interactables
 
         public virtual void FixedUpdate()
         {
-            if (selected) Drag();
+            if (selected)
+            {
+                Drag();
+                Destroy(spriteIndication);
+            }
         }
 
         //Changes the position of the object based on the users touch position relative to the screen position

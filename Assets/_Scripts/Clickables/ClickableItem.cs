@@ -10,6 +10,8 @@ namespace ThuisBijMuis.Games.Interactables
         private IClickable[] clickableCustomBehaviours;
         private ClickableIndicatorBase clickableIndicator;
 
+        [SerializeField] private GameObject spriteIndication;
+
         private void Start()
         {
             clickableCustomBehaviours = GetComponentsInChildren<IClickable>(false);
@@ -22,6 +24,7 @@ namespace ThuisBijMuis.Games.Interactables
 
         public void ActivateInteractable() {
             clickableIndicator?.Pause();
+            Destroy(spriteIndication);
             foreach (IClickable item in clickableCustomBehaviours) {
                 item.ExecuteCustomBehaviour();
             }
